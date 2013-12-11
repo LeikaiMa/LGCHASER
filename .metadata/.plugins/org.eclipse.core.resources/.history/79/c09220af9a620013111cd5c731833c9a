@@ -1,0 +1,19 @@
+package removeDuplicate;
+
+public class WithoutBuffer {
+	public static void deleteDups(LinkedListNode head) {
+		if (head == null) {
+			return;
+		}
+		
+		LinkedListNode current = head;
+		
+		while (current != null) {
+			LinkedListNode runner= current;
+			while (runner.next != null) {
+				
+			}
+		}
+	}
+
+}

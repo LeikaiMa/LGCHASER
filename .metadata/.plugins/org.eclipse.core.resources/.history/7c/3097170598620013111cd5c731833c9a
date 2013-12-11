@@ -1,0 +1,10 @@
+package removeDuplicate;
+
+import java.util.Hashtable;
+
+public class WithBuffer {
+	public static void deleteDup(LinkedlistNode n) {
+		Hashtable<Integer, Boolean> table = new Hashtable<Integer, Boolean>();
+		
+	}
+}

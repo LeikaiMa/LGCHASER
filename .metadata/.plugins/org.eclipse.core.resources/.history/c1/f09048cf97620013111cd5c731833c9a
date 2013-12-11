@@ -1,0 +1,8 @@
+package removeDuplicate;
+
+public class LinkedListNode {
+	int data;
+	public LinkedListNode() {
+		// TODO Auto-generated constructor stub
+	} next = null;
+}

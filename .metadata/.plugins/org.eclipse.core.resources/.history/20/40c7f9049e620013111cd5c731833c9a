@@ -1,0 +1,13 @@
+package nthToLast;
+
+import removeDuplicate.LinkedListNode;
+
+public class WrapperClass {
+	public class IntWrapper {
+		public int value = 0;
+	}
+	
+	LinkedListNode nthToLastR2(LinkedListNode head, int k, IntWrapper i) {
+		
+	}
+}

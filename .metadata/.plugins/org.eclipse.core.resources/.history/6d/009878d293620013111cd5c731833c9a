@@ -1,0 +1,7 @@
+package createLinkedList;
+
+public class DeleteNode {
+	public Node deleteNode(Node head, int d) {
+		
+	}
+}

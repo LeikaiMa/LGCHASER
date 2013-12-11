@@ -1,0 +1,9 @@
+package nthToLast;
+
+import removeDuplicate.LinkedListNode;
+
+public class Iterative {
+	LinkedListNode nthToLast(LinkedListNode head, int k) {
+		
+	}
+}

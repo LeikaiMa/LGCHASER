@@ -1,0 +1,17 @@
+package createLinkedList;
+
+public class DeleteNode {
+	public Node deleteNode(Node head, int d) {
+		Node n = head;
+		
+		if (n.data == d) {
+			return head.next;
+		}
+		
+		while(n.next != null) {
+			if (n.next.data == d) {
+				
+			}
+		}
+	}
+}
