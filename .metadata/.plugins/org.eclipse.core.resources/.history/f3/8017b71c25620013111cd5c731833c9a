@@ -1,0 +1,10 @@
+package subSet;
+
+import java.util.ArrayList;
+
+public class Combinatorics {
+	public ArrayList<ArrayList<Integer>> getSubsets(ArrayList<Integer> set) {
+		ArrayList<ArrayList<Integer>> allsubsets = new ArrayList<ArrayList<Integer>>();
+	}
+
+}

@@ -1,0 +1,15 @@
+package magicIndex;
+
+public class NotDistinctBS {
+	public static int magicFast(int[] array, int start, int end) {
+//		这里面要注意end 是>=长度的值
+		if (end < start || start < 0 || end >= array.length) {
+			return -1;
+		}
+		int midIndex = (start + end) /2;
+		int midValue = array[midIndex];
+		if (midValue == midIndex) {
+			
+		}
+	}
+}

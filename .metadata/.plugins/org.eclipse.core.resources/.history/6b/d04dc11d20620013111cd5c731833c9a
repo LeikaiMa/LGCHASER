@@ -1,0 +1,12 @@
+package subSet;
+
+import java.util.ArrayList;
+
+public class Recursion {
+	public ArrayList<ArrayList<Integer>> getSubSet (ArrayList<Integer> set, int index) {
+		ArrayList<ArrayList<Integer>> allsubsets;
+		if (set.size() == index) {
+			
+		}
+	}
+}

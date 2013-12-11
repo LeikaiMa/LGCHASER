@@ -1,0 +1,7 @@
+package magicIndex;
+
+public class NotDistinctBS {
+	public static int magicFast(int[] array, int start, int end) {
+		if (end < start || start < 0 || end >= array.length)
+	}
+}
