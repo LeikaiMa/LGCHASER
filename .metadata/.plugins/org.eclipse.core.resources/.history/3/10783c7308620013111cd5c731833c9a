@@ -1,0 +1,23 @@
+package robotMovingBoard;
+
+import java.util.ArrayList;
+import java.util.Hashtable;
+
+public class DPWithLimit {
+	private static boolean isFree(int x, int y) {
+		return true;
+	}
+	
+	public boolean getPath(int x, int y, ArrayList<Point> path, Hashtable<Point, Boolean> cache) {
+		Point p = new Point(x, y);
+		if (cache.containsKey(p)) {
+			return cache.get(p);
+		}
+		if (x == 0 && y == 0) {
+			return true;
+		}
+		
+		boolean success = false;
+		if (x >= 1 && )
+	}
+}

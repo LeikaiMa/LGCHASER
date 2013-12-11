@@ -1,0 +1,7 @@
+package reorderList;
+
+public class O1ReorderList {
+	if (head == null || head.next == null) {
+		
+	}
+}

@@ -1,0 +1,61 @@
+package insertInterval;
+
+import java.util.ArrayList;
+
+public class InsertInterval {
+
+	public static ArrayList<Interval> insert(ArrayList<Interval> intervals,
+			Interval newInterval) {
+		ArrayList<Interval> mergedIntervals = new ArrayList<Interval>();
+		boolean isMerged = false;
+		Interval mergedInterval = newInterval;
+		for (int i = 0; i < intervals.size(); i++) {
+			if (isMerged) {
+				mergedIntervals.add(intervals.get(i));
+				continue;
+			}
+			Interval oldInterval = intervals.get(i);
+			if (mergedInterval.end < oldInterval.start) {
+				mergedIntervals.add(mergedInterval);
+				mergedIntervals.add(oldInterval);
+				isMerged = true;
+			} else if (mergedInterval.start <= oldInterval.end) {
+				Interval tmp = new Interval(Math.min(mergedInterval.start,
+						oldInterval.start), Math.max(mergedInterval.end,
+						mergedInterval.end));
+				mergedInterval = tmp;
+			} else {
+				mergedIntervals.add(oldInterval);
+			}
+
+		}
+		
+		if (!isMerged) {
+			mergedIntervals.add(mergedInterval);
+		}
+		return mergedIntervals;
+	}
+	
+	
+	public static void main(String[] args) {
+		Interval i1 = new Interval(1, 3);
+		Interval i2 = new Interval(6, 9);
+		ArrayList<Interval> a1 = new ArrayList<>();
+		a1.add(i1);
+		a1.add(i2);
+		
+		printArrayList(a1);
+		Interval i = new Interval(2, 5);
+		
+		a1 = insert(a1, i);
+		
+	}
+	
+	
+	public static void printArrayList(ArrayList<Interval> a) {
+		for (Interval i : a) {
+			System.out.print(i + " ");
+		}
+		System.out.println();
+	}
+}

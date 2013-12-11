@@ -1,0 +1,14 @@
+package robotMovingBoard;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
+public class WithLimit {
+	private static boolean isFree(int x, int y) {
+		return true;
+	}
+	
+	public boolean getPath(int x, int y, ArrayList<Point> path) {
+		
+	}
+}

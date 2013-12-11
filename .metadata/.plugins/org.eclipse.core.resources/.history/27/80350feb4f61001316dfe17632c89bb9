@@ -1,0 +1,59 @@
+package distinctSubsequences;
+
+import java.util.ArrayList;
+
+public class RefinedDS {
+	public static int numDistinct(String S, String T) {
+		S = S.toLowerCase();
+		T = T.toLowerCase();
+		if (S.length() < T.length()) {
+			return 0;
+		}
+
+		if (T.length() == 0 && S.length() != 0) {
+			return 1;
+		}
+
+		if (T.length() == 0 && S.length() == 0) {
+			return 1;
+		}
+
+		ArrayList<Character> s = new ArrayList<Character>();
+		ArrayList<Integer> ns = new ArrayList<Integer>();
+		ArrayList<Character> t = new ArrayList<Character>();
+		ArrayList<Integer> nt = new ArrayList<Integer>();
+		shrink(s, ns, S);
+		shrink(t, nt, T);
+
+
+		ArrayList<Integer> count = new ArrayList<Integer>();
+		int result = 0;
+		int pt = 0;
+		for (int ps = 0; ps < s.size(); ps++) {
+			if ((s.get(ps) == t.get(pt)) && (ns.get(ps) >= nt.get(pt))) {
+				count.add(ns.get(ps));
+				pt++;
+				if (pt == t.size()) {
+					result += total(nt, count);
+					pt = 0;
+					count.clear();
+				}
+			} else {
+				pt = 0;
+				count.clear();
+			}
+		}
+
+		return result;
+	}
+	
+	public static void main(String[] args) {
+//		String S = "ABCDE";
+//		String T = "AEC";
+		// String S = "rabbbit";
+		// String T = "rabbit";
+		 String S = "aacaacca";
+		 String T = "ca";
+		System.out.println(numDistinct(S, T));
+	}
+}

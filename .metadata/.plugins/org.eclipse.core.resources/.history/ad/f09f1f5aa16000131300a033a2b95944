@@ -1,0 +1,33 @@
+package reorderList;
+
+public class O1ReorderList {
+	public static void reorderList(ListNode head) {
+		if (head == null || head.next == null) {
+			return;
+		}
+		ListNode runner = head;
+		ListNode walker = head;
+		
+		while (runner != null && runner.next != null) {
+			runner = runner.next.next;
+			walker = walker.next;
+		}
+		
+		ListNode reverseHead = walker.next;
+		walker.next = null;
+		reverseHead = reverseList(reverseHead);
+	}
+
+	private static ListNode reverseList(ListNode head) {
+		if (head == null) {
+			return null;
+		}
+		ListNode cur = head;
+		ListNode newHead = cur;
+		
+		while (cur.next != null) {
+			ListNode tmp = cur.next;
+		}
+		return null;
+	}
+}

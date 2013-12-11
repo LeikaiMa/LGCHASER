@@ -1,0 +1,29 @@
+package distinctSubsequences;
+
+public class DistinctSubsequences {
+	public static int numDistinct(String S, String T) {
+		S = S.toLowerCase();
+		T = T.toLowerCase();
+		if (S.length() < T.length()) {
+			return 0;
+		}
+		if (T == null && S == null) {
+			
+		}
+		char[] s = new char[S.length()];
+		int [] ns = new int[S.length()];
+		char[] t = new char[T.length()];
+		int[] nt = new int[T.length()];
+		
+		for (int i = 0; i < S.length(); i++) {
+			
+		}
+		
+		return 0;
+	}
+
+	public static void main(String[] args) {
+
+	}
+
+}

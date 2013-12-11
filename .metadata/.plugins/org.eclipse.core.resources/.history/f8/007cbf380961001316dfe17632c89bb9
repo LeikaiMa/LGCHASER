@@ -1,0 +1,18 @@
+package insertInterval;
+
+import java.util.ArrayList;
+
+public class InsertInterval {
+
+	public static ArrayList<Interval> insert(ArrayList<Interval> intervals,
+			Interval newInterval) {
+		ArrayList<Interval> mergedIntervals = new ArrayList<Interval>();
+		boolean isMerged = false
+		Interval mergedInterval = intervals.get(0);
+		for (int i = 1; i < intervals.size(); i++) {
+			Interval oldInterval = intervals.get(i);
+			
+		}
+		return null;
+	}
+}

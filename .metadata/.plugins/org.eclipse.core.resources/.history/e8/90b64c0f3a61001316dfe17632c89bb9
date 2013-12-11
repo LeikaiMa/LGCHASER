@@ -1,0 +1,20 @@
+package distinctSubsequences;
+
+public class DistinctSubsequences {
+	public static int numDistinct(String S, String T) {
+		S = S.toLowerCase();
+		T = T.toLowerCase();
+		if (S.length() < T.length()) {
+			return 0;
+		}
+		char[] s = new char[S.length()];
+		int [] ns = new int[S.length()];
+		
+		return 0;
+	}
+
+	public static void main(String[] args) {
+
+	}
+
+}

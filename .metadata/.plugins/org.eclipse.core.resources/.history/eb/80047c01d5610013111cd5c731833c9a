@@ -1,0 +1,7 @@
+package robotMovingBoard;
+
+public class WithLimit {
+	private static boolean isFree(int x, int y) {
+		return true;
+	}
+}

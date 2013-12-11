@@ -1,0 +1,12 @@
+package insertInterval;
+
+import java.util.ArrayList;
+
+public class InsertInterval {
+
+	public static ArrayList<Interval> insert(ArrayList<Interval> intervals,
+			Interval newInterval) {
+		ArrayList<Interval> newIntervals;
+		return null;
+	}
+}

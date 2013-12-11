@@ -1,0 +1,21 @@
+package recursion;
+
+public class Stairs {
+	static int count = 0;
+	public static int stairs (int n, int count) {
+		if (n == 0) {
+			count++;
+			return;
+		} else if (n < 0) {
+			return;
+		} else {
+			stairs(n - 1);
+			stairs(n - 2);
+			stairs(n - 3);
+		}
+	}
+	public static void main(String[] args) {
+
+	}
+
+}

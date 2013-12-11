@@ -1,0 +1,14 @@
+package recursion;
+
+public class Stairs {
+	static int count = 0;
+	public static void  stairs (int n) {
+		if (n == 0) {
+			count
+		}
+	}
+	public static void main(String[] args) {
+
+	}
+
+}

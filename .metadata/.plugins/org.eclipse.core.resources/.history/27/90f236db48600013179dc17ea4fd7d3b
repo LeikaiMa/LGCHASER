@@ -1,0 +1,13 @@
+package test;
+
+import java.util.ArrayList;
+
+public class TestArrayList {
+	public static void main(String[] args) {
+		ArrayList<String> al = new ArrayList<>();
+		al.add("\".Q..\",\"...Q\",\"Q...\",\"..Q.\"");
+		System.out.println(al.toString());
+		
+	}
+
+}

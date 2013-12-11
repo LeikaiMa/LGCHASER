@@ -1,0 +1,38 @@
+package recursion;
+
+public class Stairs {
+	// stairs 是一个简单的递归问题，因为要走不同的步数，所以要不通的看待
+	// 从后往前走，这样递归到最开始的时候，如果正好走到0 就说明这种走法可行
+	// 如果走到最开始为负数，说明这种方法走不通。
+	// 但是这个需要的是O（3^N)
+	public static int stairs(int n) {
+		if (n == 0) {
+			return 1;
+		} else if (n < 0) {
+			return 0;
+		} else {
+			return stairs(n - 1) + stairs(n - 2) + stairs(n - 3);
+		}
+	}
+
+	public static int DPstairs(int n, int[] map) {
+		if (n < 0) {
+			return 0;
+		} else if (n == 0) {
+			return 1;
+		} else if (map[n] > -1) {
+			return map[n];
+		} else {
+			map[n] = DPstairs(n - 1, map) + DPstairs(n - 2, map)
+					+ DPstairs(n - 3, map);
+			return map[n];
+		}
+	}
+
+	public static void main(String[] args) {
+		int n = 4;
+		System.out.println(stairs(n));
+		System.out.println(DPstairs(n, new int[n]));
+	}
+
+}

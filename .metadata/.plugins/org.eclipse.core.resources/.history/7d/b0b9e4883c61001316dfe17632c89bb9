@@ -1,0 +1,42 @@
+package distinctSubsequences;
+
+import java.util.ArrayList;
+import java.util.concurrent.CountDownLatch;
+
+public class DistinctSubsequences {
+	public static int numDistinct(String S, String T) {
+		S = S.toLowerCase();
+		T = T.toLowerCase();
+		if (S.length() < T.length()) {
+			return 0;
+		}
+
+		if (T.length() == 0 && S.length() != 0) {
+			return 1;
+		}
+
+		if (T.length() == 0 && S.length() == 0) {
+			return 1;
+		}
+
+		ArrayList<Character> s= new ArrayList<Character>();
+		ArrayList<Integer> ns = new ArrayList<Integer>();
+		char[] t = new char[T.length()];
+		int[] nt = new int[T.length()];
+		
+		s.add(S.charAt(0));
+		int count = 1;
+		s.las
+
+		for (int i = 1; i < S.length(); i++) {
+			if (S.charAt(i) == s[])
+		}
+
+		return 0;
+	}
+
+	public static void main(String[] args) {
+
+	}
+
+}

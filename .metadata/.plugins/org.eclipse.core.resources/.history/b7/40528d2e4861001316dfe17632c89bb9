@@ -1,0 +1,150 @@
+package distinctSubsequences;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Deque;
+import java.util.LinkedList;
+
+public class DistinctSubsequences {
+	public static int numDistinct(String S, String T) {
+		S = S.toLowerCase();
+		T = T.toLowerCase();
+		if (S.length() < T.length()) {
+			return 0;
+		}
+
+		if (T.length() == 0 && S.length() != 0) {
+			return 1;
+		}
+
+		if (T.length() == 0 && S.length() == 0) {
+			return 1;
+		}
+
+//		Deque<Character> s = new LinkedList<Character>();
+//		Deque<Integer> ns = new LinkedList<Integer>();
+//		Deque<Character> t = new LinkedList<Character>();
+//		Deque<Integer> nt = new LinkedList<Integer>();
+//		shrink(s, ns, S);
+//		shrink(t, nt, T);
+		
+		ArrayList<Character> s = new ArrayList<Character>();
+		ArrayList<Integer> ns = new ArrayList<Integer>();
+		ArrayList<Character> t = new ArrayList<Character>();
+		ArrayList<Integer> nt = new ArrayList<Integer>();
+		shrink(s, ns, S);
+		shrink(t, nt, T);
+		
+		ns = delete(t, s, ns);
+		if (ns == null) {
+			return 0;
+		}
+		
+//
+//		if (s.size() != t.size()) {
+//			return 0;
+//		}
+//		int result = 1;
+//		while (!s.isEmpty()) {
+//			if (s.poll() != t.poll()) {
+//				return 0;
+//			} else {
+//				int countT = nt.poll();
+//				int countS = ns.poll();
+//				if (countS < countT) {
+//					return 0;
+//				} else {
+//					result *= combination(countS, countT);
+//				}
+//			}
+//		}
+//
+//		return result;
+		return 0;
+	}
+
+	
+
+	
+
+
+
+	private static ArrayList<Integer> delete(ArrayList<Character> t,
+			ArrayList<Character> s, ArrayList<Integer> ns) {
+		ArrayList<Integer> newS = new ArrayList<Integer>();
+		int pt = 0;
+		for (int ps = 0; ps < t.size(); ps++) {
+			if (s.get(ps) == t.get(pt)) {
+				pt++;
+				newS.add(ns.get(ps));
+			}
+		}
+		if (pt != t.size()) {
+			return null;
+		} else {
+			return newS;
+		}
+		
+	}
+
+
+
+
+
+
+
+	private static void shrink(ArrayList<Character> s, ArrayList<Integer> ns,
+			String S) {
+		int position = 0;
+		int count = 1;
+		s.add(S.charAt(position));
+		for (int i =1; i < S.length(); i++) {
+			if (s.get(position) == S.charAt(i)) {
+				count++;
+			} else {
+				ns.add(count);
+				s.add(S.charAt(i));
+				count = 1;
+				position++;
+			}
+		}
+		ns.add(count);
+	}
+
+	private static int combination(int m, int n) {
+
+		return factorial(m) / (factorial(n) * factorial(m - n));
+	}
+
+	private static int factorial(int n) {
+		if (n == 0 || n == 1)
+			return 1;
+		else
+			return n * factorial(n - 1);
+	}
+
+//	private static void shrink(Deque<Character> s, Deque<Integer> ns, String S) {
+//		s.add(S.charAt(0));
+//		int count = 1;
+//
+//		for (int i = 1; i < S.length(); i++) {
+//			if (s.getLast() == S.charAt(i)) {
+//				count++;
+//			} else {
+//				ns.add(count);
+//				s.add(S.charAt(i));
+//				count = 1;
+//			}
+//		}
+//		ns.add(count);
+//	}
+	
+	
+
+	public static void main(String[] args) {
+		String S = "ABCDE";
+		String T = "ACE";
+		System.out.println(numDistinct(S, T));
+	}
+
+}
