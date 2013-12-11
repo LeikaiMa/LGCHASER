@@ -1,0 +1,19 @@
+package permutation;
+
+import java.util.ArrayList;
+
+public class Recursion {
+	public static ArrayList<String> getPerms(String str) {
+		if (str == null) {
+			return null;
+		}
+		ArrayList<String> permutations = new ArrayList<String>();
+		if (str.length() == 0) {
+			permutations.add("");
+			return permutations;
+		}
+		
+		char first  = str.charAt(0);
+		String remainder = str.substring(1);
+	}
+}

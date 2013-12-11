@@ -1,0 +1,11 @@
+package testString;
+
+public class SubStringExceedLength {
+
+	public static void main(String[] args) {
+		String s = "abc";
+		String subString = s.substring(1, 5);
+		System.out.println(subString);
+	}
+
+}
