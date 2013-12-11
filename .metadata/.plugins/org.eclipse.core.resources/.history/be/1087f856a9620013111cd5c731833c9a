@@ -1,0 +1,16 @@
+package treeSearch;
+
+public class DFS {
+	public void search (Node root) {
+		if (root == null) {
+			return;
+		}
+		visit(root);
+	}
+
+	public void visit(Node root) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

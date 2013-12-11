@@ -1,0 +1,6 @@
+package treeSearch;
+
+public class Node {
+	public boolean visited = false;
+
+}

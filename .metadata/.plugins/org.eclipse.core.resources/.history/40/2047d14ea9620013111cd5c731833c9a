@@ -1,0 +1,10 @@
+package treeSearch;
+
+public class DFS {
+	public void search (Node root) {
+		if (root == null) {
+			return;
+		}
+	}
+
+}
