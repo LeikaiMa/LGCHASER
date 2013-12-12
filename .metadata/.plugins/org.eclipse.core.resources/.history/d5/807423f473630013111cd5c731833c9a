@@ -1,0 +1,7 @@
+package binarySearch;
+
+public class NoRecursion {
+	pubic int binarySearch(int[] a, int x) {
+		
+	}
+}

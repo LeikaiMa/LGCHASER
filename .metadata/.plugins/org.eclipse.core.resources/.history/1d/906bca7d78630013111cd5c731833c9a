@@ -1,0 +1,8 @@
+package mergeArrays;
+
+public class MergeTwoSortedArrays {
+	public static void merge(int[] a, int[] b, int lastA, int lastB) {
+		int indexA = lastA - 1;
+
+	}
+}

@@ -1,0 +1,22 @@
+package anagrams;
+
+import java.util.Arrays;
+import java.util.Hashtable;
+import java.util.LinkedList;
+
+public class GroupByHashtable {
+	public void sort(String[] array) {
+		Hashtable<String, LinkedList<String>> hash = new Hashtable<>();
+		
+		for (String s: array) {
+			String key = sortChars(s);
+		}
+	}
+
+	private String sortChars(String s) {
+		char[] content = s.toCharArray();
+		Arrays.sort(content);
+		return new String(content);
+	}
+
+}

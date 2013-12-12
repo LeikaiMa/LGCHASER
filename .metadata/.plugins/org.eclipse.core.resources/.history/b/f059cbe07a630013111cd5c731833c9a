@@ -1,0 +1,10 @@
+package anagrams;
+
+import java.util.Comparator;
+
+public class AnagramComparator implements Comparator<String>{
+	public String sortChars(String s) {
+		
+	}
+
+}
