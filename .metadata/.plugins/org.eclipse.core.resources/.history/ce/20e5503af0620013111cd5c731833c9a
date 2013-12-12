@@ -1,0 +1,12 @@
+package route;
+
+public class RouteBetweenTwoNodes {
+	public enum State {
+		Unvisited, Visited, Visting;
+	}
+	
+	public Static boolean search(Graph g, Node start, Node end) {
+		
+	}
+
+}

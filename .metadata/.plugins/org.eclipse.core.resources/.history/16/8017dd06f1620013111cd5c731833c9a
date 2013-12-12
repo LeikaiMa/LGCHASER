@@ -1,0 +1,14 @@
+package treeSearch;
+
+import java.util.ArrayList;
+
+
+public class Node {
+	public enum State {
+		Unvisited, Visited, Visting;
+	}
+	public State state;
+	public boolean visited = false;
+	public ArrayList<Node> adjacent = new ArrayList<>();
+
+}

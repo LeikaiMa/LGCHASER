@@ -1,0 +1,10 @@
+package route;
+
+public class RouteBetweenTwoNodes {
+	public enum State {
+		Unvisited, Visited, Visting;
+	}
+	
+	
+
+}

@@ -1,0 +1,22 @@
+package checkBalancedTree;
+
+public class NotEntireCheck {
+	public static int checkHeight(TreeNode root) {
+		if (root == null) {
+			return 0;
+		}
+		
+		int leftHeight = checkHeight(root.left);
+		if (leftHeight == -1) {
+			
+		}
+	}
+	
+	public static boolean isBalanced(TreeNode root) {
+		if (checkHeight(root) == -1) {
+			return false;
+		} else {
+			return true;
+		}
+	}
+}

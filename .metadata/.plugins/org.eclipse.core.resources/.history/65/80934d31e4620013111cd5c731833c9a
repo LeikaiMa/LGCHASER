@@ -1,0 +1,7 @@
+package checkBalancedTree;
+
+public class checkEntire {
+	public static int getHeight(TreeNode root) {
+		
+	}
+}

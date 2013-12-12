@@ -1,0 +1,7 @@
+package checkBalancedTree;
+
+public class NotEntireCheck {
+	public static boolean isBalanced(TreeNode root) {
+		
+	}
+}
