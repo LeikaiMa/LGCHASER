@@ -1,0 +1,10 @@
+package btIsBST;
+
+import checkBalancedTree.TreeNode;
+
+public class StaticInt {
+	public static int last_printed = Integer.MIN_VALUE;
+	public static boolean checkBST(TreeNode n) {
+		
+	}
+}

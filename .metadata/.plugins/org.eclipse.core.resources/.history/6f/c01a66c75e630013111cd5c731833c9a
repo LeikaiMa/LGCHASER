@@ -1,0 +1,9 @@
+package btIsBST;
+
+import checkBalancedTree.TreeNode;
+
+public class MinMax {
+	public boolean checkBST(TreeNode n) {
+		
+	}
+}

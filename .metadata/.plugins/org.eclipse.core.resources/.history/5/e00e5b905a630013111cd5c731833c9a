@@ -1,0 +1,11 @@
+package btIsBST;
+
+import checkBalancedTree.TreeNode;
+
+public class InOrder {
+	public static int index = 0;
+	public static void copyBST(TreeNode root, int[] array) {
+		
+	}
+
+}

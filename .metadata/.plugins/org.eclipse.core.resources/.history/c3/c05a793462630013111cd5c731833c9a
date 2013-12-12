@@ -1,0 +1,23 @@
+package nextNode;
+
+import checkBalancedTree.TreeNode;
+
+public class LeftMostChild {
+	public TreeNode inoderSucc(TreeNode n) {
+		if (n == null) {
+			return null;
+		}
+	}
+	
+	
+	
+	
+	public TreeNode leftMostChild(TreeNode n) {
+		if (n == null) {
+			return null;
+		}
+		
+		while (n.left != null);
+		return n;
+	}
+}
