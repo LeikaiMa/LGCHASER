@@ -1,0 +1,21 @@
+package binaryTreeInorderTraversal;
+
+import java.util.ArrayList;
+import java.util.Stack;
+
+public class Iterative {
+	
+	public static ArrayList<Integer> InOderTraversal(TreeNode root) {
+		ArrayList<Integer> arrayList = new ArrayList<Integer>();
+		Stack<Integer> stack = new Stack<Integer>();
+ 	}
+	public static void main(String[] args) {
+		TreeNode one = new TreeNode(1);
+		TreeNode two = new TreeNode(2);
+		TreeNode three = new TreeNode(3);
+		one.right = two;
+		two.left = three;
+		ArrayList<Integer> inOderTraversal = InOderTraversal(one);
+		System.out.println(inOderTraversal.toString());
+	}
+}
