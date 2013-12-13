@@ -1,0 +1,13 @@
+package rotatedArray;
+
+public class customBinarySearch {
+	public int search(int[] a, int left, int right, int x) {
+		int mid = (left + right) / 2;
+		if (x == a[mid]) {
+			return mid;
+		}
+		if (right < left) {
+			
+		}
+	}
+}

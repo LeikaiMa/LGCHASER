@@ -1,0 +1,40 @@
+package rotatedArray;
+// 对于rotated 的sorted array，本能想到是二分法。
+// 但是因为顺序不同，所以要对原来的bineray search 要进行
+public class customBinarySearch {
+	public int search(int[] a, int left, int right, int x) {
+		int mid = (left + right) / 2;
+		if (x == a[mid]) {
+			return mid;
+		}
+		if (right < left) {
+			return -1;
+		}
+		
+		if (a[left] < a[mid]) {
+			if (x >= a[left] && x <= a[mid]) {
+				return search(a, left, mid -1, x);
+			} else {
+				return search(a, mid+1, right, x);
+			}
+		} else if (a[mid] < a[left]) {
+			if (x >= a[mid] && x <= a[right]) {
+				return search(a, mid + 1, right, x);
+			} else {
+				return search(a, left, mid - 1, x);
+			}
+		} else if (a[left] == a[mid]) {
+			if (a[mid] != right) {
+				return search(a, mid+1, right, x);
+			} else {
+				int result = search(a, left, mid - 1, x);
+				if (result == -1) {
+					return search(a, mid + 1, right, x);
+				} else {
+					return result;
+				}
+			}
+		}
+		return -1;
+	}
+}
