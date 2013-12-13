@@ -1,0 +1,10 @@
+package stackWithMin;
+
+import java.util.Stack;
+
+public class StackWithMin extends Stack<NodeWithMin>{
+	public void push(int value) {
+		
+	}
+
+}

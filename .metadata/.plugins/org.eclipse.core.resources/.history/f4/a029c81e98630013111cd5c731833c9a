@@ -1,0 +1,23 @@
+package stackWithMin;
+
+import java.util.Stack;
+
+public class StackWithMin2 extends Stack<Integer>{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	Stack<Integer> s2;
+	public StackWithMin2() {
+		s2 = new Stack<>();
+	}
+	
+	public void push(int value) {
+		if (value <= min()) {
+			
+		}
+	}
+
+}	

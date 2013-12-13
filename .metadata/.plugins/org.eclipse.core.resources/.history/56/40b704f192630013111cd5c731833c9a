@@ -1,0 +1,12 @@
+package queue;
+
+import stack.Node;
+
+
+public class Queue {
+	Node first, last;
+	
+	public void enqueue(int item) {
+		
+	}
+}

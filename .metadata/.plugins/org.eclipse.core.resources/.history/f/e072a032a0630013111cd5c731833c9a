@@ -1,0 +1,22 @@
+package stackSets;
+
+import java.util.ArrayList;
+
+public class SetOfStacks {
+	ArrayList<Stack> stacks = new ArrayList<>();
+	public int capacity;
+	public SetOfStacks(int capacity) {
+		this.capacity = capacity;
+	}
+	
+	public Stack getLastStack() {
+		if (stacks.size() == 0) {
+			return null;
+		}
+		return stacks.get(stacks.size() - 1);
+	}
+	
+	public void push(int v) {
+		Stack last = getLastStack();
+	}
+}

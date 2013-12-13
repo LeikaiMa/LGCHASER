@@ -1,0 +1,9 @@
+package stackSets;
+
+import stack.Node;
+
+public class Stack {
+	private int capacity;
+	public Node top, bottom;
+	public int size = 0;
+}

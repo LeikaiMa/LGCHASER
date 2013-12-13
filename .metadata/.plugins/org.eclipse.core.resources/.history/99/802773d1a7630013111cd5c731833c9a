@@ -1,0 +1,8 @@
+package hanoi;
+
+import java.util.Stack;
+
+public class Tower {
+	private Stack<Integer> disks;
+	private int index;
+}

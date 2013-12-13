@@ -1,0 +1,34 @@
+package hanoi;
+
+import java.util.Stack;
+// 这里面先检查是否为empty 可以保证peek 没有错。
+public class Tower {
+	private Stack<Integer> disks;
+	private int index;
+	public Tower (int i) {
+		disks = new Stack<>();
+		index = i;
+	}
+	
+	public int index() {
+		return index;
+	}
+	
+	public void add(int d) {
+		if (!disks.isEmpty() && disks.peek() <= d) {
+			System.out.println("Error placing disk" + d);
+		} else {
+			disks.push(d);
+		}
+	}
+	
+	public void moveTopTo(Tower t) {
+		int top = disks.pop();
+		t.add(top);
+		System.out.println("Move disk " + top + " from " + index() +  " to " + t.index());
+	}
+	
+	public void moveDisks(int n, Tower destination, Tower buffer) {
+		
+	}
+}

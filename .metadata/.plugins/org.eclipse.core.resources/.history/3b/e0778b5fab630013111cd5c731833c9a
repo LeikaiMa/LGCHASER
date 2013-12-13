@@ -1,0 +1,11 @@
+package hanoi;
+
+public class TowerOfHanoi {
+	public static void main(String[] args) {
+		int n = 3;
+		Tower[] towers = new Tower[n];
+		for (int i = 0; i < 3; i++) {
+			towers[i] = new Tower(i)
+		}
+	}
+}
