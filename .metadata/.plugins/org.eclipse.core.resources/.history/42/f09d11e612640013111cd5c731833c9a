@@ -1,0 +1,11 @@
+package paintFill;
+
+public class PaintFill {
+	enum Color {
+		Black, White, Red, Yellow, Green
+	}
+	
+	public boolean paintFull(Color[][] screen, int x, int y, Color ocolor, Color ncolor) {
+		
+	}
+}

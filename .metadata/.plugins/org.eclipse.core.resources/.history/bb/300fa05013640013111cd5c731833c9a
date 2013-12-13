@@ -1,0 +1,22 @@
+package paintFill;
+
+public class PaintFill {
+	enum Color {
+		Black, White, Red, Yellow, Green
+	}
+
+	public boolean paintFull(Color[][] screen, int x, int y, Color ocolor,
+			Color ncolor) {
+		if (x < 0 || x >= screen[0].length || y < 0 || y >= screen.length) {
+			return false;
+		}
+		
+		if (screen[y][x] == ocolor) {
+			screen[y][x] = ncolor;
+			paintFull(screen, x-1, y, ocolor, ncolor);
+			paintFull(screen, x+1, y, ocolor, ncolor);
+			paintFull(screen, x, y-1, ocolor, ncolor);
+			paintFull(screen, x, y+1, ocolor, ncolor);
+		}
+	}
+}

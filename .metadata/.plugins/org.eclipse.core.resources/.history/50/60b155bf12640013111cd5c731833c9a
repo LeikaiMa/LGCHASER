@@ -1,0 +1,7 @@
+package paintFill;
+
+public class PaintFill {
+	enum Color {
+		
+	}
+}
