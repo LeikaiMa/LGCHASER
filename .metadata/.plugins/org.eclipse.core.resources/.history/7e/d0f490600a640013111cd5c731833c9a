@@ -1,0 +1,7 @@
+package isPermutation;
+
+public class Permutation {
+	public boolean permutation(String s, String t) {
+		
+	}
+}

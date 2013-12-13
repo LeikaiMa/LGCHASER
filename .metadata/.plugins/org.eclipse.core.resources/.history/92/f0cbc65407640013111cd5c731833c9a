@@ -1,0 +1,11 @@
+package uniqueCharacters;
+
+public class UniqueCharacter {
+	public boolean isUniqueChars(String str) {
+		if (str.length() > 256) {
+			return false;
+		}
+		
+		boolean[] char_set = new boolean[256];
+	}
+}

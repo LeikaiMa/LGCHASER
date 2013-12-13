@@ -1,0 +1,14 @@
+package isPermutation;
+
+public class Permutation {
+	public boolean permutation(String s, String t) {
+		if (s.length() != t.length()) {
+			return false;
+		}
+		return sort(s).equals(sort(t));
+	}
+	
+	public String sort(String s) {
+		char[] content = s.toCharArray();
+	}
+}

@@ -1,0 +1,7 @@
+package replaceSpace;
+
+public class ReplaceSpaces {
+	public void replaceSpaces(char[] str, int length) {
+		
+	}
+}
