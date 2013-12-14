@@ -1,0 +1,6 @@
+package findElementInMatrix;
+
+public class Coordinate implements Cloneable{
+	public int row;
+	public int column;
+}

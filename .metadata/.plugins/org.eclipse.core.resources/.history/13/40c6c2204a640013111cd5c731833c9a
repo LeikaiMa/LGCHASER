@@ -1,0 +1,14 @@
+package circusTower;
+
+public class HtWt implements Comparable<HtWt>{
+	Integer Ht;
+	Integer Wt;
+	public int compareTo(HtWt s) {
+		HtWt second = s;
+		if (this.Ht != second.Ht) {
+			return this.Ht.compareTo(second.Ht);
+		} else {
+			return this.Wt.compareTo(second.Wt);
+		}
+	}
+}

@@ -1,0 +1,18 @@
+package findGivenString;
+
+public class BinarySearch {
+	public int searchR(String[] strings, String str, int first, int last ) {
+		if (first >last) {
+			return -1;
+		}
+	}
+	
+	
+	
+	public int search(String[] strings, String str) {
+		if (strings == null || str == null || str == "") {
+			return  -1;
+		}
+		return searchR(strings, str, 0, strings.length - 1);
+	}
+}

@@ -1,0 +1,7 @@
+package findGivenString;
+
+public class BinarySearch {
+	public int search(String[] strings, String str) {
+		
+	}
+}

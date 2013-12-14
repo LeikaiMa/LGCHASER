@@ -1,0 +1,6 @@
+package circusTower;
+
+public class HtWt implements Comparable<HtWt>{
+	int Ht;
+	int Wt;
+}

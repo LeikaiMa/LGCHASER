@@ -1,0 +1,10 @@
+package circusTower;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class IncreasingSequence {
+	ArrayList<HtWt> getIncreasingSequence(ArrayList<HtWt> items) {
+		Collections.sort(items);
+	}
+}

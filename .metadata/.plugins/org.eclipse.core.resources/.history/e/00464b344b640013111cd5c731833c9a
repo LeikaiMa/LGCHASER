@@ -1,0 +1,17 @@
+package circusTower;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class IncreasingSequence {
+	public ArrayList<HtWt> getIncreasingSequence(ArrayList<HtWt> items) {
+		Collections.sort(items);
+		return longestIncreasingSubsequence(items);
+	}
+	
+	public ArrayList<HtWt> longestIncreasingSubsequence(ArrayList<HtWt> array) {
+		@SuppressWarnings("unchecked")
+		ArrayList<HtWt>[] solutions = new ArrayList[array.size()];
+		longestIncreasingSubsequence(array, solutions, 0);
+	}
+}

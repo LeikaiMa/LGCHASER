@@ -1,0 +1,8 @@
+package findElementInMatrix;
+
+public class BinarySearch {
+
+	public static Coordinate findElement(int[][] matrix, int x) {
+		Coordinate origin = new Coordinate(0, 0);
+	}
+}

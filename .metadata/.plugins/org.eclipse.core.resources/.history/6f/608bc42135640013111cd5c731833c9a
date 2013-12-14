@@ -1,0 +1,7 @@
+package findElementInMatrix;
+
+public class Elimination {
+	public static boolean findElement(int[][] matrix, int elem) {
+		int row = 0;
+	}
+}
