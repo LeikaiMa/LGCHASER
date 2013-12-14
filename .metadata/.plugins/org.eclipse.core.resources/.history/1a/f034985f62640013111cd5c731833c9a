@@ -1,0 +1,14 @@
+package subSets;
+
+import java.util.ArrayList;
+
+public class Subsets {
+	public static ArrayList<ArrayList<Integer>> subsets(int[] S) {
+		return null;
+	}
+	
+	
+	public static void main(String[] args) {
+		int[] S = int[3];
+	}
+}

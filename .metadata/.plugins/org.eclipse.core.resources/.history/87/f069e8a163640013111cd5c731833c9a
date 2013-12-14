@@ -1,0 +1,10 @@
+package testArray;
+
+public class ReverseSortInt {
+	public static void main(String[] args) {
+		int[] S = new int[3];
+		S[0] = 1;
+		S[1] = 2;
+		S[2] = 3;
+	}
+}

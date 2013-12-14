@@ -1,0 +1,7 @@
+package testArrayList;
+
+public class ChangeContent {
+	public static void main(String[] args) {
+		
+	}
+}

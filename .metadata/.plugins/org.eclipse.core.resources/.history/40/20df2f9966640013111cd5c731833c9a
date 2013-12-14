@@ -1,0 +1,11 @@
+package testArrayList;
+
+import java.util.ArrayList;
+
+public class ChangeContent {
+	public static void main(String[] args) {
+		ArrayList<Integer> a1 = new ArrayList<>();
+		a1.add(1);
+		ArrayList<Integer> a2 = new ArrayList<>();
+	}
+}

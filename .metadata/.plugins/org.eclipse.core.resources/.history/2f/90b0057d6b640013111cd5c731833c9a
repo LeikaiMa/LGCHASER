@@ -1,0 +1,14 @@
+package testArrayList;
+
+import java.util.ArrayList;
+
+public class CollectionSort {
+	public static void main(String[] args) {
+		ArrayList<Integer> i = new ArrayList<>();
+		i.add(1);
+		i.add(3);
+		i.add(2);
+		System.out.println(i);
+	}
+	
+ }

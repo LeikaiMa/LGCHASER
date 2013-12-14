@@ -1,0 +1,16 @@
+package testArray;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+
+public class ReverseSortInt {
+	public static void main(String[] args) {
+		int[] S = new int[3];
+		S[0] = 1;
+		S[1] = 2;
+		S[2] = 3;
+		System.out.println(Arrays.toString(S));
+		ArrayList<Integer> arrayList = new ArrayList<>();
+	}
+}

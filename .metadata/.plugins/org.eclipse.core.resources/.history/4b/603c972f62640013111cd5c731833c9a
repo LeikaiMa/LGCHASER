@@ -1,0 +1,7 @@
+package subSets;
+
+public class Subsets {
+	public ArrayList<ArrayList<Integer>> subsets(int[] S) {
+
+	}
+}
