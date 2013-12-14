@@ -1,0 +1,11 @@
+package sudoku;
+
+public class Sudoku {
+	
+	
+	
+	public static void main(String[] args) {
+		char[][] board = new char[9][9];
+		String[] lines = new String[9];
+	}
+}

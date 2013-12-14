@@ -1,0 +1,13 @@
+package testArray;
+
+public class ChangeContent {
+	private static void change(char[][] a) {
+		char[][] b=a;
+	}
+	public static void main(String[] args) {
+		char[][] a = new char[9][9];
+		chage(a);
+		System.out.println(a[0][0]);
+	}
+
+}

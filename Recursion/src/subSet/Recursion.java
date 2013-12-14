@@ -7,6 +7,7 @@ package subSet;
 // 如果不是的话就要进行递归，得到返回的值，正好将此时的index取出的值塞进去。
 // 这里面用到了arraylist 嵌套 arraylist。 同时用到了arraylist addall两种不同的方法。
 // 而且定义moresubset 单独处理是个好习惯。
+// 要把里面的值deep copy 过来可以新建一个，然后将里面的值add All
 
 import java.util.ArrayList;
 

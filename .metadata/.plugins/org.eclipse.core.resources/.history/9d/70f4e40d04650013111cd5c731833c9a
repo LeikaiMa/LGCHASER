@@ -1,0 +1,128 @@
+package sudoku;
+
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
+public class Example {
+	public boolean isValid(char[][] board, int a, int b){
+//        boolean[] flag = new boolean[9];
+        
+        
+        Set<Character> contained = new HashSet<Character>();
+        for(int j=0;j<9;j++){
+            if(contained.contains(board[a][j])) return false;
+            if(board[a][j]>'0' && board[a][j]<='9')
+                contained.add(board[a][j]);
+        }
+            
+        
+    
+        contained = new HashSet<Character>();
+        for(int j=0;j<9;j++){
+            if(contained.contains(board[j][b])) return false;
+            if(board[j][b]>'0' && board[j][b]<='9')
+                contained.add(board[j][b]);
+        }
+        
+    
+        contained = new HashSet<Character>();
+        for(int m=0;m<3;m++){
+            for(int n=0;n<3;n++){
+                int x=a/3*3+m, y=b/3*3+n;
+                if(contained.contains(board[x][y])) return false;
+                    if(board[x][y]>'0' && board[x][y]<='9')
+                        contained.add(board[x][y]);
+            }  
+        }
+    
+        return true;
+    }
+    
+    public boolean isValidSudoku(char[][] board) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        for(int i=0;i<9;i++){
+            for(int j=0;j<9;j++){
+                if(board[i][j]=='.'){
+                    for(int k=0;k<9;k++){
+                        board[i][j]=(char)('1'+k);
+                        if(isValid(board,i,j) && isValidSudoku(board)) return true;
+                        board[i][j]='.';
+                    }
+                    return false;
+                }
+            }
+        }
+        return true;   
+    }
+    
+    public static void printBoard(char[][] board) {
+		for (int i = 0; i < 9; i++) {
+			System.out.println(Arrays.toString(board[i]));
+		}
+		System.out.println("-------------");
+	}
+
+	public static void main(String[] args) {
+		char[][] board = new char[9][9];
+		String[] lines = new String[9];
+
+		lines[0] = "..4...63.";
+		lines[1] = ".........";
+		lines[2] = "5......9.";
+		lines[3] = "...56....";
+		lines[4] = "4.3.....1";
+		lines[5] = "...7.....";
+		lines[6] = "...5.....";
+		lines[7] = ".........";
+		lines[8] = ".........";
+
+		// lines[0] = "53..7....";
+		// lines[1] = "6..195...";
+		// lines[2] = ".98....6.";
+		// lines[3] = "8...6...3";
+		// lines[4] = "4..8.3..1";
+		// lines[5] = "7...2...6";
+		// lines[6] = ".6....28.";
+		// lines[7] = "...419..5";
+		// lines[8] = "....8..79";
+		// lines[0] = "...26.7.1";
+		// lines[1] = "68..7..9.";
+		// lines[2] = "19...45..";
+		// lines[3] = "82.1...4.";
+		// lines[4] = "..46.29..";
+		// lines[5] = ".5...3.28";
+		// lines[6] = "..93...74";
+		// lines[7] = ".4..5..36";
+		// lines[8] = "7.3.18...";
+		// lines[0] = ".87654321";
+		// lines[1] = "2........";
+		// lines[2] = "3........";
+		// lines[3] = "4........";
+		// lines[4] = "5........";
+		// lines[5] = "6........";
+		// lines[6] = "7........";
+		// lines[7] = "8........";
+		// lines[8] = "9........";
+		// lines[0] = "..5.....6";
+		// lines[1] = "....14...";
+		// lines[2] = ".........";
+		// lines[3] = ".....92..";
+		// lines[4] = "5....2...";
+		// lines[5] = ".......3.";
+		// lines[6] = "...54....";
+		// lines[7] = "3.....42.";
+		// lines[8] = "...27.6..";
+
+		for (int i = 0; i < 9; i++) {
+			board[i] = lines[i].toCharArray();
+		}
+		printBoard(board);
+		BruteForce bf = new BruteForce();
+		if (bf.isValidSudoku(board)) {
+			printBoard(board);
+		}
+
+	}
+}

@@ -1,0 +1,8 @@
+package testArray;
+
+public class ChangeContent {
+	public static void main(String[] args) {
+		char[][] a = new char[9][9];
+	}
+
+}
