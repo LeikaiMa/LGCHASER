@@ -1,0 +1,8 @@
+package compressString;
+
+public class CompressBad {
+	public String compressBad(String str) {
+		String mystr = "";
+		char last = str.charAt(0);
+	}
+}

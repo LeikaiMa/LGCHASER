@@ -1,0 +1,10 @@
+package rotate;
+
+public class RotateMatrixPixel {
+	public void rotate(int[][] matrix, int n) {
+		for (int layer = 0; layer < n / 2; ++layer) {
+			int first = layer;
+			int last = n - 1 - layer;
+		}
+	}
+}

@@ -1,0 +1,7 @@
+package rotationSubString;
+
+public class RotationSubString {
+	public boolean isRotation(String s1, String s2) {
+		
+	}
+}

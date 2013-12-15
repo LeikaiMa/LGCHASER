@@ -1,0 +1,7 @@
+package setZero;
+
+public class SetZero {
+	public void setZeros(int[][] matrix) {
+		
+	}
+}

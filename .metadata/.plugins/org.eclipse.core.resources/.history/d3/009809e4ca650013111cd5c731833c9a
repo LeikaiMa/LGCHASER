@@ -1,0 +1,7 @@
+package compressString;
+
+public class CompressBetter {
+	public String compressBetter(String str) {
+		
+	}
+}
