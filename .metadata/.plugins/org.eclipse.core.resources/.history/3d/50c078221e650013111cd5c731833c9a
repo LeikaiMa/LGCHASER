@@ -1,0 +1,50 @@
+package fourSum;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class FourSum {
+	public ArrayList<ArrayList<Integer>> fourSum(int[] num, int target) {
+		ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
+		ArrayList<ArrayList<Integer>> targetResult = new ArrayList<ArrayList<Integer>>();
+		ArrayList<Integer> input = new ArrayList<Integer>();
+		for (int i : num) {
+			input.add(i);
+		}
+		Collections.sort(input, Collections.reverseOrder());
+		subSet(result, input, 0);
+		
+		for (ArrayList<Integer> r: result) {
+			int sum = 0;
+			for (int i: r) {
+				sum+=i;
+			}
+			if (sum == target) {
+				targetResult.add(r)
+			}
+		}
+		return result;
+	}
+
+	public static void subSet(ArrayList<ArrayList<Integer>> result,
+			ArrayList<Integer> input, int index) {
+		if (index == input.size()) {
+			ArrayList<Integer> arrayList = new ArrayList<Integer>();
+			result.add(arrayList);
+		} else {
+			ArrayList<ArrayList<Integer>> moreSets = new ArrayList<ArrayList<Integer>>();
+			subSet(result, input, index + 1);
+			for (ArrayList<Integer> subSets : result) {
+				if (subSets.size() > 3) {
+					continue;
+				}
+				ArrayList<Integer> tmpsets = new ArrayList<Integer>();
+				tmpsets.addAll(subSets);
+				tmpsets.add(input.get(index));
+				moreSets.add(tmpsets);
+			}
+			result.addAll(moreSets);
+		}
+	}
+
+}

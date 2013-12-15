@@ -1,0 +1,32 @@
+package fourSum;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class FourSum {
+	public ArrayList<ArrayList<Integer>> fourSum(int[] num, int target) {
+		ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
+		ArrayList<Integer> input = new ArrayList<Integer>();
+		for (int i : num) {
+			input.add(i);
+		}
+		Collections.sort(input, Collections.reverseOrder());
+		subSet(result, input, 0);
+		return result;
+	}
+	
+	public static void subSet(ArrayList<ArrayList<Integer>> result, ArrayList<Integer> input, int index) {
+		if (index == input.size()) {
+			ArrayList<Integer> arrayList = new ArrayList<Integer>();
+			result.add(arrayList);
+		} else {
+			ArrayList<ArrayList<Integer>> moreSets = new ArrayList<<ArrayList<Integer>>();
+			subSet(result, input, index + 1);
+			for (ArrayList<Integer> subSets : result) {
+				
+			}
+		}
+	}
+	
+	
+}

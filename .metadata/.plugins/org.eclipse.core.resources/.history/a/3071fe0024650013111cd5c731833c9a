@@ -1,0 +1,44 @@
+package threeSum;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+
+public class ThreeSum {
+	public ArrayList<ArrayList<Integer>> threeSum(int[] num) {
+		Arrays.sort(num);
+		HashSet<ArrayList<Integer>> hashSet = new HashSet<ArrayList<Integer>>();
+		ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
+		for (int i = 0; i < num.length; i++) {
+			if (num[i] > 0) {
+				return result;
+			}
+			for (int j = i + 1, k = num.length - 1;  j< k; j++) {
+				if (num[k] <0) {
+					break;
+				}
+					int sum = num[i] + num[j] + num[k];
+					if (sum < 0) {
+						j++;
+					} else if (sum > 0) {
+						k--;
+					} else {
+						ArrayList<Integer> arrayList = new ArrayList<Integer>();
+						arrayList.add(num[i]);
+						arrayList.add(num[j]);
+						arrayList.add(num[k]);
+						arrayList.add(num[l]);
+						if (!hashSet.contains(arrayList)) {
+							hashSet.add(arrayList);
+							result.add(arrayList);
+						}
+						k++;
+						l = num.length - 1;
+					}
+
+//				}
+			}
+		}
+		return result;
+	}
+}
