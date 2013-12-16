@@ -1,0 +1,13 @@
+eclipse.preferences.version=1
+encoding//src/anagrams/GroupByHashtable.java=UTF-8
+encoding//src/binarySearch/NoRecursion.java=UTF-8
+encoding//src/findElementInMatrix/BinarySearch.java=UTF-8
+encoding//src/findElementInMatrix/Coordinate.java=UTF-8
+encoding//src/findElementInMatrix/Elimination.java=UTF-8
+encoding//src/findGivenString/BinarySearch.java=UTF-8
+encoding//src/longestIncreasingSubsequencePairs/IncreasingSequence.java=UTF-8
+encoding//src/mergeArrays/MergeTwoSortedArrays.java=UTF-8
+encoding//src/mergeSort/MergeSort.java=UTF-8
+encoding//src/quickSort/QuickSort.java=UTF-8
+encoding//src/rankOfNumber/Question.java=UTF-8
+encoding//src/rotatedArray/customBinarySearch.java=UTF-8

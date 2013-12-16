@@ -1,0 +1,5 @@
+package rankOfNumber;
+
+public class Question {
+	private static RankNode root = null;
+}
