@@ -1,0 +1,15 @@
+package pickMIntegers;
+
+public class Iterative {
+	int rand(int lower, int higher) {
+		return lower + (int) (Math.random() * (higher - lower + 1));
+	}
+	
+	int[] pickMInteratively(int[] original, int m ) {
+		int[] subset= new int[m];
+		
+		for (int i = 0; i < m; i++) {
+			
+		}
+	}
+}

@@ -1,0 +1,13 @@
+package shuffleCards;
+
+public class Iterative {
+	int rand(int lower, int higher) {
+		return lower + (int) (Math.random() * (higher - lower + 1));
+	}
+
+	public void shuffleArrayIteratively(int[] cards) {
+		for (int i = 0; i < cards.length; i++) {
+			int k = rand(0, i);
+		}
+	}
+}

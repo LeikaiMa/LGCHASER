@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;dynamicProblem&apos; to &apos;fibonacci&apos;&#x0A;- Original project: &apos;DynamicProblem&apos;&#x0A;- Original element: &apos;DynamicProblem/src/dynamicProblem&apos;&#x0A;- Renamed element: &apos;DynamicProblem/src/fibonacci&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;dynamicProblem&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;dynamicProblem" name="fibonacci" qualified="false" references="true" stamp="1387226112361" textual="false" version="1.0"/>
+</session>

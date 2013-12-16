@@ -1,0 +1,15 @@
+package shuffleCards;
+
+public class Recursion {
+	int rand(int lower, int higher) {
+		return lower + (int) (Math.random() * (higher - lower + 1));
+	}
+	
+	int[] shuffleArrayRecursively(int[] cards, int i) {
+		if (i == 0) {
+			return cards;
+		}
+		
+		shuffleArrayRecursively(cards, i -1);
+	}
+}
