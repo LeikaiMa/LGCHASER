@@ -1,0 +1,19 @@
+package ticTacToe;
+
+public class WithHashTable {
+	int[] winnerHashtable;
+
+	public int hasWon(int board) {
+		return winnerHashtable[board];
+	}
+
+	public static int convertBoardToInt(char[][] board) {
+		int factor = 1;
+		int sum = 0;
+		for (int i = 0; i < board.length; i++) {
+			for (int j = 0; j < board[i].length; j++) {
+				int v = 0;
+			}
+		}
+	}
+}

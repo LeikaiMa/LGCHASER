@@ -1,0 +1,9 @@
+package ticTacToe;
+
+public class WithHashTable {
+	int[] winnerHashtable;
+	public int hasWon(int board) {
+		
+		return winnerHashtable[board];
+	}
+}

@@ -1,0 +1,15 @@
+package ticTacToe;
+
+public class ComplicatedBoard {
+	Piece hasWon(Piece[][] board) {
+		int N = board.length;
+		int row = 0;
+		int col = 0;
+		
+		for (row = 0; row < N; row++) {
+			if (board[row][0] != Piece.Empty) {
+				
+			}
+		}
+	}
+}

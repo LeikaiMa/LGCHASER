@@ -1,0 +1,7 @@
+package trailingOfZeros;
+
+public class FactorOfFive {
+	public int factorsOf5(int i ){
+		int count = 0;
+	}
+}
