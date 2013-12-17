@@ -1,0 +1,19 @@
+package zigzag;
+
+public class ZigZagConversion {
+	public String convert(String s, int nRows) {
+		StringBuffer[] stringBuffers = new StringBuffer[nRows];
+		int row = 0;
+		int increament = 1;
+		for (int i = 0; i < nRows; i++) {
+			stringBuffers[i] = new StringBuffer();
+		}
+		for (int i = 0; i < s.length(); i++) {
+			stringBuffers[row].append(s.charAt(i));
+			row++;
+			if (row == nRows) {
+				row = row -2;
+			}
+		}
+	}
+}
