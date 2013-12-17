@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;maximum.MaxWithoutIf&apos; to &apos;Naive&apos;&#x0A;- Original project: &apos;Moderate&apos;&#x0A;- Original element: &apos;maximum.MaxWithoutIf&apos;&#x0A;- Renamed element: &apos;maximum.Naive&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;MaxWithoutIf&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;maximum{MaxWithoutIf.java[MaxWithoutIf" matchStrategy="1" name="Naive" qualified="false" references="true" similarDeclarations="false" stamp="1387260764198" textual="false" version="1.0"/>
+</session>

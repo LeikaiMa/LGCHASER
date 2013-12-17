@@ -1,0 +1,7 @@
+package maximum;
+
+public class MaxWithoutIf {
+	public static int flip(int bit) {
+		return 1^bit;
+	}
+}
