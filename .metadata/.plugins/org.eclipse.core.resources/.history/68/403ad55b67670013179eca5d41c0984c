@@ -1,0 +1,28 @@
+package smallestOneMillion;
+
+public class SelectionRankAlgorithm {
+	public int rank(int[] array, int left, int right, int rank) {
+		int pivot = array[randomIntInRange(left, right)];
+		
+		int leftEnd = partition(array, left, right, pivot);
+	}
+	
+	public int partition(int[] array, itn left, int right, int pivot) {
+		while (true) {
+			while (left <= right && array[left] <= pivot) {
+				left++;
+			}
+			while (left <= right && array[right] > pivot) {
+				right--;
+			}
+			if (left > right) {
+				
+			}
+		}
+	}
+
+	private int randomIntInRange(int left, int right) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+}

@@ -1,0 +1,7 @@
+package countNumberTwos;
+
+public class CountDigit {
+	public static int count2sInRange(int number) {
+		int count = 0;
+	}
+}

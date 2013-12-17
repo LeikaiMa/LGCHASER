@@ -1,0 +1,16 @@
+package countNumberTwos;
+
+public class BruteForce {
+	public int numberOf2sInRange(int n) {
+		int count = 0;
+		for (int i =2; i <= n; i++) {
+			count += numberOf2s(i);
+		}
+		
+		return count;
+	}
+	
+	public static int numberOf2s(int n) {
+		
+	}
+}
