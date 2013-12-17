@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;whildcardMatching&apos; to &apos;wildcardMatching&apos;&#x0A;- Original project: &apos;LeetCode&apos;&#x0A;- Original element: &apos;LeetCode/src/whildcardMatching&apos;&#x0A;- Renamed element: &apos;LeetCode/src/wildcardMatching&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;whildcardMatching&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;whildcardMatching" name="wildcardMatching" qualified="false" references="true" stamp="1387227369092" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,9 @@
+package testString;
+
+public class ContainsCharacter {
+	public static void main(String[] args) {
+		String string = "aaa";
+		String string2 = "**a";
+		System.out.println(string.contains("*"));
+	}
+}
