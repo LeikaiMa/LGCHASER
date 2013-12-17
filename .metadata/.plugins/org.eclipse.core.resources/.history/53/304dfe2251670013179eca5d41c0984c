@@ -3,7 +3,7 @@ package numToString;
 // 所有的对应可以用一个array 来表示，array 的本质是带有坐标的字符，这样可以利用这个pair
 // 开始的时候也可以直接去分析0 还有负数，如果是负数可以转为正数来进行求解。
 // 求1000 以内的数同样也是可以用 逐步分析的方法，先剥离出100 的然后再 10 最后是1 的。
-// 最开始可以在最外面存储一个static 的数组
+// 最开始可以在最外面存储一个static 的数组。
 public class NumToString {
 	public static String[] digits = { "One", "Two", "Three", "Four", "Five",
 			"Six", "Seven", "Eight", "Nine" };
