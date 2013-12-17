@@ -1,0 +1,12 @@
+package mostWaterContainer;
+
+import java.util.TreeMap;
+
+public class TreeMapSolution {
+	public int maxArea(int[] height) {
+		if (height == null) {
+			return 0;
+		}
+		TreeMap<Integer, Integer> tm= new TreeMap<Integer, Integer>();
+	}
+}

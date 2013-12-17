@@ -1,0 +1,9 @@
+package testTreeMap;
+
+import java.util.TreeMap;
+
+public class Duplicate {
+	public static void main(String[] main) {
+		TreeMap< Integer, Integer> tm = new TreeMap<>();
+	}
+}

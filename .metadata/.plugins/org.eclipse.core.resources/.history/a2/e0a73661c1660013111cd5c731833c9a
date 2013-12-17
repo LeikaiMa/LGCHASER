@@ -1,0 +1,22 @@
+package mostWaterContainer;
+
+import java.util.ArrayList;
+import java.util.Hashtable;
+
+public class ContainerWithMostWater {
+	public int maxArea(int[] height) {
+        Hashtable<Integer, ArrayList<Integer>> containers= new Hashtable<Integer, ArrayList<Integer>>();
+        int maxArea = Integer.MIN_VALUE;
+        for (int i = 0; i < height.length; i++) {
+        	if (!containers.containsKey(height[i])) {
+        		ArrayList<Integer> heights = new ArrayList<Integer>();
+        		heights.add(i);
+        		containers.put(height[i], heights);
+        	} else {
+        		ArrayList<Integer> heights = containers.get(height[i]);
+        		heights.add(i);
+        	}
+        }
+        return maxArea;
+    }
+}

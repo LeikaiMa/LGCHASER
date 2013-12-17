@@ -1,0 +1,13 @@
+package mostWaterContainer;
+
+import java.util.ArrayList;
+import java.util.Hashtable;
+
+import javax.print.attribute.HashAttributeSet;
+
+public class ContainerWithMostWater {
+	public int maxArea(int[] height) {
+        Hashtable<Integer, ArrayList<Integer>> containers= new Hashtable<Integer, ArrayList<Integer>>();
+        
+    }
+}
