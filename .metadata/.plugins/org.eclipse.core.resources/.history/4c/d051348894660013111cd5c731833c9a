@@ -1,7 +1,0 @@
-package wildcardMatching;
-
-public class WildcardMatching {
-public static boolean isMatch(String s, String p) {
-        return false
-    }
-}

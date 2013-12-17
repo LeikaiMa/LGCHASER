@@ -1,0 +1,7 @@
+package masterMind;
+
+public class MasterMind {
+	public class Result {
+		
+	}
+}

@@ -1,9 +1,0 @@
-package reorderList;
-
-public class O1ReorderList {
-	public static void reorderList(ListNode head) {
-		if (head == null || head.next == null) {
-			return;
-		}
-	}
-}

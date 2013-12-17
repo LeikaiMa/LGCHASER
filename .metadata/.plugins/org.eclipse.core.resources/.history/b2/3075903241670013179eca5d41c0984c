@@ -1,0 +1,16 @@
+package masterMind;
+
+public class MasterMind {
+	public class Result {
+		public int hits = 0;
+		public int pseudoHits = 0;
+		
+		public String toString() {
+			return "(" +  hits + ", " + pseudoHits + ")";
+		}
+	}
+	
+	public int code(char c) {
+		
+	}
+}

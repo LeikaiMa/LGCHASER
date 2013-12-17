@@ -1,0 +1,33 @@
+package masterMind;
+
+public class MasterMind {
+	public class Result {
+		public int hits = 0;
+		public int pseudoHits = 0;
+		
+		public String toString() {
+			return "(" +  hits + ", " + pseudoHits + ")";
+		}
+	}
+	
+	public int code(char c) {
+		switch (c) {
+		case 'B':
+			return 0;
+		case 'G':
+			return 1;
+		case 'R':
+			return 2;
+		case 'Y':
+			return 3;
+ 		default:
+ 			return -1;
+		}
+	}
+	
+	public static int MAX_COLORS = 4;
+	
+	public Result estimate (String guess, String solution) {
+		
+	}
+}

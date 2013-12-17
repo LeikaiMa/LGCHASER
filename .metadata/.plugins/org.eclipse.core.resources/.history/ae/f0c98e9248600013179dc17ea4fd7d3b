@@ -1,9 +1,0 @@
-package test;
-
-public class TestArrayList {
-	public static void main(String[] args) {
-		TestArrayList<String> al = new TestArrayList();
-		
-	}
-
-}

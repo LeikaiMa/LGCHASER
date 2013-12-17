@@ -1,0 +1,10 @@
+package numToString;
+
+public class NumToString {
+	public String[] digits = { "One", "Two", "Three", "Four", "Five", "Six",
+			"Seven", "Eight", "Nine" };
+	public String[] teens = { "Eleven", "Twelve", "Thirteen", "Fourteen",
+			"Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen" };
+	public static String[] tens ={"Ten", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety" };
+	
+}
