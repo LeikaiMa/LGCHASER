@@ -1,0 +1,7 @@
+package buildBinaryTree;
+
+public class InorderPreorder {
+	public TreeNode buildTree(int[] preorder, int[] inorder) {
+		
+	}
+}

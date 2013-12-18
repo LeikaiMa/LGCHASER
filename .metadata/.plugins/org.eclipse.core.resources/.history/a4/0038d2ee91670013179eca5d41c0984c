@@ -1,0 +1,38 @@
+package buildBinaryTree;
+
+import java.util.HashMap;
+
+public class InorderPreorder {
+	public TreeNode buildTree(int[] preorder, int[] inorder) {
+		if (inorder == null || preorder == null) {
+			return null;
+		}
+
+		if (inorder.length != preorder.length) {
+			return null;
+		}
+		if (inorder.length == 0) {
+			return null;
+		}
+
+		HashMap<Integer, Integer> inorderHashMap = new HashMap<Integer, Integer>();
+		for (int i = 0; i < inorder.length; i++) {
+			inorderHashMap.put(inorder[i], i);
+		}
+
+		TreeNode root = buildTree(inorderHashMap, inorder, preorder, 0,
+				inorder.length - 1, 0, preorder.length - 1);
+		return root;
+	}
+
+	public static TreeNode buildTree(HashMap<Integer, Integer> map,
+			int[] inorder, int[] preorder, int istart, int iend, int pstart,
+			int pend) {
+		if (istart > iend || pstart > pend) {
+			return null;
+		}
+		TreeNode root = new TreeNode(preorder[0]);
+		int index = map.get(preorder[0]);
+		root.left = buildTree(map, inorder, preorder, istart, iend, pstart, pend)
+	}
+}
