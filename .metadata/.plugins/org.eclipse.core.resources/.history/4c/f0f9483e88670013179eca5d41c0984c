@@ -1,0 +1,36 @@
+package buildBinaryTree;
+
+import java.util.Arrays;
+
+public class BasedOnInorderPostOrder {
+	public TreeNode buildTree(int[] inorder, int[] postorder) {
+		if (inorder == null || postorder == null) {
+			return null;
+		}
+
+		if (inorder.length != postorder.length) {
+			return null;
+		}
+		TreeNode root = new TreeNode(postorder[postorder.length - 1]);
+		int index = -1;
+		for (int i = 0; i < inorder.length; i++) {
+			if (inorder[i] == postorder[postorder.length - 1]) {
+				index = i;
+				break;
+			}
+		}
+		
+		int leftEnd = index - 1;
+		int rightEnd = postorder.length - 2;
+		if (leftEnd >= 0) {
+			root.left = buildTree(Arrays.copyOfRange(inorder, 0, leftEnd + 1), Arrays.copyOfRange(postorder, 0, leftEnd + 1));
+		}
+		
+		if (rightEnd > leftEnd) {
+			root.right = buildTree(Arrays.copyOfRange(inorder, index + 1, inorder.length), Arrays.copyOfRange(postorder, index, postorder.length));
+		}
+		
+		return root;
+	}
+
+}

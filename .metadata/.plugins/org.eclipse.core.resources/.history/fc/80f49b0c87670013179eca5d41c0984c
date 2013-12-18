@@ -1,0 +1,18 @@
+package buildBinaryTree;
+
+import java.util.Hashtable;
+
+public class BasedOnInorderPostOrder {
+	public TreeNode buildTree(int[] inorder, int[] postorder) {
+		if (inorder ==null || postorder == null) {
+			return null;
+		}
+		
+		if (inorder.length != postorder.length) {
+			return null;
+		}
+		TreeNode root = new TreeNode(postorder[postorder.length - 1]);
+	}
+	
+	
+}
