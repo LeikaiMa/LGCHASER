@@ -1,6 +1,5 @@
 package buildBinaryTree;
-// 这个和post一个意思，只是left 和 right 在pre 和post 里面的 位置不同
-// 要注意的一点是get index 的时候不是preorder 的【0】 因为没有新建array 所以要用的是pstart
+
 import java.util.HashMap;
 
 public class InorderPreorder {

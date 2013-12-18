@@ -1,0 +1,10 @@
+package rotateList;
+
+public class Rotate {
+	public ListNode rotateRight(ListNode head, int n) {
+		if (head == null) {
+			return null;
+		}
+		int count = 0;
+	}
+}
