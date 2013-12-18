@@ -1,0 +1,44 @@
+package minimumSumPath;
+
+public class MinimumSumPath {
+	public static int minPathSum(int[][] grid) {
+		if (grid == null) {
+			return 0;
+		}
+		int row = grid.length;
+		int column = grid[0].length;
+		for (int i = 1; i < row + column - 2; i++) {
+			for (int j = 0; j < row - 1; j++) {
+				// int min = Integer.MAX_VALUE;
+				// if (i - j - 1 >= 0) {
+				// min = Math.min(min, grid[j][i - j] + grid[j][i - j - 1]);
+				// }
+				// if (j - 1 >= 0) {
+				// min = Math
+				// .min(min, grid[j][i - j] + grid[j - 1][i - j - 1]);
+				// }
+				// grid[i][j] = min;
+				
+				if (i - j - 1 >= 0 && j -1>= 0) {
+					grid[i][j] += Math.min( grid[j][i - j - 1], grid[j - 1][i - j - 1]);
+				} else if (i - j - 1 >= 0) {
+					grid[i][j] += grid[j][i-j-1];
+				} else {
+					grid[i][j] += grid[j -1][i-j-1];
+				}
+			}
+		}
+		return grid[row - 1][column - 1];
+	}
+	
+	public static void main(String[] args) {
+		int[][] grid = new int[2][2];
+		grid[0][0] = 1;
+		grid[0][1] = 2;
+		grid[1][0] = 3;
+		grid[1][1] = 4;
+		int shortest;
+		shortest = minPathSum(grid);
+		System.out.println(shortest);
+	}
+}

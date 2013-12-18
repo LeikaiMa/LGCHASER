@@ -1,0 +1,11 @@
+package minimumSumPath;
+
+public class MinimumSumPath {
+	public int minPathSum(int[][] grid) {
+		if (grid == null) {
+			return 0;
+		}
+		int row = grid.length;
+		int column = grid[0].length;
+	}
+}

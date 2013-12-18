@@ -1,0 +1,18 @@
+package minimumSumPath;
+
+public class MinimumSumPath {
+	public int minPathSum(int[][] grid) {
+		if (grid == null) {
+			return 0;
+		}
+		int row = grid.length;
+		int column = grid[0].length;
+		for (int i = 1; i < row + column - 2; i++) {
+			for (int j = 0; j < row -1; j++) {
+				int min = Integer.MAX_VALUE;
+				
+			}
+		}
+		return grid[row - 1][column - 1];
+	}
+}
