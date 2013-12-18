@@ -1,0 +1,10 @@
+package testArrayList;
+
+import java.util.ArrayList;
+
+public class ArraylistOfArraylist {
+	public static void main(String[] args) {
+		ArrayList<ArrayList<Integer>> heights = new ArrayList<ArrayList<Integer>>(4);
+		
+	}
+}

@@ -1,0 +1,13 @@
+package trapRain;
+
+public class Faster {
+	public static int trap(int[] A) {
+		
+	}
+	public static void main(String[] args) {
+		int[] input = {0,1,0,2,1,0,1,3,2,1,2,1};
+		int trapping;
+		trapping = trap(input);
+		System.out.println(trapping);
+	}
+}
