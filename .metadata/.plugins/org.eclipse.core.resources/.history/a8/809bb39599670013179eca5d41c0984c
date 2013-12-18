@@ -1,0 +1,8 @@
+package setZeros;
+
+public class MatrixZeros {
+	public void setZeroes(int[][] matrix) {
+		int nr = matrix.length;
+		int nc = matrix[0].length;
+	}
+}
