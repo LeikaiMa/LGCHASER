@@ -1,0 +1,23 @@
+package atoi;
+
+public class AToI {
+	public int atoi(String str) {
+		if (str == null) {
+			return 0;
+		}
+		str = str.trim();
+		boolean positive = false;
+		int pos = 0;
+		int result = 0;
+		int factor = 10;
+		if (str.charAt(pos) == '+') {
+			positive = true;
+		} else if (str.charAt(pos) == '-') {
+			positive = false;
+		} else if (str.charAt(pos) >= '0' && str.charAt(pos) <= '9') {
+			positive = true;
+			result = str.charAt(pos) - '0';
+		}
+		return 0;
+	}
+}

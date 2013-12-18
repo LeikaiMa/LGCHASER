@@ -1,0 +1,8 @@
+package atoi;
+
+public class AToI {
+	public int atoi(String str) {
+		str = str.trim();
+		return 0;
+	}
+}

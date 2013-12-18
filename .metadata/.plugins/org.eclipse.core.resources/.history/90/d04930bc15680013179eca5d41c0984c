@@ -1,0 +1,13 @@
+package atoi;
+
+public class AToI {
+	public int atoi(String str) {
+		if (str == null) {
+			return 0;
+		}
+		str = str.trim();
+		int pos = 0;
+		int result = 0;
+		return 0;
+	}
+}
