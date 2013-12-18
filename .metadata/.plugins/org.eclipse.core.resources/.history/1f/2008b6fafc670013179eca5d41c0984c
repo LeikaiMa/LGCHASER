@@ -1,0 +1,13 @@
+package addBinary;
+
+import java.util.ArrayList;
+
+public class AddBinary {
+	public String addBinary(String a, String b) {
+		if (a == null || b== null) {
+			return null;
+		}
+		ArrayList<Integer> result = new ArrayList<Integer>();
+		
+	}
+}
