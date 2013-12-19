@@ -1,0 +1,12 @@
+package removeNthNodeEnd;
+
+public class RemoveNthNodeFromEnd {
+	public ListNode removeNthFromEnd(ListNode head, int n) {
+		if (head == null) {
+			return null;
+		}
+		ListNode runner= head;
+		ListNode walker = head;
+		
+	}
+}
