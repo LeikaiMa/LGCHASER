@@ -1,0 +1,17 @@
+package surroundedRegions;
+
+public class BFS {
+	public static void solve(char[][] board) {
+		if (board == null) {
+			return;
+		}
+		int row = board.length;
+		if (row == 0) {
+			return;
+		}
+		int column = board[0].length;
+		if (row == 0 && column == 0) {
+			return;
+		}
+	}
+}
