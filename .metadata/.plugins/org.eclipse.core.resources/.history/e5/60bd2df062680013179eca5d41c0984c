@@ -1,0 +1,25 @@
+package swapNodePairs;
+
+public class SwapPairs {
+	public ListNode swapPairs(ListNode head) {
+		if (head == null || head.next == null) {
+			return head;
+		}
+		ListNode first = head;
+		ListNode second = head.next;
+		ListNode previous;
+		first.next = second.next;
+		second.next = first;
+		previous = first;
+		head = second;
+		while (first.next != null && first.next.next != null) {
+			first = first.next;
+			second = first.next;
+			first.next = second.next;
+			second.next = first;
+			previous.next = second;
+			
+		}
+		return head;
+	}
+}
