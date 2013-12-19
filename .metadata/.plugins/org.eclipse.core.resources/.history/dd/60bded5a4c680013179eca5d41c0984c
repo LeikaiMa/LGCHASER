@@ -1,0 +1,33 @@
+package spiralMatrixII;
+
+public class SpiralMatrix {
+	public static int[][] generateMatrix(int n) {
+		if (n == 0) {
+			return null;
+		}
+		int[][] matrix = new int[n][n];
+		int count = 1;
+		for (int layer = 0; layer <= n / 2; layer++) {
+			int first = layer;
+			int last = n - 1 - layer;
+			for (int i = first; i < last; i++) {
+				int offset = i - first;
+				matrix[first][i] = count;
+				matrix[last - offset][first] = count + (last - first);
+				matrix[last][last - offset] = count + (last - first) * 2;
+				matrix[i][last] = count + (last - first) * 3;
+				count++;
+			}
+			count += (last - first) * 3 + 1;
+		}
+		return matrix;
+	}
+	
+	public static void main(String[] args) {
+		int n = 3;
+		int[][] result = generateMatrix(n);
+		for (int i = 0 ; i <= n; i++) {
+			System.out.println(result[i]);
+		}
+	}
+}
