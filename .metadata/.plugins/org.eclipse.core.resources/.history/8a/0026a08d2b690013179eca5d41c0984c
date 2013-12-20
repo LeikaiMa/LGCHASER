@@ -1,0 +1,9 @@
+package testString;
+
+public class LowerCase {
+	public static void main(String[] args) {
+		String s = "123";
+		s = s.toLowerCase();
+		System.out.println(s);
+	}
+}

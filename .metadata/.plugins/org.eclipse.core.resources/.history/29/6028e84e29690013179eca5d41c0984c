@@ -1,0 +1,16 @@
+package validPalindrome;
+
+public class ValidPalindrome {
+	public boolean isPalindrome(String s) {
+		if (s == null) {
+			return false;
+		} 
+		if (s.isEmpty()) {
+			return true;
+		}
+		
+		s = s.replaceAll("[^a-zA-Z]", "").toLowerCase();
+		
+		return true;
+	}
+}
