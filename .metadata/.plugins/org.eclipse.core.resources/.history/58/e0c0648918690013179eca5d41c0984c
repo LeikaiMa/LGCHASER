@@ -1,0 +1,8 @@
+package linkedListCycleI;
+
+public class Cycle {
+	public boolean hasCycle(ListNode head) {
+		ListNode runner = head;
+		ListNode walker = head; 
+	}
+}

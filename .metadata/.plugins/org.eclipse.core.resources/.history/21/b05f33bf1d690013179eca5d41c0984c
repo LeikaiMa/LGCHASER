@@ -1,0 +1,22 @@
+package palindromeNumber;
+
+public class PalindromeNumber {
+	public static boolean isPalindrome(int x) {
+		if (x == Integer.MAX_VALUE || x == Integer.MIN_VALUE) {
+			return false;
+		}
+		if (x > -10 && x < 10) {
+			return true;
+		}
+		
+		int input = Math.abs(x);
+		return false;
+	}
+	
+	public static void main(String[] args) {
+		System.out.println(Integer.MIN_VALUE);
+		System.out.println(Integer.MAX_VALUE);
+		System.out.println((Integer.MIN_VALUE + 1)* -1);
+		System.out.println(Integer.MAX_VALUE* -1);
+	}
+}

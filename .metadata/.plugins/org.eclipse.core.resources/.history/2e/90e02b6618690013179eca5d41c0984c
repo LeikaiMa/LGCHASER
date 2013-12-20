@@ -1,0 +1,7 @@
+package linkedListCycleI;
+
+public class Cycle {
+	public boolean hasCycle(ListNode head) {
+
+	}
+}

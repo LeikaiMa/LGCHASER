@@ -1,0 +1,11 @@
+package palindromeNumber;
+
+public class PalindromeNumber {
+	public boolean isPalindrome(int x) {
+		return false;
+	}
+	
+	public static void main(String[] args) {
+		System.out.println(Integer.MIN_VALUE);
+	}
+}

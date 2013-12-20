@@ -1,0 +1,43 @@
+package palindromeNumber;
+
+public class PalindromeNumber {
+	public static boolean isPalindrome(int x) {
+		if (x < 0) {
+			return false;
+		}
+		int n = 0;
+		int a = x;
+		while (a > 0) {
+			n++;
+			a = a/10;
+			
+		}
+		int i = 1;
+		while (n > i) {
+			int pi = (int) Math.pow(10, i);
+			int qi = (int) Math.pow(10, i - 1);
+			int pn = (int) Math.pow(10, n);
+			int qn = (int) Math.pow(10, n - 1);
+			int hd = x % pn / qn;
+			int ld = x % pi / qi;
+			if (hd != ld) {
+				return false;
+			}
+			n--;
+			i++;
+		}
+		return true;
+	}
+
+	public static void main(String[] args) {
+		// System.out.println(Integer.MIN_VALUE);
+		// System.out.println(Integer.MAX_VALUE);
+		// System.out.println((Integer.MIN_VALUE + 1) * -1);
+		// System.out.println(Integer.MAX_VALUE * -1);
+//		System.out.println((int) Math.pow(10, 0));
+		System.out.println(isPalindrome(1230000321) == true);
+		System.out.println(isPalindrome(11) == true);
+		System.out.println(isPalindrome(9) == true);
+		
+	}
+}
