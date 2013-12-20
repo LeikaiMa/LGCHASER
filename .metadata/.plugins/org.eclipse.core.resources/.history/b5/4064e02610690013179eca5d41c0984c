@@ -1,0 +1,24 @@
+package palindrome;
+
+import java.util.Stack;
+
+import removeDuplicate.LinkedListNode;
+
+public class Iterative {
+	public boolean isPalindrome(LinkedListNode head) {
+		LinkedListNode fast = head;
+		LinkedListNode slow = head;
+		
+		Stack<Integer> stack = new Stack<Integer>();
+		
+		while (fast != null && fast.next != null) {
+			stack.push(slow.data);
+			slow = slow.next;
+			fast = fast.next.next;
+		}
+		
+		if (fast != null) {
+			slow = slow.next;
+		}
+	}
+}

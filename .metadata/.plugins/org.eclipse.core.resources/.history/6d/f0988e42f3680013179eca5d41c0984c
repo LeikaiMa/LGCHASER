@@ -1,0 +1,9 @@
+package removeDuplicate;
+
+public class LinkedListNode {
+	public LinkedListNode(int carry, Object object, Object object2) {
+		// TODO Auto-generated constructor stub
+	}
+	public int data;
+	public LinkedListNode next = null;
+}

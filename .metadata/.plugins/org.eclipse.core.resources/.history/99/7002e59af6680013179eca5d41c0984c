@@ -1,0 +1,14 @@
+package addition;
+
+import removeDuplicate.LinkedListNode;
+
+public class Forward {
+	public class PartialSum {
+		public LinkedListNode sum = null;
+		public int carry = 0;
+	}
+	
+	LinkedListNode addLists(LinkedListNode l1, LinkedListNode l2) {
+		
+	}
+}

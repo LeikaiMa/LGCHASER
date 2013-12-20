@@ -1,0 +1,21 @@
+package addition;
+
+import removeDuplicate.LinkedListNode;
+
+public class Reverse {
+	LinkedListNode addLists(LinkedListNode l1, LinkedListNode l2, int carry) {
+		if (l1 == null && l2 == null && carry == 0) {
+			return null;
+		}
+
+		LinkedListNode result = new LinkedListNode(carry, null, null);
+
+		int value = carry;
+		if (l1 != null) {
+			value += l1.data;
+		}
+		if (l2 != null) {
+			value += l2.data;
+		}
+	}
+}

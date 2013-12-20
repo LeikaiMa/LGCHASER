@@ -1,0 +1,10 @@
+package palindrome;
+
+import removeDuplicate.LinkedListNode;
+
+public class Iterative {
+	public boolean isPalindrome(LinkedListNode head) {
+		LinkedListNode fast = head;
+		LinkedListNode slow = head;
+	}
+}
