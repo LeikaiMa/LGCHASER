@@ -1,0 +1,9 @@
+package longestPalindromeSubstring;
+
+public class Axis {
+	public String longestPalindrome(String s) {
+		if (s == null) {
+			return null;
+		}
+	}
+}

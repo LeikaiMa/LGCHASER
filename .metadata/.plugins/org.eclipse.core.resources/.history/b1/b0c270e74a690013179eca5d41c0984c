@@ -1,0 +1,83 @@
+package longestPalindromeSubstring;
+// 在一个string 中找最大的回文，可以用的方法就是以某个为轴，然后向两边
+public class Axis {
+	public static String longestPalindrome(String s) {
+		if (s == null) {
+			return null;
+		}
+		if (s.isEmpty() || s.length() == 1) {
+			return s;
+		}
+		int length = s.length();
+		int le = 0;
+		String result = s.substring(0, 1);
+
+		for (int i = 0; i < length; i++) {
+			int expand = le + 1;
+			while (i - expand >= 0 && i + expand < length) {
+				int e = 1;
+				for (; e <= expand; e++) {
+					if(s.charAt(i -e) != s.charAt(i+e)) {
+						break;
+					}
+				}
+				if (e > expand) {
+					le = expand;
+					result = s.substring(i - expand, i + expand + 1);
+					expand++;
+				} else {
+					break;
+				}
+				
+			}
+
+			if (result.equals(s)) {
+				return s;
+			}
+		}
+		le = ((le * 2 + 1)- 2) /2;
+		for (int i = 0; i < length - 1; i++) {
+			if (s.charAt(i) != s.charAt(i + 1)) {
+				continue;
+			} else if (result.length() == 1) {
+				result = s.substring(i, i+2);
+			}
+			int expand = le + 1 ;
+			while (i - expand >= 0 && i + 1 + expand < length) {
+				int e = 1;
+				for (; e <= expand; e++) {
+					if(s.charAt(i -e) != s.charAt(i+e + 1)) {
+						break;
+					}
+				}
+				if (e > expand)  {
+					le = expand;
+					result = s.substring(i - expand, i + expand + 2);
+					expand++;
+				} else {
+					break;
+				}
+				
+			}
+			if (result.equals(s)) {
+				return s;
+			}
+		}
+		return result;
+	}
+	
+	public static void main(String[] args) {
+		String s = "abc";
+		System.out.println(longestPalindrome(s).equals("a"));
+		s = "abba";
+		System.out.println(longestPalindrome(s).equals("abba"));
+		s = "ababba";
+		System.out.println(longestPalindrome(s).equals("abba"));
+		s = "abacaba";
+		System.out.println(longestPalindrome(s).equals("abacaba"));
+		s = "bb";
+		System.out.println(longestPalindrome(s).equals("bb"));
+		s = "aaaabaaa";
+		System.out.println(longestPalindrome(s).equals("aaabaaa"));
+	}
+}

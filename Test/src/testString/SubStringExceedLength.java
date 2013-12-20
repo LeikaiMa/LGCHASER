@@ -10,7 +10,7 @@ public class SubStringExceedLength {
 //		System.out.println(subString);
 		
 		
-		String subString = s.substring(4);
+		String subString = s.substring(0, 3);
 		System.out.println(subString);
 	}
 

@@ -1,0 +1,48 @@
+package longestPalindromeSubstring;
+
+public class Axis {
+	public static String longestPalindrome(String s) {
+		if (s == null) {
+			return null;
+		}
+		if (s.isEmpty() || s.length() == 1) {
+			return s;
+		}
+		int length = s.length();
+		int le = 0;
+		String result = s.substring(0, 1);
+
+		for (int i = 0; i < length; i++) {
+			int expand = le + 1;
+			while (i - expand > 0 && i + expand < length) {
+				if (s.charAt(i - expand) == s.charAt(i + expand) && expand > le) {
+					le = expand;
+					result = s.substring(i - expand, i + expand + 1);
+				}
+			}
+
+			if (result == s) {
+				return s;
+			}
+		}
+		le = ((le * 2 + 1)- 2) /2;
+		for (int i = 0; i < length - 1; i++) {
+			if (s.charAt(i) != s.charAt(i + 1)) {
+				continue;
+			}
+			int expand = le + 1;
+			while (i - expand > 0 && i + 1 + expand < length) {
+				if (s.charAt(i - expand) == s.charAt(i+1 + expand) && expand > le)  {
+					le = expand;
+					result = s.substring(i - expand, i + expand + 2);
+				}
+			}
+		}
+		return result;
+	}
+	
+	public static void main(String[] args) {
+		String s = "abc";
+		System.out.println();
+	}
+}
