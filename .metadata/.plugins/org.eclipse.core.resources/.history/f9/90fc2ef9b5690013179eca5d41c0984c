@@ -1,0 +1,10 @@
+package palindromePartitionI;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class DP {
+	public ArrayList<ArrayList<String>> partition(String s) {
+		HashMap<Integer, ArrayList<Integer>> palindromes = new HashMap<Integer, ArrayList<Integer>>();
+	}
+}

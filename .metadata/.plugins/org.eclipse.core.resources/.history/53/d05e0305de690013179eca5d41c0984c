@@ -1,0 +1,9 @@
+package palindromePartitionI;
+
+import java.util.ArrayList;
+
+public class DFS {
+	public ArrayList<ArrayList<String>> partition(String s) {
+		boolean[][] isPalindrome = new boolean[s.length()][s.length()];
+	}
+}

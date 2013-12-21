@@ -1,0 +1,37 @@
+package palindromePartitionI;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class DP {
+	public ArrayList<ArrayList<String>> partition(String s) {
+		HashMap<Integer, ArrayList<Integer>> palindromes = new HashMap<Integer, ArrayList<Integer>>();
+		int length = s.length();
+		for (int i = 0; i < length; i++) {
+			ArrayList<Integer> a = new ArrayList<Integer>();
+			a.add(i);
+			palindromes.put(i, a);
+		}
+
+		for (int i = 1; i < length - 1; i++) {
+			int expand = 1;
+			while (i - expand >= 0 && i + expand < length) {
+				int e = 1;
+				for (; e <= expand; e++) {
+					if (s.charAt(i - e) != s.charAt(i + e)) {
+						break;
+					}
+				}
+				if (e > expand) {
+					ArrayList<Integer> a = palindromes.get(i - expand);
+					a.add(i + expand);
+					expand++;
+				} else {
+					break;
+				}
+			}
+		}
+		
+		for (int i = 1; i < length -2;)
+	}
+}

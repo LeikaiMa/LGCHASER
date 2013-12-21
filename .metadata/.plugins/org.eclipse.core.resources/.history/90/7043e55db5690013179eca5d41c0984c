@@ -1,0 +1,7 @@
+package palindromePartitionI;
+
+public class DP {
+	public ArrayList<ArrayList<String>> partition(String s) {
+
+	}
+}

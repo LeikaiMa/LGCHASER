@@ -1,0 +1,33 @@
+package palindromePartitionI;
+
+import java.util.ArrayList;
+
+public class DFS {
+	public ArrayList<ArrayList<String>> partition(String s) {
+		ArrayList<ArrayList<String>> result = new ArrayList<ArrayList<String>>();
+		if (s == null || s.isEmpty()) {
+			return result;
+		}
+		boolean[][] isPalindrome = new boolean[s.length()][s.length()];
+		for (int i = 0; i < s.length(); i++) {
+			isPalindrome[i][i] = true;
+			int expand = 1;
+			while (i - expand >= 0 && i + expand < s.length()) {
+				if (isPalindrome[i - expand + 1][i + expand - 1]
+						&& (s.charAt(i - expand) == s.charAt(i + expand))) {
+					isPalindrome[i - expand][i + expand] = true;
+				}
+				expand++;
+			}
+		}
+
+		for (int i = 0; i < s.length() - 1; i++) {
+			if (s.charAt(i) != s.charAt(i + 1)) {
+				continue;
+			}
+			isPalindrome[i][i + 1] = true;
+			int expand = 1;
+
+		}
+	}
+}
