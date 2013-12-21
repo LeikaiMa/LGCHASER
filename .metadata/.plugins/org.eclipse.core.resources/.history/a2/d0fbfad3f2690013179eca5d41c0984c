@@ -1,0 +1,13 @@
+package distinctSubsequences;
+
+import java.util.ArrayList;
+import java.util.TreeSet;
+
+public class DPSolution {
+	public int numDistinct(String S, String T) {
+		ArrayList<TreeSet<Integer>> tArrayList = new ArrayList<TreeSet<Integer>>();
+		for (int i = 0; i < T.length(); i++) {
+			
+		}
+	}
+}

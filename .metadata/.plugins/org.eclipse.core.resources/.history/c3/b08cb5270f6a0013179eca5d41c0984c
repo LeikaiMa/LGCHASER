@@ -1,0 +1,25 @@
+package distinctSubsequences;
+
+public class OnePassDP {
+	public int numDistinct(String S, String T) {
+		if (S.length() < T.length()) {
+			return 0;
+		}
+
+		if (T.length() == 0 && S.length() != 0) {
+			return 1;
+		}
+
+		if (T.length() == 0 && S.length() == 0) {
+			return 1;
+		}
+		
+		int[][] dp = new int[S.length() + 1] [T.length() + 1];
+		for (int i = 0; i <= S.length(); i++) {
+			dp[0][i] = 1;
+		}
+		for (int i = 1; i <= T.length(); i++) {
+			dp[i][0] = 0;
+		}
+	}
+}
