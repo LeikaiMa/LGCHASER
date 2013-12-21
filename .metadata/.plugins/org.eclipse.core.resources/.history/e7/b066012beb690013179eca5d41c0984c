@@ -1,0 +1,73 @@
+package palindromePartitionII;
+
+import java.util.HashSet;
+import java.util.Stack;
+
+
+public class DP {
+	public int minCut(String s) {
+		if (s == null || s.isEmpty()) {
+			return 0;
+		}
+		int length = s.length();
+		boolean[][] isPalindrome = new boolean[length][length];
+		for (int i = 0; i < length; i++) {
+			isPalindrome[i][i] = true;
+			int expand = 1;
+			while (i - expand >= 0 && i + expand < length) {
+				if (s.charAt(i - expand) == s.charAt(i + expand)) {
+					isPalindrome[i - expand][i + expand] = true;
+					expand++;
+				} else {
+					break;
+				}
+
+			}
+		}
+
+		for (int i = 0; i < length - 1; i++) {
+			if (s.charAt(i) != s.charAt(i + 1)) {
+				continue;
+			}
+			isPalindrome[i][i + 1] = true;
+			int expand = 1;
+			while (i - expand >= 0 && i + 1 + expand < length) {
+				if (s.charAt(i - expand) == s.charAt(i + 1 + expand)) {
+					isPalindrome[i - expand][i + 1 + expand] = true;
+					expand++;
+				} else {
+					break;
+				}
+			}
+		}
+		int min = -1;
+		HashSet<Integer> hashSet = new HashSet<Integer>();
+		for (int  i = 0; i < length; i++) {
+			if (isPalindrome[0][i]) {
+				if (i ==  length -1) {
+					return 0;
+				}
+				hashSet.add(i)
+			}
+		}
+		
+		while (true) {
+			min++;
+			Stack<Integer> stack2 = new Stack<>();
+			while (stack.isEmpty()) {
+				int i = stack.pop();
+				for (int j = i; j < length; j++) {
+					if (j ==  length -1) {
+						return min;
+					}
+					stack2.push(j);
+				}
+			}
+		}
+		
+		
+		
+	}
+
+	
+}

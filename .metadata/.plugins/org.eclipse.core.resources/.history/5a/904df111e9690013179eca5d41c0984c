@@ -1,0 +1,7 @@
+package palindromePartitionII;
+
+public class DP {
+	 public int minCut(String s) {
+		 
+	 }
+}
