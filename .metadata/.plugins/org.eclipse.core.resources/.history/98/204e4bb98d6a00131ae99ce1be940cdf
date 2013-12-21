@@ -1,0 +1,22 @@
+package uniqueBSTII;
+
+import java.util.ArrayList;
+
+public class UniqueBST {
+	public ArrayList<TreeNode> generateTrees(int n) {
+		ArrayList<TreeNode> result = new ArrayList<TreeNode>();
+		for (int i = 1; i <=n; i++) {
+			result.addAll(generateTreeHelper(i, 1, n));
+		}
+		return result;
+	}
+
+	private ArrayList<TreeNode> generateTreeHelper(int i, int start,
+			int end) {
+		ArrayList<TreeNode> result = new ArrayList<TreeNode>();
+		ArrayList<TreeNode> left;
+		ArrayList<TreeNode> rightArrayList;
+		if (i != )
+		return result;
+	}
+}
