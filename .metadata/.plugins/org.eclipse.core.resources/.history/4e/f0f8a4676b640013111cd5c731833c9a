@@ -1,7 +1,0 @@
-package testArrayList;
-
-import java.util.ArrayList;
-
-public class CollectionSort {
-	ArrayList<Integer> i = new ArrayList<>();
- }

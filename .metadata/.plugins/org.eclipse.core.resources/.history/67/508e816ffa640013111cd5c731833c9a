@@ -1,7 +1,0 @@
-package testStack;
-
-import java.util.Stack;
-
-public class PeekNull {
-	Stack<Integer> stack = new Stack<>();
-}

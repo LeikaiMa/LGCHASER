@@ -1,0 +1,12 @@
+package uniqueBST;
+
+public class Catalan {
+	public int numTrees(int n) {
+		int C0 = 1;
+		int C = C0;
+		for (int i = 0; i < n; i++) {
+			
+		}
+	}
+
+}

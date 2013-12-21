@@ -1,6 +1,0 @@
-package removeDuplicate;
-
-public class LinkedListNode {
-	int data;
-	LinkedListNode next = null;
-}

@@ -1,5 +1,0 @@
-package findElementInMatrix;
-
-public class Coordinate implements Cloneable{
-
-}

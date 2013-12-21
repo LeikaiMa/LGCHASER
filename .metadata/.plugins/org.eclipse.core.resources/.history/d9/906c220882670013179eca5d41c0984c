@@ -1,9 +1,0 @@
-package buildBinaryTree;
-
-import java.util.Hashtable;
-
-public class BasedOnInorderPostOrder {
-	public TreeNode buildTree(int[] inorder, int[] postorder) {
-		Hashtable<Integer, Integer> inorderHt = new Hashtable<>();
-	}
-}

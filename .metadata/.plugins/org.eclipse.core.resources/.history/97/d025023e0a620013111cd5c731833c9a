@@ -1,9 +1,0 @@
-package magicIndex;
-
-public class BruteForce {
-	public static itn magicSlow(int[] array) {
-		for (int i = 0; i < array.length; i++) {
-			
-		}
-	}
-}

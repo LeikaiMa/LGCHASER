@@ -1,9 +1,0 @@
-package testBoolean;
-
-public class BooleanAsNumber {
-
-	public static void main(String[] args) {
-		boolean true;
-	}
-
-}

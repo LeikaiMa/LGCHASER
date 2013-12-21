@@ -1,9 +1,0 @@
-package isPermutation;
-
-public class CountCharacters {
-	public boolean permutation(String s, String t) {
-		if (s.length() != t.length()) {
-			
-		}
-	}
-}

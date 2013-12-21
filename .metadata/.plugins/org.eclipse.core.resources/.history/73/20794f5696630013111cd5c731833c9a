@@ -1,6 +1,0 @@
-package stackWithMin;
-
-public class NodeWithMin {
-	public int value;
-	public int min;
-}

@@ -1,9 +1,0 @@
-package circusTower;
-
-import java.util.ArrayList;
-
-public class IncreasingSequence {
-	ArrayList<HtWt> getIncreasingSequence(ArrayList<HtWt> items) {
-		
-	}
-}

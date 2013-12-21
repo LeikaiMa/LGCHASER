@@ -1,7 +1,0 @@
-package binarySearch;
-
-public class Recursion {
-	public int binarySearchRecursive(int[] a, int x, int low, int high) {
-		if (low > high) return -1;
-	}
-}

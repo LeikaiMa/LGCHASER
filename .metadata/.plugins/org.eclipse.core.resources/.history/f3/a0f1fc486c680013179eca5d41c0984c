@@ -1,9 +1,0 @@
-package surroundedRegions;
-
-public class SurroundedRegions {
-	public void solve(char[][] board) {
-		int row = board.length;
-		int column = board[0].length;
-		boolean[][] visited = new boolean[row][column];
-	}
-}

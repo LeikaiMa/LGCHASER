@@ -1,8 +1,0 @@
-eclipse.preferences.version=1
-encoding//src/checkBalancedTree/CheckEntire.java=UTF-8
-encoding//src/checkBalancedTree/NotEntireCheck.java=UTF-8
-encoding//src/createBST/CreateMinimalBST.java=UTF-8
-encoding//src/listEachDepth/PreOder.java=UTF-8
-encoding//src/route/RouteBetweenTwoNodes.java=UTF-8
-encoding//src/treeSearch/BFS.java=UTF-8
-encoding//src/treeSearch/DFS.java=UTF-8

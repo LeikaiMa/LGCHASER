@@ -1,7 +1,0 @@
-package removeDuplicate;
-
-public class WithBuffer {
-	public static void deleteDup(LinkedlistNode n) {
-		
-	}
-}

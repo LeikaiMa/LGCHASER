@@ -1,7 +1,0 @@
-package atoi;
-
-public class AToI {
-	public int atoi(String str) {
-
-	}
-}

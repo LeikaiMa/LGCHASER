@@ -1,8 +1,0 @@
-package uniqueCharacters;
-
-public class UniqueCharacter2 {
-
-	public boolean isUniqueChars(String str) {
-		
-	}
-}

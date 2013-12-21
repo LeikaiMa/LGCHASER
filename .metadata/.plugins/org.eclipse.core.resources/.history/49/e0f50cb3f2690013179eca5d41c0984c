@@ -1,9 +1,0 @@
-package distinctSubsequences;
-
-import java.util.TreeSet;
-
-public class DPSolution {
-	public int numDistinct(String S, String T) {
-		TreeSet<Integer>[] ts = new TreeSet<Integer>[T.length()];
-	}
-}

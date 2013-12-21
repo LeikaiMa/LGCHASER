@@ -1,9 +1,0 @@
-package addition;
-
-import removeDuplicate.LinkedListNode;
-
-public class Forward {
-	public class PartialSum {
-		public LinkedListNode sum = null;
-	}
-}

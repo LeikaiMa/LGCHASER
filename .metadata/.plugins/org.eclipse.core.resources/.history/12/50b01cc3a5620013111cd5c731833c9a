@@ -1,9 +1,0 @@
-package deleteMiddle;
-
-import removeDuplicate.LinkedListNode;
-
-public class DeleteMiddle {
-	public static boolean deleteNode(LinkedListNode n) {
-		
-	}
-}

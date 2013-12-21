@@ -1,7 +1,0 @@
-package binarySearch;
-
-public class NoRecursion {
-	public int binarySearch(int[] a, int x) {
-		int low = 0;
-	}
-}

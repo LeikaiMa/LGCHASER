@@ -1,6 +1,0 @@
-package btIsBST;
-
-public class InOrder {
-	public static int index = 0;
-
-}

@@ -1,9 +1,0 @@
-package robotMovingBoard;
-
-public class Point {
-	int x;
-	int y;
-	public Point(int x, int y) {
-		// TODO Auto-generated constructor stub
-	}
-}

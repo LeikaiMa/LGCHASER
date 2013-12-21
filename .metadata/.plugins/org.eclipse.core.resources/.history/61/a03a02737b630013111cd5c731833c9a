@@ -1,8 +1,0 @@
-package anagrams;
-
-public class GroupByHashtable {
-	public void sort(String[] array) {
-		
-	}
-
-}

@@ -1,7 +1,0 @@
-package magicIndex;
-
-public class BinarySearch {
-	public static int magicFast(int[] array, int start, int end) {
-		
-	}
-}

@@ -1,5 +1,0 @@
-package btIsBST;
-
-public class StaticInt {
-	public static int last_printed = Integer.MIN_VALUE;
-}

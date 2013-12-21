@@ -1,5 +1,0 @@
-package placeQueens;
-
-public class Queens {
-	int GRID_SIZE = 8;
-}

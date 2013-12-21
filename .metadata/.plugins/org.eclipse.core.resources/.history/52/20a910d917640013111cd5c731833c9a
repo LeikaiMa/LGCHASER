@@ -1,7 +1,0 @@
-package makeChange;
-
-public class MakeChange {
-	public int makeChange(int n, int denom) {
-		int next_denom = 0;
-	}
-}

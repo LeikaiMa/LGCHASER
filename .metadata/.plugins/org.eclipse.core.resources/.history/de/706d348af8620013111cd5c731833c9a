@@ -1,9 +1,0 @@
-package createBST;
-
-import checkBalancedTree.TreeNode;
-
-public class CreateMinimalBST {
-	TreeNode createMinimalBST() {
-		
-	}
-}

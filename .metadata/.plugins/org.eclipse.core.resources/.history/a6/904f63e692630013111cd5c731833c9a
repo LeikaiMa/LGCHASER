@@ -1,6 +1,0 @@
-package queue;
-
-
-public class Queue {
-	Node first, last;
-}

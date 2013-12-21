@@ -1,9 +1,0 @@
-package palindromePartitionI;
-
-import java.util.ArrayList;
-
-public class DP {
-	public ArrayList<ArrayList<String>> partition(String s) {
-		
-	}
-}

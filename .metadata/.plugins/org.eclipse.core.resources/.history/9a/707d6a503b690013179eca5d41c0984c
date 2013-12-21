@@ -1,7 +1,0 @@
-package longestPalindromeSubstring;
-
-public class Axis {
-	public String longestPalindrome(String s) {
-
-	}
-}

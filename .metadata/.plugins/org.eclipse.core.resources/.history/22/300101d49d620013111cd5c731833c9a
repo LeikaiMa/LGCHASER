@@ -1,7 +1,0 @@
-package nthToLast;
-
-public class WrapperClass {
-	public class IntWrapper {
-		public int value = 0;
-	}
-}
