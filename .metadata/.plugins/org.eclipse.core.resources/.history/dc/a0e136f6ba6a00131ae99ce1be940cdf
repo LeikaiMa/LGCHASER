@@ -1,0 +1,15 @@
+package singleNum;
+
+public class SelectOneFromTwo {
+	public int singleNumber(int[] A) {
+		int single = 0;
+		for (int i = 0; i < A.length; i++) {
+			single = single ^ A[i];
+		}
+		return single;
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+}

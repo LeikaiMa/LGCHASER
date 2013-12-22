@@ -1,0 +1,7 @@
+package singleNum;
+
+public class SelectOneFromTwo {
+	public int singleNumber(int[] A) {
+
+	}
+}
