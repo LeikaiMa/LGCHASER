@@ -1,0 +1,27 @@
+package twoSum;
+
+import java.util.Arrays;
+import java.util.HashMap;
+
+public class UseHashMap {
+	public int[] twoSum(int[] numbers, int target) {
+		HashMap<Integer, Integer> inputs = new HashMap<Integer, Integer>();
+		int[] results = new int[2];
+		for (int i = 0; i < numbers.length; i++) {
+			if (inputs.containsKey(numbers[i])) {
+				results[0] = inputs.get(numbers[i]) + 1;
+				results[1] = i + 1;
+			} else {
+				inputs.put(target - numbers[i], i);
+				break;
+			}
+		}
+		return results;
+	}
+	
+	public static void main(String[] args) {
+		int[] numbers = { 0, 4, 3, 0 };
+		int target = 0;
+		System.out.println(Arrays.toString(new TwoSum().twoSum(numbers, target)));
+	}
+}

@@ -1,0 +1,6 @@
+package twoSum;
+
+public class HashMap {
+	public int[] twoSum(int[] numbers, int target) {
+	}
+}
