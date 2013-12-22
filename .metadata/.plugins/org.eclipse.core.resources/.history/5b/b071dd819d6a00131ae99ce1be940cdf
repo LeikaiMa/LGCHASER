@@ -1,0 +1,28 @@
+package power;
+
+public class Power {
+	public static double pow(double x, int n) {
+		if (n == 0) {
+			return 1.0;
+		}
+		boolean isPositive = n > 0;
+		n = Math.abs(n);
+		double result = 1.0;
+		for (int i = 0; i < n; i++) {
+			result = result * x;
+		}
+
+		if (!isPositive) {
+			result = 1.0 / result;
+		}
+		return result;
+	}
+
+	public static void main(String[] args) {
+		System.out.println(pow(0, 0) == Math.pow(0, 0));
+		System.out.println(pow(2, 5) == Math.pow(2, 5));
+		System.out.println(pow(2, -5) == Math.pow(2, -5));
+		System.out.println(pow(2, 1000) == Math.pow(2, 1000));
+		System.out.println(Math.pow(0.00001, 2147483647));
+	}
+}
