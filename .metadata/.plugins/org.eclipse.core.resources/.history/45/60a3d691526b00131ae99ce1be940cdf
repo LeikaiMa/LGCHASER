@@ -1,0 +1,69 @@
+package spiralMatrix;
+
+import java.util.ArrayList;
+
+public class NotEqualRowColumn {
+	public static ArrayList<Character> spiralOrder(char[][] matrix) {
+		ArrayList<Character> result = new ArrayList<Character>();
+		if (matrix == null) {
+			return result;
+		}
+		int row = matrix.length;
+		if (row == 0) {
+		    return result;
+		}
+		int column = matrix[0].length;
+		int left = 0;
+		int right = column - 1;
+		int bottom = 0;
+		int top = row - 1;
+		while (true) {
+			for (int i = left; i <= right; i++) {
+				result.add(matrix[bottom][i]);
+			}
+
+			for (int i = bottom + 1; i <= top; i++) {
+				result.add(matrix[i][right]);
+			}
+
+			for (int i = right - 1; top > bottom && i >= left; i--) {
+				result.add(matrix[top][i]);
+			}
+
+			for (int i = top - 1; right > left && i > bottom; i--) {
+				result.add(matrix[i][left]);
+			}
+			left++;
+			right--;
+			bottom++;
+			top--;
+
+			if (result.size() == row * column) {
+				System.out.println(result);
+				return result;
+			}
+		}
+	}
+
+	public static void main(String[] args) {
+		// char[][] matrix = new char[2][3];
+		// String[] lines = new String[2];
+		// lines[0] = "123";
+		// lines[1] = "456";
+		// for (int i = 0; i < 2; i++) {
+		// matrix[i] = lines[i].toCharArray();
+		// }
+		// spiralOrder(matrix);
+
+		char[][] matrix = new char[1][2];
+		String[] lines = new String[2];
+		lines[0] = "23";
+		// lines[1] = "5678";
+		// lines[2] = "9012";
+		// lines[3] = "3456";
+		for (int i = 0; i < 1; i++) {
+			matrix[i] = lines[i].toCharArray();
+		}
+		spiralOrder(matrix);
+	}
+}

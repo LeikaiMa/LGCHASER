@@ -1,0 +1,24 @@
+package spiralMatrix;
+
+import java.util.ArrayList;
+
+public class NotEqualRowColumn {
+	public static ArrayList<Character> spiralOrder(char[][] matrix) {
+		int row = matrix.length;
+		int column = matrix[0].length;
+		char[] r = new char[row * column];
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		char[][] matrix = new char[2][3];
+		String[] lines = new String[2];
+		lines[0] = "123";
+		lines[1] = "456";
+		for (int i = 0; i < 2; i++) {
+			matrix[i] = lines[i].toCharArray();
+		}
+		spiralOrder(matrix);
+	}
+}

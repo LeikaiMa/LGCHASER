@@ -1,0 +1,116 @@
+package spiralMatrix;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class SpiralOrder {
+	public static ArrayList<Character> spiralOrder(char[][] matrix) {
+		int row = matrix.length;
+		int column = matrix[0].length;
+		// int layer = Math.min(row/2, column/2);
+		// int count = 0;
+		ArrayList<Character> result = new ArrayList<Character>(row * column);
+		char[] r = new char[row * column];
+		// for (int l = 0; l < layer; l++) {
+		// int first = l;
+		// int last = column - l;
+		// for (int i = first; i < last; i++) {
+		// int offset = i - first;
+		// result.add(count, matrix[first][i]);
+		// result.add(count + column - 1 ,matrix[i][last]);
+		// result.add(count + column - 1 + row -1, matrix[last][])
+		// }
+		// }
+		int n = row;
+		int count = 0;
+		for (int layer = 0; layer < n / 2; layer++) {
+			int first = layer;
+			int last = n - 1 - layer;
+			for (int i = first; i < last; i++) {
+				int offset = i - first;
+				System.out.println("offset:" + offset);
+				System.out
+						.println("index:" + count + " content: "
+								+ matrix[first][i] + " row: " + first
+								+ " column: " + i);
+				System.out.println("index:" + (count + n - 1) + " content: "
+						+ matrix[i][last] + " row: " + i + " column: " + last);
+				System.out.println("index:" + (count + 2 * (n - 1))
+						+ " content: " + matrix[last][last - offset] + " row: "
+						+ last + " column: " + (last - offset));
+				System.out.println("index:" + (count + 3 * (n - 1))
+						+ " content: " + matrix[last - offset][i-offset] + " row: "
+						+ (last - offset) + " column: " + (i-offset));
+				r[count] = matrix[first][i];
+				r[count + n - 1] = matrix[i][last];
+				r[count + 2 * (n - 1)] = matrix[last][last - offset];
+				r[count + 3 * (n - 1)] = matrix[last - offset][i - offset];
+				// result.add(count, matrix[first][i]);
+				// result.add(count + n - 1, matrix[i][last]);
+				// result.add(count + 2 * (n - 1), matrix[last][last - offset]);
+				// result.add(count + 3 * (n - 1), matrix[last -
+				// offset][first]);
+				count++;
+			}
+			count = count + 3 * (n - 1);
+		}
+		System.out.println(Arrays.toString(r));
+		return result;
+
+		// int row = matrix.length;
+		// int column = matrix[0].length;
+		// int left = -1;
+		// int right = column;
+		// int bottom = -1;
+		// int top = row;
+		// int r = 0;
+		// int c = -1;
+		// int dr = 0;
+		// int dc = 1;
+		// ArrayList<Integer> result = new ArrayList<Integer>();
+		// while (left <= right && bottom <= top) {
+		// r = r + dr;
+		// c = c + dc;
+		//
+		// if (c == right) {
+		// c--;
+		// dr = 1;
+		// dc = 0;
+		// continue;
+		// } else if (r == top) {
+		// r--;
+		// dc = -1;
+		// dr =0;
+		// continue;
+		// } else if (c == left) {
+		// c++;
+		// dr = -1;
+		// dc = 0;
+		// continue;
+		// } else if (r == bottom + 1) {
+		// r++;
+		// dr = 0;
+		// dc = 1;
+		// left++;
+		// right --;
+		// top--;
+		// bottom++;
+		// continue;
+		// }
+		// System.out.println(matrix[r][c]);
+		// }
+		// return null;
+	}
+
+	public static void main(String[] args) {
+		char[][] matrix = new char[3][3];
+		String[] lines = new String[3];
+		lines[0] = "123";
+		lines[1] = "456";
+		lines[2] = "789";
+		for (int i = 0; i < 3; i++) {
+			matrix[i] = lines[i].toCharArray();
+		}
+		spiralOrder(matrix);
+	}
+}
