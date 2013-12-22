@@ -1,0 +1,39 @@
+package integerToRoman;
+
+public class UseWhile {
+	public static String intToRoman(int num) {
+		StringBuffer result = new StringBuffer();
+		if (num >= 1000) {
+			result.append(repeat(num, 1000, "M"));
+			num %= 1000;
+		}
+		if (num >= 900) {
+			result.append("CM");
+			num -= 900;
+		}
+		if (num >= 500) {
+			result.append("D");
+			num -= 500;
+		}
+		if (num >= 400) {
+			result.append("CD");
+			num -= 400;
+		}
+
+		if (num >= 100) {
+			result.append(repeat(num, 100, "C"));
+			num %= 100;
+		}
+		
+		return result.toString();
+
+	}
+
+	public static String repeat(int num, int fac, String unit) {
+		StringBuffer s = new StringBuffer();
+		for (int i = 0; i < num / fac; i++) {
+			s.append(unit);
+		}
+		return s.toString();
+	}
+}
