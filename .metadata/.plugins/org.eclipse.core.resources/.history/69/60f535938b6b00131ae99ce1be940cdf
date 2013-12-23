@@ -1,0 +1,14 @@
+package longestCombinedWord;
+
+public class CombinedTwoWords {
+	public String getLongestWord(String[] list) {
+		String[] array = SortByLength(list);
+	}
+
+	private String[] SortByLength(String[] list) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+
+}

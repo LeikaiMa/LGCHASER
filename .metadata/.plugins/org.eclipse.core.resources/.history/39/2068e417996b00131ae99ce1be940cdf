@@ -1,0 +1,15 @@
+package testArrayList;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class StoreInHashMap {
+	public static void main(String[] args) {
+		HashMap<ListNode, Integer> map = new HashMap<>();
+		ArrayList<ListNode> arrayList =  new ArrayList<>();
+		ListNode l1 = new ListNode();
+		map.put(l1, 0);
+		arrayList.add(l1);
+		ListNode l2 = new ListNode();
+	}
+}

@@ -1,0 +1,26 @@
+package longestCombinedWord;
+
+import java.util.HashMap;
+
+public class CombinedTwoWords {
+	public String getLongestWord(String[] list) {
+		String[] array = SortByLength(list);
+
+		HashMap<String, Boolean> map = new HashMap<>();
+		for (String str : array) {
+			map.put(str, true);
+		}
+
+		for (String s : array) {
+			for (int i = 1; i < s.length(); i++) {
+				String left = s.substring(0,i);
+			}
+		}
+	}
+
+	private String[] SortByLength(String[] list) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

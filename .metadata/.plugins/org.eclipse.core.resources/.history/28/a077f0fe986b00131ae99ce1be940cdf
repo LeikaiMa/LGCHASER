@@ -1,0 +1,14 @@
+package testArrayList;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class StoreInHashMap {
+	public static void main(String[] args) {
+		HashMap<ListNode, Integer> map = new HashMap<>();
+		ArrayList<Integer> arrayList =  new ArrayList<>();
+		ListNode l1 = new ListNode();
+		
+		ListNode l2 = new ListNode();
+	}
+}

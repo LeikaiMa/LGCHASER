@@ -1,0 +1,45 @@
+package copyListWithRandomPointer;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class HashMapArrayList {
+	public RandomListNode copyRandomList(RandomListNode head) {
+		if (head == null) {
+			return null;
+		}
+		if (head.next == null) {
+			RandomListNode nh = new RandomListNode(head.label);
+			if (head.random != null) {
+				nh.random = nh;
+			}
+			return nh;
+		}
+		
+		HashMap<RandomListNode, Integer> map = new HashMap<RandomListNode, Integer>();
+		ArrayList<RandomListNode> arrayList =  new ArrayList<RandomListNode>();
+		
+		RandomListNode nh = new RandomListNode(head.label);
+		map.put(head, 0);
+		arrayList.add(nh);
+		int index = 1;
+		RandomListNode node = head;
+		RandomListNode newNode = nh;
+		while (node.next != null) {
+			node = node.next;
+			map.put(node, index);
+			RandomListNode tmp = new RandomListNode(node.label);
+			arrayList.add(tmp);
+			newNode.next = tmp;
+			index++;
+			newNode = tmp;
+		}
+		node = head;
+		newNode = nh;
+		while (node != null) {
+			if (node.random != null) {
+			newNode.random = arrayList.get(map.get(node.random));
+			}
+		}
+	}
+}

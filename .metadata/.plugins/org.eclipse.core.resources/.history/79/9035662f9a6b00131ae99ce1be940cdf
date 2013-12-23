@@ -1,0 +1,16 @@
+package copyListWithRandomPointer;
+
+public class HashMapArrayList {
+	public RandomListNode copyRandomList(RandomListNode head) {
+		if (head == null) {
+			return null;
+		}
+		if (head.next == null) {
+			RandomListNode nh = new RandomListNode(head.label);
+			if (head.random != null) {
+				nh.random = nh;
+			}
+			return nh;
+		}
+	}
+}

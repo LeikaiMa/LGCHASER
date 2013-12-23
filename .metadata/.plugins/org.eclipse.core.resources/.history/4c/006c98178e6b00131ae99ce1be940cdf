@@ -1,0 +1,7 @@
+package longestCombinedWord;
+
+import java.util.Comparator;
+
+public class LengthComparator implements Comparable<? super String> {
+
+}

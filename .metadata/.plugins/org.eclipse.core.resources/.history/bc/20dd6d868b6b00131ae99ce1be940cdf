@@ -1,0 +1,7 @@
+package longestCombinedWord;
+
+public class CombinedTwoWords {
+	String getLongestWord(String[] list) {
+		String[] array = list.SortByLength();
+	}
+}
