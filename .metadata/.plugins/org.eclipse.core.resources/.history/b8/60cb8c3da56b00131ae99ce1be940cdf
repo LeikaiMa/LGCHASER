@@ -1,0 +1,33 @@
+package maxDepth;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class MaxDepth {
+	public int maxDepth(TreeNode root) {
+		if (root == null) {
+			return 0;
+		}
+		if (root.left == null && root.right == null) {
+			return 1;
+		}
+		
+		Queue<TreeNode> q1 = new LinkedList<TreeNode>();
+		q1.add(root);
+		int depth = 0;
+		
+		while (!q1.isEmpty()) {
+			depth++;
+			Queue<TreeNode> tmp = new LinkedList<TreeNode>();
+			while (!q1.isEmpty()) {
+				TreeNode node = q1.poll();
+				if (node.left != null) {
+					tmp.add(node.left);
+				}
+				if (node.right != null) {
+					tmp.add(node.right);
+				}
+			}
+		}
+	}
+}
