@@ -1,0 +1,12 @@
+package encodingXML;
+
+public class Attribute {
+
+	public String value;
+
+	public Element getTagCode() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

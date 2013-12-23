@@ -1,0 +1,13 @@
+package encodingXML;
+
+import java.util.ArrayList;
+
+public class Element {
+
+	public ArrayList<Attribute> attributes;
+	public String getNameCode() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

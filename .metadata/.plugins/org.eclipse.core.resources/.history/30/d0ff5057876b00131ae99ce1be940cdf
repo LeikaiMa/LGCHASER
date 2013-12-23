@@ -1,0 +1,14 @@
+package encodingXML;
+
+
+public class TreeEncoding {
+	public static String encodeToString(Element root) {
+		StringBuffer sb = new StringBuffer();
+		encode(root, sb);
+		return sb.toString();
+	}
+	
+	public static void encode(Element root, StringBuffer sb) {
+		encode(root.getNameCode, sb);
+	}
+}

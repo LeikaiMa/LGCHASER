@@ -1,0 +1,30 @@
+package encodingXML;
+
+
+
+public class TreeEncoding {
+	public static String encodeToString(Element root) {
+		StringBuffer sb = new StringBuffer();
+		encode(root, sb);
+		return sb.toString();
+	}
+	
+	public static void encode(Element root, StringBuffer sb) {
+		encode(root.getNameCode(), sb);
+		for (Attribute a: root.attributes) {
+			encode(a, sb);
+		}
+		
+		encode("0", sb);
+	}
+	
+	public static void encode(String v, StringBuffer sb) {
+		sb.append(v);
+		sb.append(" ");
+	}
+	
+	public static void encode(Attribute attr, StringBuffer sb) {
+		encode(attr.getTagCode(), sb);
+		
+	}
+}

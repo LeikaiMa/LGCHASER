@@ -1,0 +1,7 @@
+package encodingXML;
+
+public class Element {
+
+	public Element getNameCode;
+
+}

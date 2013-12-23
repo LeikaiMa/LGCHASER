@@ -1,0 +1,7 @@
+package encodingXML;
+
+public class Attribute {
+
+	public String value;
+
+}

@@ -1,0 +1,17 @@
+package largestSum;
+// 只有正数才会越来越大，如果加上负数就会减小，如果负数减小的效果超过了正数，宁可将前面记录的部分删掉，重新开始。
+public class ContiguousSequence {
+	public static int getMaxSum(int[] a) {
+		int maxsum = 0;
+		int sum = 0;
+		for (int i = 0; i < a.length; i++) {
+			sum += a[i];
+			if (maxsum < sum) {
+				maxsum = sum;
+			} else if (sum < 0) {
+				sum = 0;
+			}
+		}
+		return maxsum;
+	}
+}

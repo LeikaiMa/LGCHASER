@@ -1,0 +1,8 @@
+package encodingXML;
+
+
+public class TreeEncoding {
+	public static String encodeToString(Element root) {
+		StringBuffer sb = new StringBuffer();
+	}
+}
