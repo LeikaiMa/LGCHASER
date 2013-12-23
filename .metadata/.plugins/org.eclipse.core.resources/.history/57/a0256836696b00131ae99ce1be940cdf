@@ -1,0 +1,7 @@
+package rotateImage;
+
+public class ClockWiseInPlace {
+public void rotate(int[][] matrix) {
+        
+    }
+}
