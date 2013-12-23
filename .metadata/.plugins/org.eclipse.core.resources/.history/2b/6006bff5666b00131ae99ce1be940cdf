@@ -1,0 +1,28 @@
+package romanToInteger;
+
+import java.util.HashMap;
+
+public class UseHashMap {
+	public int romanToInt(String s) {
+		if (s == null || s.isEmpty()) {
+			return 0;
+		}
+		int i = 0;
+		HashMap<String, Integer> rToI = new HashMap<String, Integer>();
+		
+		rToI.put( "M",1000);
+		rToI.put("CM",900);
+		rToI.put( "D",500);
+		rToI.put( "CD",400);
+		rToI.put("C",100);
+		rToI.put("XC",90);
+		rToI.put( "L",50);
+		rToI.put("XL",40);
+		rToI.put( "X",10);
+		rToI.put("IX",9);
+		rToI.put("V",5);
+		rToI.put(4, "IV");
+		rToI.put(1, "I");
+		
+	}
+}
