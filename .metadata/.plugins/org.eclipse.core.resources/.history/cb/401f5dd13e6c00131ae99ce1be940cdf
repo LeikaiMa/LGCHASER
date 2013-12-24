@@ -1,0 +1,8 @@
+package suffixTree;
+
+import java.util.HashMap;
+
+public class SuffixTreeNode {
+	HashMap<Character, SuffixTreeNode> children = new HashMap<Character, SuffixTreeNode>();
+	char
+}

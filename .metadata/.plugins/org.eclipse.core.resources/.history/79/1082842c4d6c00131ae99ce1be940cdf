@@ -1,0 +1,44 @@
+package medianValue;
+
+import java.util.PriorityQueue;
+// 找一个随机数的中位数
+// 可以建两个heap 一个是maxHeap 一个是minHeap 这样两个顶部肯定就是这个排好序的最中间的两个。
+// 假设max存的比min 的要多或者相等，那么如果要多，那么表示是一个奇数个数的数组，这样肯定就是多出的那一个是中位数。
+// 如果是相同的，表示应该是两个的平均数。如果max 没有值说明就没有任何存进来， 就直接返回0
+// 
+public class MaxMinHeap {
+//	private Comparator<Integer> maxHeapComparator;
+//	private Comparator<Integer> minHeapComparator;
+	private PriorityQueue<Integer> maxHeap, minHeap;
+
+	public void addNewNumber(int randomNumber) {
+		if (maxHeap.size() >= minHeap.size()) {
+			if ((minHeap.peek() != null) && randomNumber > minHeap.peek()) {
+				maxHeap.offer(minHeap.poll());
+				minHeap.offer(randomNumber);
+			} else {
+				maxHeap.offer(randomNumber);
+			}
+		} else {
+			if (randomNumber < maxHeap.peek()) {
+				minHeap.offer(maxHeap.poll());
+				maxHeap.offer(randomNumber);
+			} else {
+				minHeap.offer(randomNumber);
+			}
+		}
+	}
+
+	public double getMedian() {
+		if (maxHeap.isEmpty()) {
+			return 0;
+		}
+
+		if (maxHeap.size() == minHeap.size()) {
+			return ((double) minHeap.peek() + (double) maxHeap.peek()) / 2;
+		} else {
+			return maxHeap.peek();
+		}
+
+	}
+}

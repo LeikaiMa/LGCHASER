@@ -1,0 +1,7 @@
+package medianValue;
+
+import java.util.Comparator;
+
+public class MaxMinHeap {
+	private Comparator<Integer> maxHeapComparator;
+}

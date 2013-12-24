@@ -1,0 +1,18 @@
+package suffixTree;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class SuffixTreeNode {
+	HashMap<Character, SuffixTreeNode> children = new HashMap<Character, SuffixTreeNode>();
+	char value;
+	ArrayList<Integer> indexes = new ArrayList<>();
+	
+	public SuffixTreeNode() {
+		
+	}
+	
+	public void insertString(String s, int index) {
+		
+	}
+}

@@ -1,0 +1,5 @@
+package suffixTree;
+
+public class SuffixTreeNode {
+
+}
