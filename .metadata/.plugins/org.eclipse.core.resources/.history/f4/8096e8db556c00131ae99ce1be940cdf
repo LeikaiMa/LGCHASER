@@ -1,0 +1,8 @@
+package bstToDoubleLinkedList;
+
+public class AdditionalDataStructure {
+	private class NodePair {
+		BiNode head;
+		BiNode tail;
+	}
+}

@@ -1,4 +1,7 @@
 eclipse.preferences.version=1
+encoding//src/bstToDoubleLinkedList/AdditionalDataStructure.java=UTF-8
+encoding//src/bstToDoubleLinkedList/CircularLinkedList.java=UTF-8
+encoding//src/bstToDoubleLinkedList/RetrievingTheTail.java=UTF-8
 encoding//src/encodingXML/TreeEncoding.java=UTF-8
 encoding//src/frequencyOfOccurence/Repetitive.java=UTF-8
 encoding//src/largestSum/ContiguousSequence.java=UTF-8
@@ -12,4 +15,5 @@ encoding//src/ticTacToe/SimpleBoard.java=UTF-8
 encoding//src/ticTacToe/WithHashTable.java=UTF-8
 encoding//src/trailingOfZeros/CountZeroDirectly.java=UTF-8
 encoding//src/trailingOfZeros/FactorOfFive.java=UTF-8
+encoding//src/twoSumPairs/PairSums.java=UTF-8
 encoding//src/unsortedMiddleArray/UnsortedMiddleArray.java=UTF-8

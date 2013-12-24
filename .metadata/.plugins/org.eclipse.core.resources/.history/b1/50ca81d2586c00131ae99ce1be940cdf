@@ -1,0 +1,16 @@
+package bstToDoubleLinkedList;
+
+public class CircularLinkedList {
+	public static BiNode convertToCircular(BiNode root) {
+		if (root == null) {
+			return null;
+		}
+		
+		BiNode part1 = convertToCircular(root.node1);
+		BiNode part3 = convertToCircular(root.node2);
+		
+		if (part1 == null && part3 == null) {
+			
+		}
+	}
+}

@@ -1,0 +1,12 @@
+package bstToDoubleLinkedList;
+
+public class RetrievingTheTail {
+	public static BiNode convert(BiNode root) {
+		if (root == null) {
+			return null;
+		}
+		
+		BiNode part1 = convert(root.node1);
+		BiNode part2 = convert(root.node2);
+	}
+}

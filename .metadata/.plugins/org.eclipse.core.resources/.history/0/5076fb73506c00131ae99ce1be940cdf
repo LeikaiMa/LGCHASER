@@ -1,0 +1,12 @@
+package ran7;
+
+public class ByRan5 {
+	public static int rand7() {
+		while (true) {
+			int num = 5 * rand5() + rand5();
+			if (num < 21) {
+
+			}
+		}
+	}
+}
