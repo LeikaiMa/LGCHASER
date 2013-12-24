@@ -1,0 +1,12 @@
+package scrambleString;
+
+import java.util.HashMap;
+
+public class UseHashMap {
+	public boolean isScramble(String s1, String s2) {
+		if (s1.isEmpty() && s2.isEmpty()) {
+			return true;
+		}
+		HashMap<Character, V>
+	}
+}
