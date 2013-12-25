@@ -1,0 +1,41 @@
+package jumpGame;
+
+public class DP {
+	public boolean canJump(int[] A) {
+		if (A == null) {
+			return false;
+		}
+		int len = A.length;
+		if (len == 0) {
+			return false;
+		}
+		if (len == 1) {
+			return true;
+		}
+		int[] ways = new int[len];
+		if (A[0] >= len - 1) {
+			return true;
+		}
+		for (int i = 1; i <= A[0]; i++) {
+			if (i < len) {
+				ways[i] += 1;
+			} else {
+				break;
+			}
+		}
+
+		for (int i = 1; i < len - 1; i++) {
+			if (ways[i] > 0) {
+				for (int j = 1; j <= A[i]; j++) {
+					if (i + j >= len) {
+						break;
+					} else {
+						ways[i + j] += 1;
+					}
+				}
+			}
+		}
+
+		return ways[len - 1] > 0;
+	}
+}

@@ -1,0 +1,16 @@
+package jumpGame;
+
+public class DPNoArray {
+	public boolean canJump(int[] A) {
+		if (A == null) {
+			return false;
+		}
+		int len = A.length;
+		if (len == 0) {
+			return false;
+		}
+		if (len == 1) {
+			return true;
+		}
+	}
+}

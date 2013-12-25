@@ -1,0 +1,8 @@
+package jumpGame;
+
+public class DP {
+	public boolean canJump(int[] A) {
+		int len = A.length;
+		int[] ways = new int[A.length];
+	}
+}

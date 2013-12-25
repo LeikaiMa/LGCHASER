@@ -1,0 +1,24 @@
+package jumpGame;
+
+public class DPNoArray {
+	public boolean canJump(int[] A) {
+		if (A == null) {
+			return false;
+		}
+		int len = A.length;
+		if (len == 0) {
+			return false;
+		}
+		if (len == 1) {
+			return true;
+		}
+
+		int maxCover = A[0];
+		for (int i = 1; i < maxCover; i++) {
+			maxCover = Math.max(A[i] + i, maxCover);
+			if (maxCover >= len - 1) {
+				return true;
+			}
+		}
+	}
+}

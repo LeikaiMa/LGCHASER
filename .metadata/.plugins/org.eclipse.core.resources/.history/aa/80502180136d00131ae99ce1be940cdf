@@ -1,0 +1,7 @@
+package jumpGame;
+
+public class DP {
+	public boolean canJump(int[] A) {
+
+	}
+}
