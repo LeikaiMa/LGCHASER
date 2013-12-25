@@ -1,0 +1,7 @@
+package removeDuplicatesFromList;
+
+public class TwoPointer {
+	public ListNode deleteDuplicates(ListNode head) {
+
+	}
+}

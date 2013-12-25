@@ -1,0 +1,26 @@
+package removeDuplicateFromListII;
+
+public class WhileTrue {
+	public ListNode deleteDuplicates(ListNode head) {
+		while (true) {
+			if (head == null || head.next == null) {
+				return head;
+			}
+			if (head.val != head.next.val) {
+				break;
+			}
+			ListNode p = head;
+			while (p != null && p.val == head.val) {
+				p = p.next;
+			}
+			head = p;
+		}
+		
+		ListNode slow = head;
+		ListNode fast = head.next;
+		while (fast != null) {
+			
+		}
+		return head;
+	}
+}
