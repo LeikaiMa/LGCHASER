@@ -1,0 +1,24 @@
+package jumpGameII;
+
+
+public class DP {
+	public int jump(int[] A) {
+		if (A == null || A.length == 0 || A.length == 1) {
+			return 0;
+		}
+		int len = A.length;
+		int maxCover = A[0];
+		if (maxCover >= len -1) {
+			return 1;
+		}
+		
+//		for (int i = 1, jump = 2; i <= maxCover; jump++) {
+//			int newMaxCover = 0;
+//			for (int j = i; j<= maxCover; j++) {
+//				
+//			}
+//		}
+		int i = 1;
+		int jump = 2;
+	}
+}

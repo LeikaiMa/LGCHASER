@@ -1,0 +1,9 @@
+package jumpGameII;
+
+public class DP {
+	public int jump(int[] A) {
+		if (A == null || A.length == 0) {
+			return 0;
+		}
+	}
+}

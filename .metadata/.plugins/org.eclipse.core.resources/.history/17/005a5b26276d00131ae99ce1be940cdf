@@ -1,0 +1,16 @@
+package jumpGameII;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class DP {
+	public int jump(int[] A) {
+		if (A == null || A.length == 0 || A.length == 1) {
+			return 0;
+		}
+		int len = A.length;
+		boolean[] isVisited = new boolean[len];
+		isVisited[0] = true;
+		Queue<Integer> start = new LinkedList<>();
+ 	}
+}
