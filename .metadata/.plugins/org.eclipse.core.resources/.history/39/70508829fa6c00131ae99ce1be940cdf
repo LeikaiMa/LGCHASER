@@ -1,0 +1,7 @@
+package mergeIntervals;
+
+public class UseArraylist {
+public ArrayList<Interval> merge(ArrayList<Interval> intervals) {
+        
+    }
+}

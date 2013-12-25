@@ -1,0 +1,21 @@
+package mergeIntervals;
+
+import java.util.ArrayList;
+import java.util.TreeMap;
+
+public class UseArraylist {
+	public ArrayList<Interval> merge(ArrayList<Interval> intervals) {
+		ArrayList<Interval> result = new ArrayList<Interval>();
+		if (intervals == null || intervals.size() == 0) {
+			return result;
+		}
+		if (intervals.size() == 1) {
+			result.add(intervals.get(0));
+			return result;
+		}
+
+		TreeMap<Integer, Interval> map = new TreeMap<Integer, Interval>();
+		
+		for ()
+	}
+}
