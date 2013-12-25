@@ -1,0 +1,7 @@
+package sortedArrayToBST;
+
+public class Recursive {
+	public TreeNode sortedArrayToBST(int[] num) {
+		TreeNode root =null;
+	}
+}
