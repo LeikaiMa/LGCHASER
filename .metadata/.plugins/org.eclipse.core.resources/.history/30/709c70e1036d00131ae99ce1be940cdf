@@ -1,0 +1,7 @@
+package uniquePath;
+
+public class DP {
+	public int uniquePaths(int m, int n) {
+		int [][] dp = int[m+1][n+1];
+	}
+}
