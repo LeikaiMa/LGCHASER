@@ -1,0 +1,51 @@
+package combinationSumII;
+
+import java.util.ArrayList;
+
+public class RemoveDuplicate {
+	public static ArrayList<ArrayList<Integer>> combinationSum2(int[] num,
+			int target) {
+		ArrayList<ArrayList<Integer>> results = new ArrayList<ArrayList<Integer>>();
+		if (num == null || num.length == 0) {
+			return results;
+		}
+		ArrayList<Integer> re = new ArrayList<Integer>();
+		combinationSum2Helper(num, target, 0, 0, re, results);
+		return results;
+	}
+
+	private static void combinationSum2Helper(int[] num, int target, int start,
+			int sum, ArrayList<Integer> re,
+			ArrayList<ArrayList<Integer>> results) {
+		if (sum == target) {
+			ArrayList<Integer> result = new ArrayList<Integer>();
+			result.addAll(re);
+			results.add(result);
+			return;
+		} else if (sum > target) {
+			return;
+		} else {
+			for (int i = start; i < num.length; i++) {
+				re.add(num[i]);
+				sum += num[i];
+				combinationSum2Helper(num, target, start + 1, sum, re, results);
+				re.remove(re.size() - 1);
+				sum -= num[i];
+				while (i < num.length - 1 && num[i] == num[i + 1]) {
+					i++;
+				}
+			}
+		}
+
+	}
+	
+	public static void main(String[] args) {
+		int[] candidates = { 10, 1, 2, 7, 6, 1, 5 };
+		int target = 8;
+		ArrayList<ArrayList<Integer>> result = new ArrayList<>();
+		result = combinationSum2(candidates, target);
+		for (ArrayList<Integer> r : result) {
+			System.out.println(r);
+		}
+	}
+}

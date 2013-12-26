@@ -1,0 +1,18 @@
+package combinationSum;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class Forward {
+	public static ArrayList<ArrayList<Integer>> combinationSum(
+			int[] candidates, int target) {
+		ArrayList<ArrayList<Integer>> results = new ArrayList<ArrayList<Integer>>();
+		if (candidates == null || candidates.length == 0) {
+			return results;
+		}
+		Arrays.sort(candidates);
+		ArrayList<Integer> re = new ArrayList<Integer>();
+		combinationSum2Helper(candidates, target, 0, 0, re, results);
+		return results;
+	}
+}

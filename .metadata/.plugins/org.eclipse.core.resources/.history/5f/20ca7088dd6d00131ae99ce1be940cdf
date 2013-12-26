@@ -1,0 +1,7 @@
+package testArrayList;
+
+public class NoElementArraylist {
+	public static void main(String[] args) {
+		
+	}
+}
