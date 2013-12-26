@@ -1,0 +1,29 @@
+package combination;
+
+import java.util.ArrayList;
+
+public class BFSBacktrace {
+	public ArrayList<ArrayList<Integer>> combine(int n, int k) {
+		ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
+		if (k > n || n <= 0 || k <= 0) {
+			return result;
+		}
+
+		result = combineHelper(n, k);
+		return result;
+	}
+
+	private static ArrayList<ArrayList<Integer>> combineHelper(int n, int k) {
+		ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
+		if (k == 1) {
+			for (int i = 1; i <= n; i++) {
+				ArrayList<Integer> r = new ArrayList<Integer>();
+				r.add(i);
+				result.add(r);
+			}
+			return result;
+		} else {
+
+		}
+	}
+}
