@@ -18,5 +18,7 @@ encoding//src/testString/LowerCase.java=UTF-8
 encoding//src/testString/ReplaceNonalphanumericCharacters.java=UTF-8
 encoding//src/testString/SubStringExceedLength.java=UTF-8
 encoding//src/testString/nullVsNoElement.java=UTF-8
+encoding//src/testStringBuffer/DeletePreviousAdded.java=UTF-8
+encoding//src/testStringBuffer/SubStringInStringBuffer.java=UTF-8
 encoding//src/testTreeMap/Duplicate.java=UTF-8
 encoding//src/testTreeMap/TestTreeMap.java=UTF-8

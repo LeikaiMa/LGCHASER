@@ -1,0 +1,16 @@
+package wordBreakII;
+
+import java.util.ArrayList;
+import java.util.Set;
+
+public class DFS {
+	public static ArrayList<String> wordBreak(String s, Set<String> dict) {
+		ArrayList<String> result = new ArrayList<String>();
+		if (s == null || s.isEmpty()) {
+			return result;
+		}
+		StringBuffer sb = new StringBuffer();
+		wordBreakHelper(0, 0, s, dict,sb);
+		return result;
+	}
+}

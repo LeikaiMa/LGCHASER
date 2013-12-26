@@ -1,3 +1,6 @@
 eclipse.preferences.version=1
 encoding//src/jumpGame/DPNoArray.java=UTF-8
 encoding//src/jumpGameII/DP.java=UTF-8
+encoding//src/wordBreak/DP.java=UTF-8
+encoding//src/wordBreak/RecursiveBackTrace.java=UTF-8
+encoding//src/wordBreakII/DP.java=UTF-8

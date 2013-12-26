@@ -1,0 +1,11 @@
+package testStringBuffer;
+
+public class DeletePreviousAdded {
+	public static void main(String[] args) {
+		StringBuffer sb= new StringBuffer();
+		sb.append("abc");
+		int lastPos= sb.length();
+		sb.append("def");
+		System.out.println(sb.delete(lastPos, sb.length()));
+	}
+}

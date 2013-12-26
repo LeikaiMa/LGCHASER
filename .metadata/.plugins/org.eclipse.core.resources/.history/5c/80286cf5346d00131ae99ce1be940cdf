@@ -1,0 +1,7 @@
+package wordBreak;
+
+public class Recursive {
+	public boolean wordBreak(String s, Set<String> dict) {
+
+	}
+}

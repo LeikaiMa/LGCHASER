@@ -1,0 +1,44 @@
+package wordBreakII;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Set;
+
+public class Recursive {
+	public ArrayList<String> wordBreak(String s, Set<String> dict) {
+		ArrayList<String> result = new ArrayList<String>();
+		if (dict == null || dict.isEmpty()) {
+			return result;
+		}
+		HashMap<String, Boolean> map = new HashMap<String, Boolean>();
+		for (String word : dict) {
+			map.put(word, true);
+		}
+		result = wordBreakHelper(s, map);
+		return result;
+	}
+
+	private ArrayList<String> wordBreakHelper(String s,
+			HashMap<String, Boolean> map) {
+		ArrayList<String> result = new ArrayList<String>();
+		if (map.containsKey(s)) {
+			if (map.get(s)) {
+				result.add(s);
+			}
+			return result;
+		}
+		for (int i = 1; i < s.length(); i++) {
+			String left = s.substring(0, i);
+			String right = s.substring(i);
+			
+			if (map.containsKey(left) && map.get(left)) {
+				ArrayList<String> rights = wordBreakHelper(right, map);
+				if (rights.size() > 0) {
+					
+				}
+			}
+		}
+	}
+	
+	
+}

@@ -1,0 +1,35 @@
+package wordBreakII;
+
+import java.util.ArrayList;
+import java.util.Set;
+
+public class DFS {
+	public static ArrayList<String> wordBreak(String s, Set<String> dict) {
+		ArrayList<String> result = new ArrayList<String>();
+		if (s == null || s.isEmpty()) {
+			return result;
+		}
+		StringBuffer sb = new StringBuffer();
+		wordBreakHelper(0, s, dict, result, sb);
+		return result;
+	}
+
+	private static void wordBreakHelper(int start, String s,
+			Set<String> dict, ArrayList<String> result, StringBuffer sb) {
+		int len = s.length();
+		if (start == len) {
+			result.add(sb.substring(0, sb.length() - 1));
+			return;
+		}
+
+		for (int end = 1; end <= len; end++) {
+			String left = s.substring(start, end);
+			if(dict.contains(left)) {
+				int lastPos= sb.length();
+				wordBreakHelper(end, s, dict, result, sb);
+				sb.delete(lastPos, sb.length());
+			}
+		}
+
+	}
+}

@@ -1,0 +1,11 @@
+package wordBreak;
+
+import java.util.Set;
+
+public class DP {
+	public static boolean wordBreak(String s, Set<String> dict) {
+		return wordBreakHelper(s, dict, 0);
+	}
+	
+	private static boolean wordBreakHelper(String s, Set<String> dict, int start) {
+}
