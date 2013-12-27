@@ -1,0 +1,12 @@
+package surroundedSquare;
+
+public class BruteForce {
+	Subsquare findSquare(int[][] matrix) {
+		for (int i = matrix.length; i >= 1; i--) {
+			Subsquare square = findSquareWithSize(matrix, i);
+			if (square != null) {
+				return square;
+			}
+		}
+	}
+}

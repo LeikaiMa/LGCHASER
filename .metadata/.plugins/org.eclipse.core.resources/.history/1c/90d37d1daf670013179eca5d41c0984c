@@ -1,7 +1,0 @@
-package minimumSumPath;
-
-public class MinimumSumPath {
-	public int minPathSum(int[][] grid) {
-		
-	}
-}

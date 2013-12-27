@@ -1,7 +1,0 @@
-package combinationSumII;
-
-public class BackTrace {
-	public ArrayList<ArrayList<Integer>> combinationSum2(int[] num, int target) {
-
-	}
-}

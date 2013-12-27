@@ -1,0 +1,55 @@
+package rectangleTrie;
+
+public class Rectangle {
+	public int height;
+	public int length;
+	public char[][] matrix;
+
+	public Rectangle(int len) {
+		this.length = len;
+	}
+
+	public Rectangle(int length, int height, char[][] letters) {
+		this.height = letters.length;
+		this.length = letters[0].length;
+		matrix = letters;
+	}
+
+	public char getLetter(int i, int j) {
+		return matrix[i][j];
+	}
+
+	public String getColumn(int i) {
+		char[] column = new char[height];
+		for (int j = 0; j < height; j++) {
+			column[j] = getLetter(j, i);
+		}
+
+		return new String(column);
+	}
+
+	public boolean isComplete(int l, int h, WordGroup groupList) {
+		if (height == h) {
+			for (int i = 0; i < l; i++) {
+				String col = getColumn(i);
+				if (!groupList.containsWord(col)) {
+					return false;
+				}
+			}
+			return true;
+		}
+		return false;
+	}
+
+	public boolean isPartialOK(int l, Trie trie) {
+		if (height == 0) {
+			return true;
+		}
+		for (int i = 0; i < l; i++) {
+			for (int i = 0; i < l; i++) {
+
+			}
+		}
+	}
+
+}

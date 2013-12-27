@@ -1,9 +1,0 @@
-package ticTacToe;
-
-public class SimpleBoard {
-	public Piece hasWon(Piece[][] board) {
-		for (int i = 0; i < board.length; i++) {
-			
-		}
-	}
-}

@@ -1,7 +1,0 @@
-package countNumberTwos;
-
-public class BruteForce {
-	public int numberOf2sInRange(int n) {
-		int count = 0;
-	}
-}

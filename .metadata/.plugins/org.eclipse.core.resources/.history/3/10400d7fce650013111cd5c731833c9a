@@ -1,7 +1,0 @@
-package compressString;
-
-public class WithArray {
-	String compressAlternate(String str) {
-		
-	}
-}

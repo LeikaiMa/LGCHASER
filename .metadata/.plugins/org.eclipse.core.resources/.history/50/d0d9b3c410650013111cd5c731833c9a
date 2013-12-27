@@ -1,7 +1,0 @@
-package fourSum;
-
-public class FourSum {
-	public ArrayList<ArrayList<Integer>> fourSum(int[] num, int target) {
-
-	}
-}

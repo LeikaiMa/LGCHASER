@@ -1,7 +1,0 @@
-package trailingOfZeros;
-
-public class CountZeroDirectly {
-	public int countFactZeros(int num) {
-		
-	}
-}

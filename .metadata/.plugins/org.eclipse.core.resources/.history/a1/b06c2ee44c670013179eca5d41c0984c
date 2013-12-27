@@ -1,6 +1,0 @@
-package numToString;
-
-public class NumToString {
-	public String[] digits = {"One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"};
-	
-}

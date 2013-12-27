@@ -1,7 +1,0 @@
-package rotateList;
-
-public class Rotate {
-	public ListNode rotateRight(ListNode head, int n) {
-
-	}
-}

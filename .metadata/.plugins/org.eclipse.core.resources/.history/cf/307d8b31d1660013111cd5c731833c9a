@@ -1,7 +1,0 @@
-package grayCode;
-
-public class GrayCode {
-	 public ArrayList<Integer> grayCode(int n) {
-		 
-	 }
-}

@@ -1,7 +1,0 @@
-package smallestOneMillion;
-
-public class SelectionRankAlgorithm {
-	public int rank(int[] array, int left, int right, int rank) {
-		
-	}
-}

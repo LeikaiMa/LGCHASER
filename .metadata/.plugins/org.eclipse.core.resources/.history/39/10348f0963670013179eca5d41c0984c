@@ -1,7 +1,0 @@
-package shortestDistanceOfWords;
-
-public class Shortest {
-	public int shortest(String[] words, String word1, String word2) {
-		
-	}
-}

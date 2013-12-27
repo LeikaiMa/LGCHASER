@@ -1,8 +1,0 @@
-package compressString;
-
-public class CompressBad {
-	public String compressBad(String str) {
-		String mystr = "";
-		
-	}
-}

@@ -1,0 +1,6 @@
+package surroundedSquare;
+
+public class SquareCell {
+	public int zerosRight = 0;
+	
+}

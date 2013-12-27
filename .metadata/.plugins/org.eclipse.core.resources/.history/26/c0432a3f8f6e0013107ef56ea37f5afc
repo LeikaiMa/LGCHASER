@@ -1,0 +1,21 @@
+package rectangleTrie;
+
+import java.util.ArrayList;
+
+public class Trie {
+	private TrieNode root;
+	
+	public Trie(ArrayList<String> list) {
+		root = new TrieNode();
+		for (String word : list) {
+			root.addWord(word);
+		}
+	}
+	
+	public Trie(String[] list) {
+		root = new TrieNode();
+		for (String word: list) {
+			
+		}
+	}
+}

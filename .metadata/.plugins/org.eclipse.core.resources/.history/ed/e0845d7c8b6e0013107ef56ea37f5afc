@@ -1,0 +1,14 @@
+package rectangleTrie;
+
+import java.util.LinkedList;
+
+public class TrieNode {
+	private LinkedList<TrieNode> children;
+	private boolean terminates = false;
+	
+	private char character;
+	
+	public TrieNode() {
+		children = new LinkedList<TrieNode>();
+	}
+}

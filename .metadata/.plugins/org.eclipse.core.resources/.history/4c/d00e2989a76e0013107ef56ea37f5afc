@@ -1,0 +1,9 @@
+package rectangleTrie;
+
+import java.util.ArrayList;
+import java.util.Hashtable;
+
+public class WordGroup {
+	private Hashtable<String, Boolean> lookup = new Hashtable<String, Boolean>();
+	private ArrayList<String> group = new ArrayList<>();
+}

@@ -1,0 +1,7 @@
+package rectangleTrie;
+
+public class Question {
+	private int maxWordLength;
+	private WordGroup[] groupList;
+	private Trie trieList[];
+}

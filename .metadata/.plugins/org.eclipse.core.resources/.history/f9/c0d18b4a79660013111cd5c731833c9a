@@ -1,5 +1,0 @@
-package rankOfNumber;
-
-public class RankNode {
-	public int left_size = 0;
-}

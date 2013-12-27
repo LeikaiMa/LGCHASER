@@ -1,9 +1,0 @@
-package spiralMatrixII;
-
-public class SpiralMatrix {
-	public int[][] generateMatrix(int n) {
-		for (int i = 0; i <= n / 2; i++) {
-			
-		}
-	}
-}

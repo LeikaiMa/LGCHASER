@@ -1,2 +1,9 @@
 1387859091261	Copy package
 1387859100352	Delete element
+1388102962681	Rename type 'TrieNode'
+1388102976056	Rename type 'Trie'
+1388104597626	Rename type 'TrieList'
+1388106354802	Rename type 'ReferenceQuestion'
+1388106647934	Rename type 'Question'
+1388106666608	Rename type 'Rectangle'
+1388106685651	Rename type 'WordGroup'

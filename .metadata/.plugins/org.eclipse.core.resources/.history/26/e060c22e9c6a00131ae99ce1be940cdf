@@ -1,7 +1,0 @@
-package power;
-
-public class Power {
-public double pow(double x, int n) {
-        
-    }
-}

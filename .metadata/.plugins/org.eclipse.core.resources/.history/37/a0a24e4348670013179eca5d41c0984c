@@ -1,7 +1,0 @@
-package unsortedMiddleArray;
-
-public class UnsortedMiddleArray {
-	public void findUnsortedSequence(int[] array) {
-		int end_left = findEndOfLeftSubsequence(array);
-	}
-}

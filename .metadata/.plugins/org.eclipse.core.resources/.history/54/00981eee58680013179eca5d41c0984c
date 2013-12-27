@@ -1,7 +1,0 @@
-package removeNthNodeEnd;
-
-public class RemoveNthNodeFromEnd {
-	public ListNode removeNthFromEnd(ListNode head, int n) {
-		
-	}
-}

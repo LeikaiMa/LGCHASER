@@ -1,7 +1,0 @@
-package trapRain;
-
-public class TrappingRainWater {
-public int trap(int[] A) {
-        
-    }
-}

@@ -1,7 +1,0 @@
-package testString;
-
-public class GetCharacter {
-	public static void main(String[] args) {
-		
-	}
-}

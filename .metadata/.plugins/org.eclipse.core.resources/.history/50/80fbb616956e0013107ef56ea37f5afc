@@ -1,0 +1,6 @@
+package rectangleTrie;
+
+public class Rectangle {
+	public int height;
+	public int length;
+}

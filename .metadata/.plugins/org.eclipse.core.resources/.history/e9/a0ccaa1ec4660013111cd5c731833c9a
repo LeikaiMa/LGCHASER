@@ -1,7 +1,0 @@
-package testTreeMap;
-
-public class Duplicate {
-	public static void main(String[] main) {
-		
-	}
-}

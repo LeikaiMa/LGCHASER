@@ -1,7 +1,0 @@
-package spiralMatrix;
-
-public class SpiralOrder {
-	public ArrayList<Integer> spiralOrder(int[][] matrix) {
-        
-    }
-}

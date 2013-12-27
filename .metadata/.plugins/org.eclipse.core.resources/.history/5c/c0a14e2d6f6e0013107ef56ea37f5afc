@@ -1,0 +1,7 @@
+package surroundedSquare;
+
+public class PreProcessing {
+	Subsquare findSquare(int[][] matrix) {
+		SquareCell[][] processed = processSquare(matrix);
+	}
+}

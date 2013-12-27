@@ -1,7 +1,0 @@
-package threeSumClosest;
-
-public class Closest {
-public int threeSumClosest(int[] num, int target) {
-        
-    }
-}
