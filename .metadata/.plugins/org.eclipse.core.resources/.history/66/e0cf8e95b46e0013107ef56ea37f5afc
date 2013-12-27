@@ -1,0 +1,7 @@
+package splitSentence;
+
+public class Simple {
+	public int parseSimple(int wordStart, int wordEnd) {
+		return 0;
+	}
+}

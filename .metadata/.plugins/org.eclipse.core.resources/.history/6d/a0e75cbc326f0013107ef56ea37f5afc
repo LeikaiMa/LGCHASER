@@ -1,0 +1,5 @@
+package splitSentence;
+
+public class Result {
+	public int invalid = Integer.MAX_VALUE;
+}

@@ -1,0 +1,36 @@
+package splitSentence;
+
+import java.util.Hashtable;
+
+public class Optimization {
+	public String sentence;
+	public Trie dictionary;
+
+	public int parseOptimized(int wordStart, int wordEnd,
+			Hashtable<Integer, Integer> cache) {
+		if (wordEnd >= sentence.length()) {
+			return wordEnd - wordStart;
+		}
+
+		if (cache.contains(wordStart)) {
+			return cache.get(wordStart);
+		}
+
+		String currentWord = sentence.substring(wordStart, wordEnd + 1);
+
+		boolean validPartial = dictionary.contains(currentWord, false);
+
+		int bestExact = parseOptimized(wordEnd + 1, wordEnd + 1, cache);
+
+		if (!validPartial || !dictionary.contains(currentWord, true)) {
+			bestExact += currentWord.length();
+		}
+
+		int bestExtend = Integer.MAX_VALUE;
+		if (validPartial) {
+			bestExtend = parseOptimized(wordStart, wordEnd + 1, cache);
+		}
+
+		int min = Math.min(bestExact, bestExtend);
+	}
+}

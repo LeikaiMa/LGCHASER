@@ -1,0 +1,10 @@
+package splitSentence;
+
+import java.util.Hashtable;
+
+public class Optimization {
+	public int parseOptimized(int wordStart, int wordEnd,
+			Hashtable<Integer, Integer> cache) {
+
+	}
+}

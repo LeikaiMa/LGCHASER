@@ -1,0 +1,27 @@
+package splitSentence;
+
+public class Question {
+
+	public class Result {
+		public int invalid = Integer.MAX_VALUE;
+		public String parsed = "";
+
+		public Result(int inv, String p) {
+			invalid = inv;
+			parsed = p;
+		}
+
+		public Result clone() {
+			return new Result(this.invalid, this.parsed);
+		}
+
+		public static Result min(Result r1, Result r2) {
+			if (r1 == null) {
+				return r2;
+			} else  if (r2 == null) {
+				
+			}
+		}
+	}
+
+}

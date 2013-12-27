@@ -1,0 +1,11 @@
+package splitSentence;
+
+public class Result {
+	public int invalid = Integer.MAX_VALUE;
+	public String parsed = "";
+
+	public Result(int inv, String p) {
+		invalid = inv;
+		parsed = p;
+	}
+}

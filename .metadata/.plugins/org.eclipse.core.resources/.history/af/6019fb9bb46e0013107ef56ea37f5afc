@@ -1,0 +1,10 @@
+package splitSentence;
+
+public class Simple {
+	public String sentence;
+	public int parseSimple(int wordStart, int wordEnd) {
+		if (wordEnd >= sentence.length()) {
+			return wordEnd - wordEnd;
+		}
+	}
+}

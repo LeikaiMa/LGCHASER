@@ -1,0 +1,13 @@
+package splitSentence;
+
+public class Question {
+	public int invalid = Integer.MAX_VALUE;
+	public String parsed = "";
+
+	public Question(int inv, String p) {
+		invalid = inv;
+		parsed = p;
+	}
+	
+	
+}
