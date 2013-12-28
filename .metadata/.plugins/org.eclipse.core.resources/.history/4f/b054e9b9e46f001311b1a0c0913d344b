@@ -1,0 +1,7 @@
+package removeElement;
+
+public class TwoPointer {
+public int removeElement(int[] A, int elem) {
+        
+    }
+}
