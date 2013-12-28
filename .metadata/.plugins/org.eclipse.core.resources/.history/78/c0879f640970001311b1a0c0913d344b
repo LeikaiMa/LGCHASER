@@ -1,0 +1,41 @@
+package regularExpressionMatching;
+
+public class DFA {
+	public boolean isMatch(String s, String p) {
+		if (s == null || p == null) {
+			return false;
+		}
+		if (s.isEmpty() && p.isEmpty()) {
+			return true;
+		} else if (p.isEmpty() && !s.isEmpty()) {
+			return false;
+		}
+
+		return isMatchHelper(s, p, 0, 0);
+	}
+
+	public boolean isMatchHelper(String s, String p, int ps, int pp) {
+		if (pp == p.length()) {
+			return ps == s.length();
+		}
+
+		if (pp + 1 < p.length() && p.charAt(pp + 1) != '*') {
+			if (ps == s.length()
+					|| (p.charAt(pp) != '.' && p.charAt(pp) != s.charAt(ps))) {
+				return false;
+			} else {
+				return isMatchHelper(s, p, ps + 1, pp + 1);
+			}
+		}
+
+		while (ps < s.length()
+				&& (p.charAt(pp) == '.' || p.charAt(pp) == s.charAt(ps))) {
+			if (isMatchHelper(s, p, ps, pp + 2)) {
+				return true;
+			}
+			ps++;
+		}
+
+		return isMatchHelper(s, p, ps, pp + 2);
+	}
+}

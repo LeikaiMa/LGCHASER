@@ -1694,3 +1694,21 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.
 
 !ENTRY org.eclipse.core.net 1 0 2013-12-28 11:35:21.660
 !MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.ui 4 4 2013-12-28 15:42:10.703
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.disable.grammar.constraints
+
+!ENTRY org.eclipse.ui 4 4 2013-12-28 15:42:10.704
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.reload.dependencies
+
+!ENTRY org.eclipse.ui 4 4 2013-12-28 15:42:10.704
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.disable.grammar.constraints
+
+!ENTRY org.eclipse.ui 4 4 2013-12-28 15:42:10.705
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.reload.dependencies
+
+!ENTRY org.eclipse.ui 4 4 2013-12-28 15:42:10.710
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.disable.grammar.constraints
+
+!ENTRY org.eclipse.ui 4 4 2013-12-28 15:42:10.710
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.reload.dependencies

@@ -1,0 +1,117 @@
+package regularExpressionMatching;
+
+import java.util.Stack;
+
+public class UseStack {
+	public  boolean isMatch(String s, String p) {
+		int indexS = 0;
+		int indexP = 0;
+		Stack<starIndex> stack = new Stack<starIndex>();
+		boolean isBack = false;
+		if (s == null || p == null) {
+			return false;
+		}
+		if (s.isEmpty() && p.isEmpty()) {
+			return true;
+		} else if (p.isEmpty() && !s.isEmpty()) {
+			return false;
+		}
+
+		int countStar = 0;
+		for (int i = 0; i < p.length(); i++) {
+			if (p.charAt(i) == '*') {
+				countStar++;
+			}
+		}
+
+		if (p.length() - countStar * 2 > s.length()) {
+			return false;
+		}
+		
+		while (indexS < s.length()) {
+			if (indexP == p.length()) {
+				if (!stack.isEmpty()) {
+					starIndex node = stack.pop();
+					indexP = node.indexP;
+					indexS = node.indexS;
+					isBack = true;
+					continue;
+				} else {
+					return false;
+				}
+			}
+			
+			char cs = s.charAt(indexS);
+			char cp = p.charAt(indexP);
+			
+			if (isBack) {
+				if (cp == '.' || cs == cp) {
+					indexS++;
+					isBack = false;
+					continue;
+				} else if (!stack.isEmpty()){
+					starIndex node = stack.pop();
+					indexP = node.indexP;
+					indexS = node.indexS;
+					isBack = true;
+					continue;
+					
+				} else {
+					return false;
+				}
+			}
+			
+			if (indexP + 1 < p.length() && p.charAt(indexP + 1) == '*' ) {
+				stack.push(new starIndex(indexS, indexP));
+				indexP += 2;
+			} else if (cp == '.' || cs == cp) {
+				indexP++;
+				indexS++;
+			} else if (cs != cp && cp != '.' && !stack.isEmpty()) {
+				starIndex node = stack.pop();
+				indexP = node.indexP;
+				indexS = node.indexS;
+				isBack = true;
+			} else {
+				return false;
+			}
+		}
+		
+		while (indexP < p.length()) {
+			if (indexP + 1 >= p.length()) {
+				return false;
+			} else if(p.charAt(indexP + 1) != '*') {
+				return false;
+			}
+			indexP += 2;
+		}
+		
+		return true;
+
+	}
+	
+	public class starIndex {
+		int indexS;
+		int indexP;
+		public starIndex(int s, int p) {
+			indexS = s;
+			indexP = p;
+		}
+		public String toString() {
+			return "S: " + indexS + " P: " + indexP;
+		}
+	}
+	
+	public static void main(String[] args) {
+		UseStack useStack = new UseStack();
+		System.out.println(useStack.isMatch("aaa", "ab*a*c*a") == true);
+		System.out.println(useStack.isMatch("aa", "a") == false);
+		System.out.println(useStack.isMatch("aa", "aa") == true);
+		System.out.println(useStack.isMatch("aaa", "aa") == false);
+		System.out.println(useStack.isMatch("aa", "a*") == true);
+		System.out.println(useStack.isMatch("aa", ".*") == true);
+		System.out.println(useStack.isMatch("ab", ".*") == true);
+		System.out.println(useStack.isMatch("aab", "c*a*b") == true);
+	}
+
+}

@@ -1,0 +1,84 @@
+package regularExpressionMatching;
+
+public class UseStack {
+	public boolean isMatch(String s, String p) {
+		int indexS = 0;
+		int indexP = 0;
+		int starS = -1;
+		int starP = -1;
+		char starPC = 0;
+		boolean isBack = false;
+		if (s == null || p == null) {
+			return false;
+		}
+		if (s.isEmpty() && p.isEmpty()) {
+			return true;
+		} else if (p.isEmpty() && !s.isEmpty()) {
+			return false;
+		}
+
+		int countStar = 0;
+		for (int i = 0; i < p.length(); i++) {
+			if (p.charAt(i) == '*') {
+				countStar++;
+			}
+		}
+
+		if (p.length() - countStar * 2 > s.length()) {
+			return false;
+		}
+		
+		while (indexS < s.length()) {
+			int step = 1;
+			if (indexP == p.length()) {
+				if (starP > -1) {
+					indexP = starP;
+					indexS = starS;
+					isBack = true;
+					continue;
+				} else {
+					return false;
+				}
+			}
+			
+			char cs = s.charAt(indexS);
+			char cp = p.charAt(indexP);
+			
+			if (isBack) {
+				if (cp == '.' || cs == cp) {
+					indexS++;
+					isBack = false;
+					continue;
+				} else{
+					return false;
+				}
+			}
+			
+			if (indexP + 1 < p.length() && p.charAt(indexP + 1) == '*' ) {
+				starP = indexP;
+				starS = indexS;
+				indexP += 2;
+			} else if (cp == '.' || cs == cp) {
+				indexP++;
+				indexS++;
+			} else if (cs != cp && cp != '.' && starP > -1) {
+				indexP = starP;
+				indexS = starS;
+				isBack = true;
+			} else {
+				return false;
+			}
+		}
+		
+		while (indexP < p.length()) {
+			if (indexP + 1 >= p.length()) {
+				return false;
+			} else if(p.charAt(indexP + 1) != '*') {
+				return false;
+			}
+			indexP += 2;
+		}
+
+	}
+
+}

@@ -1,0 +1,14 @@
+package regularExpressionMatching;
+
+public class UseStack {
+	public boolean isMatch(String s, String p) {
+		int indexS = 0;
+		int indexP = 0;
+		int starS = -1;
+		int starP = -1;
+		char starPC = 0;
+		
+	}
+	
+	
+}
