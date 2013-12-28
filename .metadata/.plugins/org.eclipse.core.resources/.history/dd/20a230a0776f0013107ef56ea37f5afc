@@ -1,0 +1,19 @@
+package searchForRange;
+
+public class BinarySearch {
+	public static  int[] searchRange(int[] A, int target) {
+		int pos = binarySearch(A, target, 0, A.length -1);
+	}
+	
+	public static int binarySearch(int[] A, int target, int start, int end) {
+		if (start > end) {
+			return -1;
+		} 
+		
+		int mid = start + (end - start) / 2;
+		if (A[mid] == target) {
+			
+		}
+		
+	}
+}

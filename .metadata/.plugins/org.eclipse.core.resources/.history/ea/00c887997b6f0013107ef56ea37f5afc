@@ -1,0 +1,40 @@
+package searchForRange;
+
+public class TwoBinarySearch {
+	public static int[] searchRange(int[] A, int target) {
+		int[] result = new int[2];
+		result[0] = -1;
+		result[1] = -1;
+		if (A == null || A.length == 0) {
+			return result;
+		}
+		int lower = 0;
+		int upper = A.length - 1;
+
+		while (lower < upper) {
+			int mid = lower + (upper - lower) / 2;
+			if (A[mid] < target) {
+				lower = mid + 1;
+			} else {
+				upper = mid;
+			}
+		}
+
+		if (A[lower] != target) {
+			return result;
+		} else {
+			result[0] = lower;
+		}
+
+		upper = A.length - 1;
+		while (lower < upper) {
+			int mid = lower + (upper - lower) / 2;
+			if (A[mid] > upper) {
+				upper = mid -1;
+			} else {
+				lower =  mid;
+			}
+		}
+
+	}
+}
