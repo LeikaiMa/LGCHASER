@@ -1,0 +1,18 @@
+package lruCache;
+
+import java.util.TreeMap;
+
+public class LRUCache {
+	private TreeMap<Integer, Integer> map;
+	public LRUCache(int capacity) {
+		map
+	}
+
+	public int get(int key) {
+
+	}
+
+	public void set(int key, int value) {
+
+	}
+}

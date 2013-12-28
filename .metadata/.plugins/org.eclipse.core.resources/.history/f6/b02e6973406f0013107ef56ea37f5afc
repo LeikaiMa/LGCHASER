@@ -1,0 +1,44 @@
+package lruCache;
+
+import java.util.Map;
+import java.util.TreeMap;
+
+import org.omg.CORBA.INTERNAL;
+
+public class LRUCache {
+	public TreeMap<Integer, Integer> map;
+	private int capacity;
+	public LRUCache(int capacity) {
+		map = new TreeMap<Integer, Integer>();
+		this.capacity = capacity;
+	}
+
+	public int get(int key) {
+		if (!map.containsKey(key)) {
+			return -1;
+		} else {
+			int value = map.get(key);
+			map.remove(key);
+			map.put(key, value);
+			return value;
+		}
+	}
+
+	public void set(int key, int value) {
+		if (map.containsKey(key)) {
+			map.remove(key);
+			map.put(key, value);
+		} else if (map.size() >= capacity) {
+			map.pollFirstEntry();
+			map.put(key, value);
+		} else {
+			map.put(key, value);
+		}
+	}
+	
+	public void print() {
+		for (Map.Entry<Integer, Integer> entry: map.entrySet()) {
+			System.out.println(entry.toString());
+		}
+	}
+}
