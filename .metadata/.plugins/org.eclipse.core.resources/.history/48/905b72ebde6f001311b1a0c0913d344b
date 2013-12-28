@@ -1,0 +1,54 @@
+package medianOfTwoSortedArray;
+
+public class KthElement {
+	public static double findMedianSortedArrays(int A[], int B[]) {
+		int lenA = A.length;
+		int lenB = B.length;
+		int total = lenA + lenB;
+		if (total % 2 == 1) {
+			return findMedianSortedArraysHelper(A, 0, lenA, B, 0, lenB,
+					(total + 1) / 2);
+		} else {
+			return (findMedianSortedArraysHelper(A, 0, lenA, B, 0, lenB,
+					total / 2) + findMedianSortedArraysHelper(A, 0, lenA, B, 0,
+					lenB, total / 2 + 1)) / 2.0;
+		}
+	}
+
+	public static double findMedianSortedArraysHelper(int A[], int as, int ae,
+			int B[], int bs, int be, int k) {
+		int lenA = ae - as;
+		int lenB = be - bs;
+		if (lenA > lenB) {
+			findMedianSortedArraysHelper(B, bs, be, A, as, ae, k);
+		}
+
+		if (lenA == 0) {
+			return B[bs + k - 1];
+		}
+
+		if (k == 1) {
+			return Math.min(A[as], B[bs]);
+		}
+
+		int ak = Math.min(k / 2, lenA);
+		int bk = k - ak;
+
+		if (A[as + ak - 1] < B[bs + bk - 1]) {
+			return findMedianSortedArraysHelper(A, as + ak, ae, B, bs, be, k
+					- ak);
+		} else if (A[as + ak - 1] > B[bs + bk - 1]) {
+			return findMedianSortedArraysHelper(A, as, ae, B, bs + bk, be, k
+					- bk);
+		} else {
+			return A[as + ak - 1];
+		}
+	}
+	
+	
+	public static void main(String[] args) {
+		int[] A = {2} ;
+		int[] B = {};
+		System.out.println(findMedianSortedArrays(A, B));
+	}
+}

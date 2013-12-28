@@ -1,0 +1,8 @@
+package testArray;
+
+public class MoveFirstElement {
+	public static void main(String[] args) {
+		int[] A = {1,2,3};
+		
+	}
+}

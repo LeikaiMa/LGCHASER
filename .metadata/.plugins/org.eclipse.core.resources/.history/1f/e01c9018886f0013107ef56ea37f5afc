@@ -1,0 +1,16 @@
+package testArray;
+
+import java.util.Arrays;
+
+public class ConcatArrays {
+	public static void main(String[] args){
+		int[] A = {};
+		int[] B = {2,3};
+		int lenA = A.length;
+		int lenB = B.length;
+		int[] result = new int[lenA + lenB];
+		System.arraycopy(A, 0, result, 0, lenA);
+		System.arraycopy(B, 0, result, lenA, lenB);
+		Arrays.sort(result);
+	}
+}

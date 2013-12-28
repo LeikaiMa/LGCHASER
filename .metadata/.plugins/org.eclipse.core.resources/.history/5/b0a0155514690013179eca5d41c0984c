@@ -1,8 +1,0 @@
-package palindrome;
-
-import removeDuplicate.LinkedListNode;
-
-public class Result {
-	LinkedListNode node;
-	boolean result;
-}

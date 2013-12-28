@@ -1,0 +1,7 @@
+package medianOfTwoSortedArray;
+
+public class KthElement {
+	public static double findMedianSortedArrays(int A[], int B[]) {
+		int lenA = A.length;
+	}
+}

@@ -1,7 +1,0 @@
-package distinctSubsequences;
-
-public class OnePassDP {
-	public int numDistinct(String S, String T) {
-		
-	}
-}

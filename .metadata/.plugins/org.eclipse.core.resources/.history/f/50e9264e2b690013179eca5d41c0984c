@@ -1,7 +1,0 @@
-package testString;
-
-public class LowerCase {
-	public static void main(String[] args) {
-		
-	}
-}

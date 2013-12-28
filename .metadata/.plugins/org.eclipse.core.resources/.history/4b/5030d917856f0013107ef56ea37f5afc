@@ -1,0 +1,10 @@
+package medianOfTwoSortedArray;
+
+public class BruteForce {
+	public double findMedianSortedArrays(int A[], int B[]) {
+		int lenA = A.length;
+		int lenB = B.length;
+		
+		
+	}
+}

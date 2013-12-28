@@ -1,9 +1,0 @@
-package palindrome;
-
-import removeDuplicate.LinkedListNode;
-
-public class Recursive {
-	public Result isPalindromeRecurse(LinkedListNode head, int length) {
-		
-	}
-}
