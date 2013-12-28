@@ -1,0 +1,23 @@
+package levelOrderTraversal;
+
+import java.util.ArrayList;
+
+public class BFS {
+	public ArrayList<ArrayList<Integer>> levelOrder(TreeNode root) {
+		ArrayList<ArrayList<Integer>> results = new ArrayList<ArrayList<Integer>>();
+		if (root == null) {
+			return results;
+		}
+		
+		ArrayList<Integer> r = new ArrayList<Integer>();
+		r.add(root.val);
+		ArrayList<TreeNode> nodes = new ArrayList<TreeNode>();
+		while (!nodes.isEmpty()) {
+			results.add(r);
+			r = new ArrayList<Integer>();
+			for (TreeNode node: nodes) {
+				
+			}
+		}
+	}
+}
