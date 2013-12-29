@@ -1,0 +1,14 @@
+package textJustification;
+
+import java.util.ArrayList;
+
+public class Classification {
+	public ArrayList<String> fullJustify(String[] words, int L) {
+		int totalWords = words.length;
+		int curLen = 0;
+		int lastI = -1;
+		for (int i = 0; i <= words; i++) {
+			
+		}
+	}
+}
