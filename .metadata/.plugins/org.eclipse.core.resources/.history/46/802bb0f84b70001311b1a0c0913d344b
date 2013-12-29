@@ -2,7 +2,6 @@ eclipse.preferences.version=1
 encoding//src/combination/BFSBacktrace.java=UTF-8
 encoding//src/combinationSum/Forward.java=UTF-8
 encoding//src/combinationSumII/RemoveDuplicate.java=UTF-8
-encoding//src/countAndSay/Loop.java=UTF-8
 encoding//src/jumpGame/DPNoArray.java=UTF-8
 encoding//src/jumpGameII/DP.java=UTF-8
 encoding//src/levelOrderTraversal/BFS.java=UTF-8
