@@ -1,0 +1,17 @@
+package pathSum;
+
+public class DFS {
+	public boolean hasPathSum(TreeNode root, int sum) {
+		if (root == null) {
+			return false;
+		}
+		
+		int curSum = 0;
+		return hasPathSumHelper(root, curSum, sum);
+	}
+
+	private boolean hasPathSumHelper(TreeNode root, int curSum, int sum) {
+		
+		return false;
+	}
+}
