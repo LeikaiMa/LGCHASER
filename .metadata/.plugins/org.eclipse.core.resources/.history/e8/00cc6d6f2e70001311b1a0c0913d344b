@@ -1,0 +1,16 @@
+package reverseGroup;
+
+public class Dummy {
+	public static ListNode reverseKGroup(ListNode head, int k) {
+		if (head == null || k == 1) {
+			return head;
+		}
+		ListNode dummy = new ListNode(0);
+		dummy.next = head;
+		ListNode prev = dummy;
+		int i = 0;
+		while (head == null) {
+			
+		}
+	}
+}

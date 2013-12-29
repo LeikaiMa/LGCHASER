@@ -1,0 +1,16 @@
+package reverseGroup;
+
+public class TwoPointer {
+	public ListNode reverseKGroup(ListNode head, int k) {
+		if (head == null) {
+			return head;
+		}
+		ListNode fast = head.next;
+		ListNode slow = head;
+		for (int i = 0; i < k - 1; i++) {
+			if (fast == null) {
+				break;
+			}
+		}
+	}
+}

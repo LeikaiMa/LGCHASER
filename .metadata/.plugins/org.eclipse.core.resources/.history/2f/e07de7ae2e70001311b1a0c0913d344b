@@ -1,0 +1,30 @@
+package reverseGroup;
+
+import java.awt.List;
+
+public class Dummy {
+	public static ListNode reverseKGroup(ListNode head, int k) {
+		if (head == null || k == 1) {
+			return head;
+		}
+		ListNode dummy = new ListNode(0);
+		dummy.next = head;
+		ListNode prev = dummy;
+		int i = 0;
+		while (head != null) {
+			i++;
+			if (i % k == 0) {
+				prev = reverse(prev, head.next);
+				head = prev.next;
+			} else {
+				head = head.next;
+			}
+		}
+		
+		return dummy.next;
+	}
+	
+	public static ListNode reverse(ListNode prev, ListNode next) {
+		ListNode last = prev.next;
+	}
+}

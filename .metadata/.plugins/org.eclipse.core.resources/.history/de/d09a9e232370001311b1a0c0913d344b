@@ -1,0 +1,13 @@
+package reverseGroup;
+
+public class TwoPointer {
+	public ListNode reverseKGroup(ListNode head, int k) {
+		if (head == null) {
+			return head;
+		}
+
+		for (int i = 0; i < k - 1; i++) {
+			
+		}
+	}
+}
