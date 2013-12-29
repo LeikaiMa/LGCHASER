@@ -5,6 +5,7 @@ package copyListWithRandomPointer;
 // 这样原始的list 连接什么样的index 只要进行依葫芦画瓢就可以了。
 // 这里采用的策略是一个使用hashmap 记录这个node 所在的标号
 // 另一个是用的arraylist，对应的标号有相对应的node 这样就完成了查找的功能。
+// 可以直接两个randomlistnode 直接用hashmap 对应 参考 clonegraph
 import java.util.ArrayList;
 import java.util.HashMap;
 

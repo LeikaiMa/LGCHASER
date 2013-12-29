@@ -1,0 +1,37 @@
+package cloneGraph;
+
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class UseHashMapAndHashMap {
+	public UndirectedGraphNode cloneGraph(UndirectedGraphNode node) {
+		if (node == null) {
+			return node;
+		}
+		
+		HashMap<UndirectedGraphNode, Integer> source = new HashMap<UndirectedGraphNode, Integer>();
+		HashMap<Integer, UndirectedGraphNode> dest = new HashMap<Integer, UndirectedGraphNode>();
+		
+		UndirectedGraphNode root = new UndirectedGraphNode(node.label);
+		int num = 0;
+		source.put(node, num);
+		dest.put(num, root);
+		
+		Queue<UndirectedGraphNode> sq = new LinkedList<UndirectedGraphNode>();
+		sq.add(node);
+		Queue<UndirectedGraphNode> dq = new LinkedList<UndirectedGraphNode>();
+		dq.add(root);
+		
+		while (!sq.isEmpty()) {
+			UndirectedGraphNode sn = sq.poll();
+			UndirectedGraphNode dn = dq.poll();
+			for (UndirectedGraphNode n : sn.neighbors) {
+				if (source.containsKey(n)) {
+					int index = source.get(n);
+				}
+			}
+		}
+		
+	}
+}
