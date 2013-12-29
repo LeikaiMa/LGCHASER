@@ -1,0 +1,12 @@
+package bestTimeToBuyAndSellStockI;
+
+public class ON {
+	public int maxProfit(int[] prices) {
+		if (prices == null || prices.length < 2) {
+			return Integer.MIN_VALUE;
+		}
+		
+		int buy = 0;
+		int tmp = 0;
+	}
+}

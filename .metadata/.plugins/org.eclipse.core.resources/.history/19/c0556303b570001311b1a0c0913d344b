@@ -1,0 +1,29 @@
+package bestTimeToBuyAndSellStockI;
+
+public class Clearer {
+	public static int maxProfit(int[] prices) {
+		int buy =0;
+		int sell = 0;
+		int min = 0;
+		int maxdiff = 0;
+		for (int i = 0; i < prices.length; i++) {
+			if (prices[i] < min) {
+				min = i;
+			} else {
+				int diff = prices[i] - prices[min];
+				if (diff > maxdiff) {
+					sell = i;
+					buy = min;
+					maxdiff = diff;
+				}
+			}
+		}
+		return prices[sell] - prices[buy];
+//		这里其实可以直接用maxdiff 来进行解决。但是为了少warning
+	}
+	
+	public static void main(String[] args) {
+		int[] prices = {2,1,4};
+		System.out.println(maxProfit(prices));
+	}
+}
