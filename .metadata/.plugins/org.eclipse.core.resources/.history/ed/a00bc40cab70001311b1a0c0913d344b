@@ -1,0 +1,33 @@
+package binaryTreeMaxSum;
+
+public class RecursiveCompare {
+	public static int maxPathSum(TreeNode root) {
+		if (root == null) {
+			return 0;
+		}
+		int[] maxSum = new int[1];
+		maxSum[0] = Integer.MIN_VALUE;
+		maxPathSumHelper(root, maxSum);
+		return maxSum[0];
+	}
+
+	private static int maxPathSumHelper(TreeNode root, int[] maxSum) {
+		if (root == null) {
+			return Integer.MIN_VALUE;
+		}
+		
+		int cur = root.val;
+		int left = maxPathSumHelper(root.left, maxSum);
+		int right = maxPathSumHelper(root.right, maxSum);
+		int arc = cur + left + right;
+		int max = Math.max(arc, Math.max(cur, Math.max(left, right) + cur));
+		maxSum[0] = Math.max(maxSum[0], max);
+		return max;
+	}
+	
+	public static void main(String[] args){
+		
+	}
+	
+	
+}
