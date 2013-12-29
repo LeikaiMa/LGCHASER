@@ -1,0 +1,28 @@
+package bestTimeToBuyAndSellStockIII;
+
+public class BetterSolution {
+	public static int maxProfit(int[] prices) {
+		if (prices.length == 0) {
+			return 0;
+		}
+
+		int max = 0;
+		int[] left = new int[prices.length];
+		int[] right = new int[prices.length];
+
+		process(prices, left, right);
+	}
+
+	private static void process(int[] prices, int[] left, int[] right) {
+		left[0] = 0;
+		int min = prices[0];
+
+		for (int i = 1; i < left.length; i++) {
+			left[i] = Math.max(left[i - 1], prices[i] - min);
+			min = Math.min(prices[i], min);
+		}
+		
+		right[prices.length - 1] = 0;
+
+	}
+}

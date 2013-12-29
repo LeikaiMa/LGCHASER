@@ -1,0 +1,19 @@
+package bestTimeToBuyAndSellStockIII;
+
+public class DP {
+	public int maxProfit(int[] prices) {
+		int n = prices.length;
+		int[] first = new int[n];
+		int[] second = new int[n];
+		
+		int buy = 0;
+		int sell = 0;
+		int min = 0;
+		
+		for (int i = 0; i < n; i++) {
+			if (prices[i] < prices[min]) {
+				min = i;
+			}
+		}
+	}
+}

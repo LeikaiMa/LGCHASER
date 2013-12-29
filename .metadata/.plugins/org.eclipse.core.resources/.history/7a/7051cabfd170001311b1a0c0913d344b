@@ -1,0 +1,10 @@
+package bestTimeToBuyAndSellStockIII;
+
+public class BetterSolution {
+	public static int maxProfit(int[] prices) {
+		if (prices.length == 0) {
+			return 0; 
+		}
+		
+	}
+}

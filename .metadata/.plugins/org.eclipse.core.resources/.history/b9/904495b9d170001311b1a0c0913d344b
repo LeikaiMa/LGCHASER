@@ -1,0 +1,7 @@
+package bestTimeToBuyAndSellStockIII;
+
+public class BetterSolution {
+	public static int maxProfit(int[] prices) {
+		
+	}
+}

@@ -1,0 +1,48 @@
+package bestTimeToBuyAndSellStockIII;
+// 这个思路比较清楚，因为只能够有两次完整的
+// http://blog.csdn.net/fightforyourdream/article/details/14503469
+public class BetterSolution {
+	public static int maxProfit(int[] prices) {
+		if (prices.length == 0) {
+			return 0;
+		}
+
+		int max = 0;
+		int[] left = new int[prices.length];
+		int[] right = new int[prices.length];
+
+		process(prices, left, right);
+
+		for (int i = 0; i < prices.length; i++) {
+			max = Math.max(max, left[i] + right[i]);
+		}
+
+		return max;
+	}
+
+	private static void process(int[] prices, int[] left, int[] right) {
+		left[0] = 0;
+		int min = prices[0];
+
+		for (int i = 1; i < left.length; i++) {
+			left[i] = Math.max(left[i - 1], prices[i] - min);
+			min = Math.min(prices[i], min);
+		}
+
+		right[prices.length - 1] = 0;
+		int max = prices[prices.length - 1];
+
+		for (int i = prices.length - 2; i >= 0; i--) {
+			right[i] = Math.max(right[i + 1], max - prices[i]);
+			max = Math.max(prices[i], max);
+		}
+
+	}
+
+	public static void main(String[] args) {
+		// int[] prices = {3,3,5,0,0,3,1,4};
+		// int[] prices = {2,1,2,0,1};
+		int[] prices = { 1, 2 };
+		System.out.println(maxProfit(prices));
+	}
+}
