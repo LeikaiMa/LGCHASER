@@ -1,0 +1,29 @@
+package editDistance;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Queue;
+
+public class BFSAndHashmap {
+	public int minDistance(String word1, String word2) {
+		if (word1 == null || word1 == null) {
+			return 0;
+		}
+		
+		if (word1.length() == 0) {
+			return word2.length();
+		}
+		if (word2.length() == 0) {
+			return word1.length();
+		}
+		
+		if (word1.equals(word2)) {
+			return 0;
+		}
+		
+		
+		HashSet<String> visited= new HashSet<String>();
+		visited.add(word1);
+		ArrayList<String> arrayList = new ArrayList<>();
+	}
+}
