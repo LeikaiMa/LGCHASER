@@ -1,0 +1,24 @@
+package firstMissingPositive;
+
+public class UseArrayIndex {
+	public int firstMissingPositive(int[] A) {
+		if (A == null || A.length == 0) {
+			return 0;
+		}
+		int n = A.length;
+		for (int i = 0; i < n; i++) {
+			if (A[i] != i + 1 && A[i] > 0 && A[i] <= n) {
+				int tmp = A[i];
+				A[i] = A[tmp - 1];
+				A[tmp - 1] = tmp;
+				i--;
+			}
+		}
+		
+		for (int i = 0; i < n; i++) {
+			if (A[i] != i+1) {
+				
+			}
+		}
+	}
+}
