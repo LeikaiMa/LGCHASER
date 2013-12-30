@@ -1,0 +1,11 @@
+package testHashMap;
+
+import java.util.HashMap;
+
+public class GetNoSuchElement {
+	public static void main(String[] args) {
+		HashMap<String, Integer> map = new HashMap<>();
+		map.put("123", 1);
+		System.out.println(map.get("234"));
+	}
+}

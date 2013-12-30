@@ -1,0 +1,17 @@
+package substringWithConcatenationOfAllWords;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+public class Conciser {
+	public ArrayList<Integer> findSubstring(String S, String[] L) {
+		ArrayList<Integer> res = new ArrayList<Integer>();
+		if (S == null || S.length() == 0 || L == null || L.length == 0) {
+			return res;
+		}
+		
+		int n = L.length, m = L[0].length(), l = S.length();
+		Map<String, Integer> covered = new HashMap<String, Integer>();
+	}
+}

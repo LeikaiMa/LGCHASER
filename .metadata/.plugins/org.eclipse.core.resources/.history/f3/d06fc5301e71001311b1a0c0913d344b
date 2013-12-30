@@ -1,0 +1,7 @@
+package substringWithConcatenationOfAllWords;
+
+public class DPWithHashMap {
+	public ArrayList<Integer> findSubstring(String S, String[] L) {
+
+	}
+}
