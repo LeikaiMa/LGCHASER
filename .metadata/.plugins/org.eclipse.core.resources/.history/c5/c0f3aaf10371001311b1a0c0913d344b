@@ -1,0 +1,38 @@
+package permutationsII;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class DFS {
+	public static ArrayList<ArrayList<Integer>> permuteUnique(int[] num) {
+		ArrayList<ArrayList<Integer>> permutations = new ArrayList<ArrayList<Integer>>();
+		if (num == null || num.length == 0) {
+			return permutations;
+		}
+		Arrays.sort(num);
+		ArrayList<Integer> permutation = new ArrayList<Integer>();
+		boolean[] visited = new boolean[num.length];
+
+		permuteUniqueHelper(permutations, permutation, visited, num, 0);
+		return permutations;
+	}
+
+	private static void permuteUniqueHelper(
+			ArrayList<ArrayList<Integer>> permutations,
+			ArrayList<Integer> permutation, boolean[] visited, int[] num,
+			int step) {
+		if (step == num.length) {
+			ArrayList<Integer> p = new ArrayList<Integer>(permutation);
+			permutations.add(p);
+		} else {
+			for (int i = 0; i < num.length; i++) {
+				if (i > 0 && num[i - 1] == num[i] && !visited[i - 1]) {
+					continue;
+				}
+				if (!visited[i]) {
+					
+				}
+			}
+		}
+	}
+}

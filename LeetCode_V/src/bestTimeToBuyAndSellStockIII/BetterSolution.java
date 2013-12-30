@@ -11,6 +11,7 @@ package bestTimeToBuyAndSellStockIII;
 // 最后第一个肯定是最优的。
 // 比较最大的时候同样可以用Math.max来进行比较，比较清楚。
 // http://blog.csdn.net/fightforyourdream/article/details/14503469
+// 这个如果是不止两笔交易同样可以将所有的情况写进DP，这个时候就要用二维DP来进行然后根据时间点来进行划分，时间复杂度也会随着提升
 public class BetterSolution {
 	public static int maxProfit(int[] prices) {
 		if (prices.length == 0) {

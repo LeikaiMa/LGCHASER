@@ -1,0 +1,7 @@
+package permutationsI;
+
+public class Insert {
+	public ArrayList<ArrayList<Integer>> permute(int[] num) {
+		
+	}
+}
