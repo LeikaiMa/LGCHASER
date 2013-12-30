@@ -1,0 +1,31 @@
+package subSetII;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Recursive {
+	public ArrayList<ArrayList<Integer>> subsetsWithDup(int[] num) {
+		ArrayList<ArrayList<Integer>> results = new ArrayList<ArrayList<Integer>>();
+		if (num == null || num.length == 0) {
+			return results;
+		}
+
+		ArrayList<Integer> numbers = new ArrayList<Integer>();
+		for (int i : num) {
+			numbers.add(i);
+		}
+		Collections.reverse(numbers);
+		
+		results = subSetsWithDupHelper(numbers, 0);
+		return results;
+	}
+
+	private ArrayList<ArrayList<Integer>> subSetsWithDupHelper(
+			ArrayList<Integer> numbers, int depth) {
+		ArrayList<ArrayList<Integer>> results = new ArrayList<ArrayList<Integer>>();
+		if (depth == numbers.size()) {
+			ArrayList<Integer> r = new ArrayList<Integer>();
+		}
+		return null;
+	}
+}

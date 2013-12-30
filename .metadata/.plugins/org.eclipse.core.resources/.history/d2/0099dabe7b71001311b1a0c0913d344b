@@ -1,0 +1,12 @@
+package subSets;
+
+import java.util.ArrayList;
+
+public class DFS {
+	public static ArrayList<ArrayList<Integer>> subsets(int[] S) {
+		ArrayList<ArrayList<Integer>> results = new ArrayList<ArrayList<Integer>>();
+			if (S == null || S.length == 0) {
+				return results;
+			}
+	}
+}

@@ -1,0 +1,7 @@
+package testArrayList;
+
+public class ArrayToArraylist {
+	public static void main(String[] args) {
+		
+	}
+}

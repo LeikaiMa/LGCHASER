@@ -1,0 +1,25 @@
+package subSetII;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class DFS {
+	public static ArrayList<ArrayList<Integer>> subsetsWithDup(int[] num) {
+		ArrayList<ArrayList<Integer>> results = new ArrayList<ArrayList<Integer>>();
+		if (num == null || num.length == 0) {
+			return results;
+		}
+		ArrayList<Integer> tmp = new ArrayList<Integer>();
+		
+		Arrays.sort(num);
+		results.add(tmp);
+		
+		dfs(results, tmp, num, 0) ;
+		return results;
+	}
+
+	private static void dfs(ArrayList<ArrayList<Integer>> results,
+			ArrayList<Integer> tmp, int[] num, int i) {
+		
+	}
+}

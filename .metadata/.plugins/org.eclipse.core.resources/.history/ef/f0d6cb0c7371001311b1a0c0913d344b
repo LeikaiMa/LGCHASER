@@ -1,0 +1,58 @@
+package subSetII;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Recursive {
+	public static ArrayList<ArrayList<Integer>> subsetsWithDup(int[] num) {
+		ArrayList<ArrayList<Integer>> results = new ArrayList<ArrayList<Integer>>();
+		if (num == null || num.length == 0) {
+			return results;
+		}
+
+		ArrayList<Integer> numbers = new ArrayList<Integer>();
+		for (int i : num) {
+			numbers.add(i);
+		}
+		Collections.sort(numbers);
+
+		results = subSetsWithDupHelper(numbers, 0);
+		return results;
+	}
+
+	private static ArrayList<ArrayList<Integer>> subSetsWithDupHelper(
+			ArrayList<Integer> numbers, int depth) {
+		ArrayList<ArrayList<Integer>> results = new ArrayList<ArrayList<Integer>>();
+		if (depth == numbers.size()) {
+			ArrayList<Integer> r = new ArrayList<Integer>();
+			results.add(r);
+			return results;
+		} else {
+			ArrayList<ArrayList<Integer>> tmp = subSetsWithDupHelper(numbers,
+					depth + 1);
+			results.addAll(tmp);
+			for (ArrayList<Integer> t : tmp) {
+				if (depth < numbers.size() - 1
+						&& numbers.get(depth) == numbers.get(depth + 1)
+						&& (t.isEmpty() || (!t.isEmpty() && numbers.get(depth) != t
+								.get(t.size() - 1)))) {
+					continue;
+				}
+				ArrayList<Integer> r = new ArrayList<Integer>(t);
+				r.add(numbers.get(depth));
+				results.add(r);
+			}
+			return results;
+		}
+
+	}
+
+	public static void main(String[] args) {
+		int[] num = { 1, 2, 2 };
+		ArrayList<ArrayList<Integer>> results = new ArrayList<ArrayList<Integer>>();
+		results = subsetsWithDup(num);
+		for (ArrayList<Integer> r : results) {
+			System.out.println(r);
+		}
+	}
+}
