@@ -1,0 +1,11 @@
+package removeDuplicateFromSortedArrayI;
+
+public class TwoPointer {
+	public int removeDuplicates(int[] A) {
+		if (A == null || A.length == 0 ||A.length == 1) {
+			return 
+		}
+		int slow = 0;
+	
+	}
+}
