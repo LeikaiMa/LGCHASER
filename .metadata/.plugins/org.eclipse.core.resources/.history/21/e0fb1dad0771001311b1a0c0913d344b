@@ -1,0 +1,7 @@
+package populatingNextRightInEachNode;
+
+public class BFS {
+	public void connect(TreeLinkNode root) {
+		
+	}
+}
