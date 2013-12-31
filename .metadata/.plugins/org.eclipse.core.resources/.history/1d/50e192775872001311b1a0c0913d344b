@@ -1,0 +1,16 @@
+package binaryTreePostorderTraversal;
+
+import java.util.ArrayList;
+import java.util.Stack;
+
+public class Iterative {
+	public ArrayList<Integer> postorderTraversal(TreeNode root) {
+		ArrayList<Integer> result = new ArrayList<Integer>();
+		Stack<Integer> stack= new Stack<Integer>();
+		if (root == null ) {
+			return result;
+		}
+		
+		
+	}
+}

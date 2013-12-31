@@ -1,0 +1,9 @@
+package binaryTreePostorderTraversal;
+
+import java.util.ArrayList;
+
+public class Iterative {
+	public ArrayList<Integer> postorderTraversal(TreeNode root) {
+		ArrayList<Integer> result = new ArrayList<>()root;
+	}
+}
