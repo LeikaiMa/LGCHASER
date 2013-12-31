@@ -1,0 +1,13 @@
+package nQueensII;
+
+public class BitManiputlation {
+	public static int upper = 0;
+	public static int count = 0;
+
+	public static int totalNQueens(int n) {
+		count = 0;
+		upper = (1 << n) - 1;
+		Queen(0,0,0);
+		return count;
+	}
+}

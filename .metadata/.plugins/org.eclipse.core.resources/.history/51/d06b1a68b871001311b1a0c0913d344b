@@ -1,0 +1,8 @@
+package nQueensII;
+
+public class Permutation {
+	public int totalNQueens(int n) {
+
+	}
+
+}

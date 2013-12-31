@@ -1,0 +1,7 @@
+package nQueensII;
+
+public class BitManiputlation {
+	public int totalNQueens(int n) {
+		
+	}
+}

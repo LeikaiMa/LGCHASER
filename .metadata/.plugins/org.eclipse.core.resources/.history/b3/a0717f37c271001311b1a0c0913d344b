@@ -1,0 +1,48 @@
+package nQueensII;
+
+public class BitManiputlation {
+	public static int upper = 0;
+	public static int count = 0;
+
+	public static int totalNQueens(int n) {
+		count = 0;
+		upper = (1 << n) - 1;
+		System.out.println(Integer.toBinaryString(upper));
+		Queen(0, 0, 0);
+		return count;
+	}
+
+	// private static void Queen(int row, int ld, int rd) {
+	// int pos, p;
+	// if (row != upper) {
+	// pos = upper & (~(row | ld | rd));
+	// while (pos != 0) {
+	// p = pos & -pos;
+	// pos = pos - p;
+	// Queen(row + p, (ld + p) << 1, (rd + p) >> 1);
+	// }
+	// } else {
+	// count++;
+	// }
+	// }
+
+	public static void Queen (int row, int ld, int rd) {  
+		  
+		if (row!= upper) {  
+		int pos = upper & ~(row | ld | rd);
+		while (pos != 0) {  
+		  
+		int p = pos & -pos;  
+		pos -= p;  
+		Queen(row + p, (ld + p) << 1, (rd + p) >> 1); 
+		}  
+		  
+		} else  { 
+		count++;  
+		}
+}
+
+	public static void main(String[] args) {
+		System.out.println(totalNQueens(8));
+	}
+}
