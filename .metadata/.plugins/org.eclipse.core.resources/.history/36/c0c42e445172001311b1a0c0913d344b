@@ -1,0 +1,42 @@
+package testArray;
+
+public class CeilAndFloorOfSortedArray {
+	public static void main(String[] args) {
+		int[] A = { 1, 2, 4, 4, 6, 6, 8 };
+		int low = 0;
+		int high = A.length - 1;
+		int target = 9;
+		while (low < high) {
+			int mid = low + (high - low) / 2;
+			if (A[mid] < target) {
+				low = mid + 1;
+			} else {
+				high = mid;
+			}
+		}
+		if (A[low] != target) {
+			
+		}
+		System.out.println("Floor: " + low + " value: " + A[low]);
+
+		low = 0;
+		high = A.length - 1;
+		target = 0;
+		while (low < high) {
+			int mid = low + (high - low) / 2;
+			if (A[mid] > target) {
+				high = mid;
+			} else {
+				low = mid + 1;
+			}
+		}
+		// high 就是ceiling 		
+		high = high -1;
+		if (high < 0) {
+			System.out.println("No Right Constrain");
+		} else {
+			System.out.println("Right Constraint: " + high + " value: " + A[high]);
+		}
+		
+	}
+}

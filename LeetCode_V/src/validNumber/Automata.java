@@ -22,6 +22,7 @@ package validNumber;
 // 如果全部出来，要看最后的状态是不能够成为最终状态，最终的状态只能是以数字或者空格结尾，但空格不能是完全空格，也就是状态 1 4 7 8 这些状态。
 // 比较好的例子，能够学习automata 的方法。图可以参考下面链接
 // 参考http://discuss.leetcode.com/questions/241/valid-number
+// 还有一个是新建二维数组的方法。不用一个一个插进去。
 
 public class Automata {
 	public enum InputType {

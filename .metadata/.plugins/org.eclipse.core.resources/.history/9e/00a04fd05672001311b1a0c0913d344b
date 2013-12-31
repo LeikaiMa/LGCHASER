@@ -1,0 +1,16 @@
+package searchA2DArray;
+
+public class OneBinarySearch {
+	public static boolean searchMatrix(int[][] matrix, int target) {
+		if (matrix == null || matrix.length == 0) {
+			return false;
+		}
+		int row = matrix.length;
+		int column = matrix[0].length;
+		if (column == 0) {
+			return false;
+		}
+		
+		
+	}
+}

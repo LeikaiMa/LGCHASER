@@ -1,0 +1,43 @@
+package testArray;
+// 其实自己开始考虑复杂了，这里面看你到底最后要是>= 还是要 <= 的情况，因为不同于二分法查数，这个的while 的限制条件是low  < high 这样出来的 low 和high 都不会超过边界条件。
+// 比如看第一种情况要的是 >= 的情况，那么就是在小于的时候mid  +1 那么最后的结果肯定是 >=  的最小的那个值。
+public class CeilAndFloorOfSortedArray {
+	public static void main(String[] args) {
+		int[] A = { 1, 2, 4, 4, 6, 6, 8 };
+		int low = 0;
+		int high = A.length - 1;
+		int target = 6;
+		while (low < high) {
+			int mid = low + (high - low) / 2;
+			if (A[mid] < target) {
+				low = mid + 1;
+			} else {
+				high = mid;
+			}
+		}
+		if (A[low] != target) {
+			
+		}
+		System.out.println("Floor: " + low + " value: " + A[low]);
+
+		low = 0;
+		high = A.length - 1;
+		target = 5;
+		while (low < high) {
+			int mid = low + (high - low) / 2;
+			if (A[mid] > target) {
+				high = mid;
+			} else {
+				low = mid + 1;
+			}
+		}
+		// high 就是ceiling 因为ceiling 的是
+		high = high -1;
+		if (high < 0) {
+			System.out.println("No Right Constrain");
+		} else {
+			System.out.println("Right Constraint: " + high + " value: " + A[high]);
+		}
+		
+	}
+}
