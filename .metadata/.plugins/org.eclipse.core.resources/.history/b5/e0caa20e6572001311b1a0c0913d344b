@@ -1,0 +1,7 @@
+package maxPointsOnALine;
+
+public class UseHashMap {
+	public int maxPoints(Point[] points) {
+
+	}
+}
