@@ -1,0 +1,14 @@
+package validNumber;
+
+public class SetConstraints {
+	public static boolean isNumber(String s) {
+
+	}
+
+	public static void main(String[] args) {
+		System.out.println(isNumber("0")==true);
+		System.out.println(isNumber("-0")==true);
+		System.out.println(isNumber(" 0.1 ")==true);
+		System.out.println(isNumber("abc")==true);
+	}
+}

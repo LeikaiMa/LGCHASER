@@ -1,0 +1,9 @@
+package validNumber;
+
+public class Automata {
+	public static boolean isNumber(String s) {
+		 public enum InputType {
+			 
+		 }
+	}
+}

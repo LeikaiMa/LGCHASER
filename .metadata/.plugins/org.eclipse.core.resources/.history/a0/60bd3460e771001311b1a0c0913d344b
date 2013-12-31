@@ -1,0 +1,7 @@
+package longestSubstringWithoutRepeatingCharacters;
+
+public class UseArraylist {
+	public int lengthOfLongestSubstring(String s) {
+		
+	}
+}

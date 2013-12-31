@@ -1,0 +1,67 @@
+package validNumber;
+// 因为是一个字母一个字母往后检查，所以可以利用automata 这个方法，具体形式类似于状态机，一个状态看输入量决定跳的状态。
+// 跳的状态就是用一个二维数组来进行表示，row 表示状态的个数，column 表示输入量的个数，
+// 这样就有个问题，输入的参量如何用数字来进行表示，想到了可以用enum 然后java 里面他有个method 是叫做ordinal 可以调出他的index
+// 因为是从0开始的，所以如果想要有个个数就只要在最后面加一个参量，例如这题用的num_inputs 这样正好是个数，
+// 参考http://discuss.leetcode.com/questions/241/valid-number
+
+public class Automata {
+	public enum InputType {
+		INVALID, SPACE, SIGN, DIGIT, DOT, EXPONENT, NUM_INPUTS
+
+	}
+
+	public static int[][] transitionTable = { { -1, 0, 3, 1, 2, -1 },
+			{ -1, 8, -1, 1, 4, 5 }, { -1, -1, -1, 4, -1, -1 },
+			{ -1, -1, -1, 1, 2, -1 }, { -1, 8, -1, 4, -1, 5 },
+			{ -1, -1, 6, 7, -1, -1 }, { -1, -1, -1, 7, -1, -1 },
+			{ -1, 8, -1, 7, -1, -1 }, { -1, 8, -1, -1, -1, -1 }
+
+	};
+
+	public static boolean isNumber(String s) {
+		if (s == null || s.length() == 0) {
+			return false;
+		}
+		int state = 0;
+		for (int i = 0; i < s.length(); i++) {
+			InputType inputType = InputType.INVALID;
+			char c = s.charAt(i);
+			if (c == ' ') {
+				inputType = InputType.SPACE;
+			} else if (c == '+' || c == '-') {
+				inputType = InputType.SIGN;
+			} else if (Character.isDigit(c)) {
+				inputType = InputType.DIGIT;
+			} else if (c == '.') {
+				inputType = InputType.DOT;
+			} else if (c == 'e' || c == 'E') {
+				inputType = InputType.EXPONENT;
+			}
+			state = transitionTable[state][inputType.ordinal()];
+			if (state == -1) {
+				return false;
+			}
+		}
+
+		return state == 1 || state == 4 || state == 7 || state == 8;
+	}
+	
+	public static void main(String[] args) {
+		System.out.println(isNumber("0") == true);
+		System.out.println(isNumber("-0") == true);
+		System.out.println(isNumber(" 0.1 ") == true);
+		System.out.println(isNumber("abc") == false);
+		System.out.println(isNumber("1 a") == false);
+		System.out.println(isNumber("2e10") == true);
+		System.out.println(isNumber(".1") == true);
+		System.out.println(isNumber("3.") == true);
+		System.out.println(isNumber(".") == false);
+		System.out.println(isNumber("+.8") == true);
+		System.out.println(isNumber("+-.") == false);
+		System.out.println(isNumber("6e6.5") == false);
+		System.out.println(isNumber(" 005047e+6") == true);
+		System.out.println(isNumber("6+1") == false);
+		System.out.println(isNumber("4e+") == false);
+	}
+}

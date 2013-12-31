@@ -1,0 +1,7 @@
+package validNumber;
+
+public class SetConstraints {
+public static boolean isNumber(String s) {
+        
+    }
+}
