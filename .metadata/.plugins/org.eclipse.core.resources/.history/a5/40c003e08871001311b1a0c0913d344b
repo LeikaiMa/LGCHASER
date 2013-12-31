@@ -1,0 +1,7 @@
+package wordLadder;
+
+public class UseHashSet {
+public int ladderLength(String start, String end, HashSet<String> dict) {
+        
+    }
+}

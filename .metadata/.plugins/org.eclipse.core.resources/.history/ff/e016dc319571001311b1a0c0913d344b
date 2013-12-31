@@ -1,0 +1,13 @@
+package wordLadder;
+
+import java.util.HashSet;
+
+public class DoubleBFS {
+	public static int ladderLength(String start, String end,
+			HashSet<String> dict) {
+		if (start.equals(end)) {
+			return 1;
+		}
+		
+	}
+}

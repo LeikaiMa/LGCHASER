@@ -1,0 +1,32 @@
+package wordLadderII;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+
+public class BackTrack {
+	public ArrayList<ArrayList<String>> findLadders(String start, String end, HashSet<String> dict) {
+		ArrayList<ArrayList<String>> ladders = new ArrayList<ArrayList<String>>();
+		HashMap<String, ArrayList<String>> map = new HashMap<String, ArrayList<String>>();
+		
+		HashSet<String> visited = new HashSet<String>();
+		HashSet<String> levelElements = new HashSet<String>();
+		levelElements.add(start);
+		
+		while (!levelElements.isEmpty()) {
+			HashSet<String> levelVisited = new HashSet<String>();
+			HashSet<String> tmpLevelElements =new HashSet<String>();
+			for (String s: levelElements) {
+				for (String next: getNext(s)) {
+					if (next.equals(end) || ( dict.contains(o)&& !visited.contains(next))) {
+						
+					}
+				}
+			}
+			if (map.containsKey(end)) {
+				
+			}
+		}
+		return ladders;
+	}
+}

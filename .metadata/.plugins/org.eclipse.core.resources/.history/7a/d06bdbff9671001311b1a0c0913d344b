@@ -1,0 +1,45 @@
+package wordLadder;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+
+public class DoubleBFS {
+	public static int ladderLength(String start, String end,
+			HashSet<String> dict) {
+		if (start.equals(end)) {
+			return 1;
+		}
+		
+		HashSet<String> visitedS = new HashSet<String>();
+		HashSet<String> visitedE = new HashSet<String>();
+		visitedS.add(start);
+		visitedE.add(end);
+		
+		int len = 1;
+		ArrayList<String> arrayListS = new ArrayList<String>();
+		ArrayList<String> arrayListE = new ArrayList<String>();
+		
+		arrayListS.add(start);
+		arrayListE.add(end);
+		
+		while (!arrayListS.isEmpty() && !arrayListE.isEmpty()) {
+			len++;
+			ArrayList<String> tmpS = new ArrayList<String>(); 
+			for (String s: arrayListS) {
+				for (String next: getNext(s)) {
+					
+				}
+			}
+			
+			
+		}
+ 		
+	}
+
+	private static ArrayList<String> getNext(String s) {
+		ArrayList<String> nexts = new ArrayList<String>();
+		for (int i = 0; i< s.length(); i++) {
+			
+		}
+	}
+}

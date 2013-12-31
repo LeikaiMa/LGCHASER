@@ -1,0 +1,105 @@
+package wordLadder;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+
+public class DoubleBFS {
+	public static int ladderLength(String start, String end,
+			HashSet<String> dict) {
+		if (start.equals(end)) {
+			return 1;
+		}
+
+		HashSet<String> visitedS = new HashSet<String>();
+		HashSet<String> visitedE = new HashSet<String>();
+		// visitedS.add(start);
+		// visitedE.add(end);
+
+		int len = 1;
+		ArrayList<String> arrayListS = new ArrayList<String>();
+		ArrayList<String> arrayListE = new ArrayList<String>();
+
+		arrayListS.add(start);
+		arrayListE.add(end);
+
+		while (!arrayListS.isEmpty() && !arrayListE.isEmpty()) {
+			len++;
+			ArrayList<String> tmpS = new ArrayList<String>();
+			for (String s : arrayListS) {
+				for (String next : getNext(s)) {
+					if (visitedE.contains(next)) {
+						return len * 2 - 1;
+					} else if (next.equals(end)) {
+						return len;
+					} else if (dict.contains(next) && !visitedS.contains(next)) {
+						visitedS.add(next);
+						tmpS.add(next);
+					}
+				}
+			}
+			arrayListS = tmpS;
+
+			ArrayList<String> tmpE = new ArrayList<String>();
+			for (String s : arrayListE) {
+				for (String next : getNext(s)) {
+					if (visitedS.contains(next)) {
+						return len * 2 - 1;
+					} else if (next.equals(start)) {
+						return len;
+					}	else if (dict.contains(next) && !visitedE.contains(next)) {
+					
+						visitedE.add(next);
+						tmpE.add(next);
+					}
+				}
+			}
+			arrayListE = tmpE;
+
+		}
+		return 0;
+	}
+
+	private static ArrayList<String> getNext(String s) {
+		ArrayList<String> nexts = new ArrayList<String>();
+		for (int i = 0; i < s.length(); i++) {
+			char[] word = s.toCharArray();
+			for (char c = 'a'; c <= 'z'; c++) {
+				if (c != s.charAt(i)) {
+					word[i] = c;
+				}
+				nexts.add(new String(word));
+			}
+		}
+		return nexts;
+	}
+
+	public static void main(String[] args) {
+		 String start = "hit";
+		 String end = "cog";
+		 HashSet<String> dict = new HashSet<String>();
+		 dict.add("hot");
+				 dict.add("dot");
+				 dict.add("dog");
+				 dict.add("lot");
+				 dict.add("log");
+		
+		System.out.println(ladderLength(start, end, dict) == 5);
+		  start = "a";
+		  end = "c";
+		  dict = new HashSet<String>();
+		 dict.add("a");
+			 dict.add("b");
+			 dict.add("c");
+			 System.out.println(ladderLength(start, end, dict) == 2);
+
+		 start = "hot";
+		 end = "dog";
+		 dict = new HashSet<String>();
+		
+
+		
+		dict.add("hot");
+		dict.add("dog");
+		System.out.println(ladderLength(start, end, dict) == 0);
+	}
+}
