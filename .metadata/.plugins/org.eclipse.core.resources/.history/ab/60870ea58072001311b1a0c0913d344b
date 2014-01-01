@@ -1,0 +1,7 @@
+package sortColors;
+
+public class OnePass {
+	public void sortColors(int[] A) {
+		
+	}
+}

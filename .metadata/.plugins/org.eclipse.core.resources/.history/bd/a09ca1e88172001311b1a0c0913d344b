@@ -1,0 +1,38 @@
+package sortColors;
+
+public class OnePass {
+	public void sortColors(int[] A) {
+		if (A == null || A.length == 0 || A.length == 1) {
+			return;
+		}
+		if (A.length == 2) {
+			if (A[0] > A[1]) {
+				swap(A, 0, 1);
+			}
+			return;
+		}
+		
+		int r = 0;
+		int w = 0;
+		int b = A.length -1;
+		while(w < b) {
+			if (A[w] == 0) {
+				swap(A, w, r);
+				w++;
+				r++;
+			} else if (A[w] == 1) {
+				w++;
+			}
+			
+		}
+		
+		
+	}
+
+	private void swap(int[] a, int i, int j) {
+		int tmp = a[i];
+		a[i] = a[j];
+		a[j] = tmp;
+	}
+
+}
