@@ -1,0 +1,14 @@
+package longestRectangleInHistogram;
+
+import java.util.Stack;
+
+public class ONOneStack {
+	public static  int largestRectangleArea(int[] height) {
+		if (height == null) {
+			return 0;
+		}
+		
+		Stack<Integer> indexes = new Stack<Integer>();
+		int max = 0;
+	}
+}
