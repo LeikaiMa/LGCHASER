@@ -1,0 +1,7 @@
+package validParentheses;
+
+public class StackWay {
+	public boolean isValid(String s) {
+
+	}
+}
