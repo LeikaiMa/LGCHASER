@@ -1,0 +1,28 @@
+package convertSortedListToBST;
+
+import java.util.ArrayList;
+
+public class ListToArrayList {
+	public TreeNode sortedListToBST(ListNode head) {
+		if (head == null) {
+			return null;
+		}
+		ArrayList<Integer> sortedData = new ArrayList<Integer>();
+		while (head!= null) {
+			sortedData.add(head.val);
+		}
+		
+		TreeNode root = sortedListToBSTHelper(sortedData, 0 , sortedData.size() - 1);
+		return root;
+	}
+
+	private TreeNode sortedListToBSTHelper(ArrayList<Integer> sortedData,
+			int start, int end) {
+		if (start == end) {
+			return new TreeNode(sortedData.get(start));
+		} else if (start > end) {
+			
+		}
+		return null;
+	}
+}

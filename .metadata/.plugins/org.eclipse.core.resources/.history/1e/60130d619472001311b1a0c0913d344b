@@ -1,0 +1,19 @@
+package convertSortedListToBST;
+
+public class ListOnly {
+	public TreeNode sortedListToBST(ListNode head) {
+		if (head == null) {
+			return null;
+		}
+		
+		int len  = 0;
+		ListNode node = head;
+		while (node != null) {
+			len ++;
+			node = node.next;
+		}
+		
+		return sortedListToBSTHelper(head, 0, len -1);
+		
+	}
+}
