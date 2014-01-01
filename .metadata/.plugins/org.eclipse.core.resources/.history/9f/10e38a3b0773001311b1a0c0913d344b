@@ -1,0 +1,7 @@
+package candy;
+
+public class TwoPointer {
+	public int candy(int[] ratings) {
+		
+	}
+}

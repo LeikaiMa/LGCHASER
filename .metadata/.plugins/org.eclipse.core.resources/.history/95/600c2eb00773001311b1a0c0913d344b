@@ -1,0 +1,16 @@
+package candy;
+
+public class TwoPointer {
+	public int candy(int[] ratings) {
+		if (ratings == null) {
+			return 0;
+		}
+		if (ratings.length == 0 || ratings.length == 1){
+			return ratings.length;
+		}
+		
+		int [] candies = new int[ratings.length];
+		int i = 0;
+		int j = 1;
+ 	}
+}

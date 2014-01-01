@@ -1,0 +1,60 @@
+package candy;
+
+import java.util.Arrays;
+
+public class TwoPointer {
+	public static int candy(int[] ratings) {
+		if (ratings == null) {
+			return 0;
+		}
+		if (ratings.length == 0 || ratings.length == 1) {
+			return ratings.length;
+		}
+
+		int[] candies = new int[ratings.length];
+		int i = 0;
+		int j = 1;
+		candies[0] = 1;
+
+		while (j < ratings.length) {
+			if (ratings[j] >= ratings[j-1]) {
+				candies[j - 1] = Math.max(1, candies[j - 1]);
+				int k = j - 2;
+				while (k >= i) {
+					candies[k] = Math.max(candies[k], candies[k + 1] + 1);
+					k--;
+				}
+
+				candies[j] = ratings[j] == ratings[j-1] ? 1
+						: candies[j - 1] + 1;
+				i = j;
+				j++;
+			} else {
+				j++;
+			}
+		}
+
+		if (ratings[j - 1] < ratings[j - 2]) {
+			candies[j-1] = 1;
+			int k = j - 2;
+			while (k >= i) {
+				candies[k] = Math.max(candies[k], candies[k + 1] + 1);
+				k--;
+			}
+		}
+
+		System.out.println(Arrays.toString(ratings));
+		System.out.println(Arrays.toString(candies));
+		int total = 0;
+		for (int candy : candies) {
+			total += candy;
+		}
+		return total;
+	}
+
+	public static void main(String[] args) {
+		int[] ratings = {5,1,1,1,10,2,1,1,1,3};
+		System.out.println(candy(ratings) == 15);
+		ratings = {1,2,2};
+	}
+}

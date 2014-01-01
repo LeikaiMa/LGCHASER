@@ -1,0 +1,36 @@
+package candy;
+
+public class TwoPointer {
+	public int candy(int[] ratings) {
+		if (ratings == null) {
+			return 0;
+		}
+		if (ratings.length == 0 || ratings.length == 1){
+			return ratings.length;
+		}
+		
+		int [] candies = new int[ratings.length];
+		int i = 0;
+		int j = 1;
+		while (j < ratings.length) {
+			if (ratings[j] > ratings[j-1]) {
+				candies[j-1] = Math.max(1, candies[j-1]);
+				int k = j -2;
+				while (k >= i) {
+					if (ratings[k] == ratings[k+1]) {
+						candies[k] = candies[k+1];
+					} else {
+						candies[k] = candies[k+1] + 1;
+					}
+					k--;
+				}
+				i= j;
+				j++;
+			} else {
+				j++;
+			}
+		}
+		
+		
+ 	}
+}

@@ -1,0 +1,40 @@
+package candy;
+
+public class ONThreeIteration {
+	public static int candy(int[] ratings) {
+		if (ratings == null) {
+			return 0;
+		}
+		if (ratings.length == 0 || ratings.length == 1) {
+			return ratings.length;
+		}
+		int[] candies = new int[ratings.length];
+		for (int i = 0; i < ratings.length; i++) {
+			candies[i] = 1;
+
+		}
+
+		for (int i = 0; i < ratings.length - 1; i++) {
+			if (ratings[i] > ratings[i + 1]) {
+				candies[i]++;
+			}
+		}
+
+		for (int i = ratings.length - 1; i > 0; i--) {
+			if (ratings[i] > ratings[i-1]) {
+				candies[i]++;
+			}
+		}
+		int total= 0;
+		for (int i: candies) {
+			total += i;
+		}
+		
+		return total;
+	}
+	
+public static void main(String[] args) {
+	int[] rating2 = {1,2,2};
+	System.out.println(candy(rating2) ==4);
+}
+}
