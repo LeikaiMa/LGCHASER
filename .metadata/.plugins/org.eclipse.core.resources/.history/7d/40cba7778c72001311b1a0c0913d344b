@@ -1,0 +1,9 @@
+package gasStation;
+
+public class ON {
+	public static int canCompleteCircuit(int[] gas, int[] cost) {
+		if (gas == null || gas.length == 0) {
+			return -1;
+		}
+	}
+}
