@@ -1,0 +1,12 @@
+package triangle;
+
+import java.util.ArrayList;
+
+public class BetterWithoutSort {
+	public static int minimumTotal(ArrayList<ArrayList<Integer>> triangle) {
+		if (triangle == null || triangle.size() == 0) {
+			return 0;
+		}
+		
+	}
+}

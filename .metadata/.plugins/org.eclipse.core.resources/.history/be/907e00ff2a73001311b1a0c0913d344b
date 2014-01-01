@@ -1,0 +1,15 @@
+package triangle;
+
+import java.util.ArrayList;
+
+public class ON {
+	public int minimumTotal(ArrayList<ArrayList<Integer>> triangle) {
+		if (triangle == null || triangle.size() == 0) {
+			return 0;
+		}
+		if (triangle.size() == 1) {
+			return triangle.get(0).get(0);
+		}
+		int[] results = new int[triangle.size()];
+	}
+}
