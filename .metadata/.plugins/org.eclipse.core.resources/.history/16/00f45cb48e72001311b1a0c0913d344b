@@ -1,0 +1,21 @@
+package climbStairs;
+
+public class Recursive {
+	public int climbStairs(int n) {
+		if (n == 0 || n == 1 || n == 2) {
+			return n;
+		}
+		
+		int[] ways = new int[1];
+		
+		climbStairsHelper(n, ways);
+		return ways[0];
+	}
+
+	private void climbStairsHelper(int n, int[] ways) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+}
