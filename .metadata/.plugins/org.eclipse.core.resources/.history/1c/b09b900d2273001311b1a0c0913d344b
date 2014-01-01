@@ -1,0 +1,7 @@
+package pascalTriangleI;
+
+public class AddZeroToTwoEnd {
+	public ArrayList<ArrayList<Integer>> generate(int numRows) {
+
+	}
+}

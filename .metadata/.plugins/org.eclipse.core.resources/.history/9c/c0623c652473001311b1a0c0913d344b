@@ -1,0 +1,24 @@
+package pascalTriangleII;
+
+import java.util.ArrayList;
+
+public class AddZeroToTwoEnd {
+	public  static ArrayList<Integer> getRow(int rowIndex) {
+		ArrayList<Integer> row = new ArrayList<Integer>();
+		if (rowIndex == 0) {
+			return row;
+		}
+		row.add(1);
+		for (int i = 1; i < rowIndex; i++) {
+			ArrayList<Integer> tmp = new ArrayList<Integer>();
+			row.add(0);
+			row.add(0, 0);
+			for (int j = 1; j < row.size(); j++) {
+				tmp.add(row.get(i) + row.get(i - 1));
+			}
+			row = tmp;
+		}
+		
+		return row;
+	}
+}
