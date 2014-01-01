@@ -1,0 +1,9 @@
+package longestConsecutiveSequence;
+
+public class HashMapWithIndex {
+	public int longestConsecutive(int[] num) {
+		if (num == null) {
+			return null;
+		}
+	}
+}
