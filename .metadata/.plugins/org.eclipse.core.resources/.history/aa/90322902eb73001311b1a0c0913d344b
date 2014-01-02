@@ -1,0 +1,9 @@
+package interleavingString;
+
+public class UseStack {
+	public boolean isInterleave(String s1, String s2, String s3) {
+		if (s1.isEmpty()) {
+			return s3.equals(s2);
+		}
+	}
+}

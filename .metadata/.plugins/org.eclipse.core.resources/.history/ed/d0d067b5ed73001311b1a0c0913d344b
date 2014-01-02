@@ -1,0 +1,59 @@
+package interleavingString;
+
+import java.util.Stack;
+
+public class UseStack {
+	public boolean isInterleave(String s1, String s2, String s3) {
+		if (s1.isEmpty()) {
+			return s3.equals(s2);
+		}
+		if (s2.isEmpty()) {
+			return s3.equals(s1);
+		}
+		int l1 = s1.length();
+		int l2 = s2.length();
+		int l3 = s3.length();
+		if (l3 != l1 + 12) {
+			return false;
+		}
+		Stack<Integer> stack1 = new Stack<Integer>();
+		Stack<Integer> stack2 = new Stack<Integer>();
+		Stack<Integer> stack3 = new Stack<Integer>();
+		stack1.push(-2);
+		stack2.push(-2);
+		stack3.push(-2);
+
+		int i1 = -1, i2 = -1, i3 = -1;
+		while (i1 < l1 - 1 && i2 < l2 - 1 && i3 < l3 - 1) {
+			if (i3 == -2) {
+				return false;
+			}
+
+			char c1 = s1.charAt(i1 + 1);
+			char c2 = s2.charAt(i2 + 1);
+			char c3 = s3.charAt(i3 + 1);
+
+			if (c3 != c1 && c3 != c2) {
+				i1 = stack1.pop();
+				i2 = stack2.pop();
+				i3 = stack3.pop();
+			} else if (c3 != c1) {
+				i3++;
+				i2++;
+			} else if (c3 != c2) {
+				i3++;
+				i1++;
+			} else {
+				stack1.push(i1);
+				stack2.push(i2 + 1);
+				stack3.push(i3 + 1);
+				i3++;
+				i1++;
+			}
+		}
+
+		if (i1 == l1 - 1) {
+			
+		}
+	}
+}
