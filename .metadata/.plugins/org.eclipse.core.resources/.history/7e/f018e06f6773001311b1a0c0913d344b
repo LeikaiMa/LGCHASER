@@ -1,0 +1,29 @@
+package evaluateReversePolishNotation;
+
+import java.util.Stack;
+
+public class WithStack {
+	public int evalRPN(String[] tokens) {
+		if (tokens == null || tokens.length == 0) {
+			return 0;
+		}
+
+		Stack<Integer> members = new Stack<Integer>();
+
+		for (int i = 0; i < tokens.length; i++) {
+			String element = tokens[i];
+			
+			if (element.equals("+")) {
+				members.push(members.pop() + members.pop());
+			} else if (element.equals("-")) {
+				members.push(members.pop() - members.pop());
+			} else if (element.equals("*")) {
+				members.push(members.pop() * members.pop());
+			} else if (element.equals("/")) {
+				members.push(members.pop() / members.pop());
+			} else {
+				members.push(Integer.valueOf(element))
+			}
+		}
+	}
+}

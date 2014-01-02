@@ -2153,3 +2153,6 @@ java.lang.ClassCastException: org.eclipse.jdt.core.dom.EnumDeclaration cannot be
 
 !ENTRY org.eclipse.ui 4 4 2014-01-01 22:43:02.254
 !MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.reload.dependencies
+
+!ENTRY org.eclipse.core.resources 4 376 2014-01-01 23:28:32.747
+!MESSAGE Marker id 10561 not found.
