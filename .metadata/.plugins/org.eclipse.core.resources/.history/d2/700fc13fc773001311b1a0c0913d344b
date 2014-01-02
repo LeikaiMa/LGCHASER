@@ -1,0 +1,83 @@
+package sortList;
+
+public class MergeSort {
+	public static ListNode sortList(ListNode head) {
+		if (head == null || head.next == null) {
+			return head;
+		}
+
+		ListNode slow = head;
+		ListNode fast = head.next;
+
+		while (fast != null && fast.next != null) {
+			slow = slow.next;
+			fast = fast.next.next;
+		}
+
+		ListNode head1 = head;
+		ListNode head2 = slow.next;
+		slow.next = null;
+
+		head1 = sortList(head1);
+		head2 = sortList(head2);
+
+		return merge(head1, head2);
+	}
+
+	private static ListNode merge(ListNode head1, ListNode head2) {
+		ListNode dummy = new ListNode(0);
+		ListNode prev = dummy;
+
+		while (head1 != null && head2 != null) {
+			if (head1.val <= head2.val) {
+				prev.next = head1;
+				head1 = head1.next;
+			} else {
+				prev.next = head2;
+				head2 = head2.next;
+			}
+			prev = prev.next;
+		}
+
+		if (head1 == null) {
+			prev.next = head2;
+		} else {
+			prev.next = head1;
+		}
+		return dummy.next;
+
+	}
+	
+	public static void printList(ListNode head) {
+		while (head != null) {
+			System.out.print(head.val + "=>");
+			head = head.next;
+		}
+		
+		System.out.println("NULL");
+	}
+	
+	public static void main(String[] args) {
+		ListNode l1 = new ListNode(2);
+		ListNode l2 = new ListNode(1);
+		ListNode l3 = new ListNode(3);
+		ListNode l4 = new ListNode(4);
+		ListNode l5 = new ListNode(3);
+		ListNode l6 = new ListNode(2);
+		ListNode l7 = new ListNode(5);
+		ListNode l8 = new ListNode(6);
+		
+		l1.next = l2;
+		l2.next = l3;
+		l3.next = l4;
+		l4.next = l5;
+		l5.next = l6;
+		l6.next = l7;
+		l7.next = l8;
+		
+		ListNode head = sortList(l1);
+		
+ 		
+	}
+
+}
