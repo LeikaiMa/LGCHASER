@@ -1,0 +1,14 @@
+package insertionSortList;
+
+public class InsertSort {
+	public ListNode insertionSortList(ListNode head) {
+		if (head == null || head.next == null) {
+			return head;
+		}
+		
+		ListNode dummy = new ListNode(0);
+		dummy.next = head;
+		
+		ListNode end = dummy.next.next;
+	}
+}
