@@ -1,0 +1,9 @@
+package searchInsertPosition;
+
+public class BinarySearch {
+	public int searchInsert(int[] A, int target) {
+		if (A == null || A.length == 0) {
+			return 0;
+		}
+	}
+}
