@@ -1,0 +1,15 @@
+package permutationSequence;
+
+public class DP {
+	public String getPermutation(int n, int k) {
+		int[] dp = new int[10];
+		int total = 1;
+		int digit = 9;
+		for (int i = 1; i <= 9; i++) {
+			total *= i;
+			dp[i-1] = total;
+		}
+		
+		while ()
+	}
+}

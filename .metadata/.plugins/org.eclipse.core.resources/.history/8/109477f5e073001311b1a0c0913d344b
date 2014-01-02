@@ -1,0 +1,8 @@
+package permutationSequence;
+
+public class DP {
+	public String getPermutation(int n, int k) {
+		int[] dp = new int[9];
+		
+	}
+}

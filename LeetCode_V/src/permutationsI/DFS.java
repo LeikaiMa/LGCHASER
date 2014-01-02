@@ -39,7 +39,7 @@ public class DFS {
 	}
 	
 	public static void main(String[] args) {
-		int[] num = {1, 2, 3};
+		int[] num = {1, 2, 3,4,5};
 		ArrayList<ArrayList<Integer>> permutations = new ArrayList<ArrayList<Integer>>();
 		permutations = permute(num);
 		for (ArrayList<Integer> a : permutations) {
