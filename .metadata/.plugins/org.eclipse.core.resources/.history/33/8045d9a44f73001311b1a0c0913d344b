@@ -1,0 +1,20 @@
+package searchInRotatedArrayII;
+
+public class CustomBinarySearch {
+	public boolean search(int[] A, int target) {
+		if (A == null || A.length == 0) {
+			return false;
+		}
+
+		int low = 0;
+		int high = A.length - 1;
+
+		while (low <= high) {
+			int mid = low + (high - low) / 2;
+			if (A[mid] == target) {
+				return true;
+			}
+		}
+		return false;
+	}
+}

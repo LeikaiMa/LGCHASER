@@ -1,0 +1,7 @@
+package searchInRotatedArrayII;
+
+public class CustomBinarySearch {
+	public boolean search(int[] A, int target) {
+
+	}
+}

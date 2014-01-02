@@ -1,0 +1,33 @@
+package searchInRotatedArray;
+// 这个是更加general 的二分法，因为是有部分前面比后面大，这样就要进行比较。不能仅仅依靠target来进行比较了。
+// 首先还是按照以前的做法是low 要 <= high 然后算mid 
+public class CustomBinarySearch {
+	public int search(int[] A, int target) {
+		if (A == null || A.length == 0) {
+			return -1;
+		}
+		int low = 0;
+		int high = A.length - 1;
+		while (low <= high) {
+			int mid = low + (high - low) / 2;
+			if (A[mid] == target) {
+				return mid;
+			} 
+			
+			if (A[low] <= A[mid]) {
+				if (target < A[mid] && target >= A[low]) {
+					high = mid - 1;
+				} else {
+					low = mid + 1;
+				}
+			} else {
+				if (target <= A[high] && target >  A[mid]) {
+					low = mid + 1;
+				} else {
+					high = mid - 1;
+				}
+			}
+		}
+		return -1;
+	}
+}
