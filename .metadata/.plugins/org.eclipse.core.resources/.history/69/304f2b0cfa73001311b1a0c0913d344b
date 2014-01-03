@@ -1,0 +1,18 @@
+package longestValidParentheses;
+
+import java.util.Stack;
+
+public class UseStack {
+	public int longestValidParentheses(String s) {
+		if (s == null || s.length() == 0 || s.length() == 1) {
+			return 0;
+		}
+		Stack<Character> paren = new Stack<Character>();
+		for (int i = 0; i < s.length(); i++) {
+			char c = s.charAt(i);
+			if (c == '(') {
+				paren.push(c);
+			}
+		}
+	}
+}

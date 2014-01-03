@@ -1,0 +1,52 @@
+package longestValidParentheses;
+
+import java.util.HashMap;
+import java.util.Stack;
+
+public class UseStack {
+	public static int longestValidParentheses(String s) {
+		if (s == null || s.length() == 0 || s.length() == 1) {
+			return 0;
+		}
+
+		HashMap<Integer, Integer> parenIndex = new HashMap<Integer, Integer>();
+
+		Stack<Character> paren = new Stack<Character>();
+		Stack<Integer> index = new Stack<Integer>();
+		int max = 0;
+		for (int i = 0; i < s.length(); i++) {
+			char c = s.charAt(i);
+			
+			if (c == '(') {
+				paren.push(c);
+				index.push(i);
+			} else {
+				if (paren.isEmpty() || paren.peek() == ')') {
+					paren.push(c);
+					index.push(i);
+				} else {
+					int leftIndex = index.pop();
+					int size = i - leftIndex + 1;
+					paren.pop();
+//					parenIndex.put(leftIndex, size);
+					
+//					if (paren.contains(leftIndex - 1)) {
+//						parenIndex.put(leftIndex - 1, paren.get(leftIndex - 1) + size);
+						parenIndex.put(key, value)
+					} else {
+						parenIndex.put(i, size);
+						max = Math.max(max, size);
+					}
+				}
+			}
+		}
+
+	}
+
+	public static void main(String[] args) {
+		System.out.println(longestValidParentheses(")()())") == 4);
+		System.out.println(longestValidParentheses("()(()") == 2);
+		System.out.println(longestValidParentheses("()(())") == 6);
+	}
+
+}
