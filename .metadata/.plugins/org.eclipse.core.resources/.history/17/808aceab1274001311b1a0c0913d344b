@@ -1,0 +1,11 @@
+package sqrt;
+
+public class Naive {
+	public int sqrt(int x) {
+		return 0;
+	}
+	
+	public static void main(String[] args) {
+		System.out.println(Math.sqrt(-1));
+	}
+}

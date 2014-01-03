@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;sqrt.Naive&apos; to &apos;Newton&apos;&#x0A;- Original project: &apos;LeetCode_VII&apos;&#x0A;- Original element: &apos;sqrt.Naive&apos;&#x0A;- Renamed element: &apos;sqrt.Newton&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Naive&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;sqrt{Naive.java[Naive" matchStrategy="1" name="Newton" qualified="false" references="true" similarDeclarations="false" stamp="1388713218690" textual="false" version="1.0"/>
+</session>
