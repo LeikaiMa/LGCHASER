@@ -1,0 +1,7 @@
+package mergeTwoSortedArray;
+
+public class ArrayBackwards {
+	public void merge(int A[], int m, int B[], int n) {
+		
+	}
+}

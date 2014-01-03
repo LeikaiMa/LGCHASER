@@ -1,0 +1,11 @@
+package mergeTwoSortedArray;
+
+public class ArrayBackwards {
+	public void merge(int A[], int m, int B[], int n) {
+		if (B == null || B.length == 0) {
+			return;
+		}
+
+		int i = m - 1, j = n - 1, k = m + n - 1;
+	}
+}
