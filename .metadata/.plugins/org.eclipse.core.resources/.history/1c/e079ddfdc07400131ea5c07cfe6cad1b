@@ -1,0 +1,55 @@
+package letterCombinationOfPhoneNumber;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class DFS {
+	public static ArrayList<String> letterCombinations(String digits) {
+		ArrayList<String> results = new ArrayList<String>();
+		if (digits == null || digits.length() == 0) {
+			return results;
+		}
+		HashMap<Character, String> digit2Letter = new HashMap<Character, String>();
+
+		digit2Letter.put('0', "");
+		digit2Letter.put('1', "");
+		digit2Letter.put('2', "abc");
+		digit2Letter.put('3', "def");
+		digit2Letter.put('4', "ghi");
+		digit2Letter.put('5', "jkl");
+		digit2Letter.put('6', "mno");
+		digit2Letter.put('7', "pqrs");
+		digit2Letter.put('8', "tuv");
+		digit2Letter.put('9', "wxyz");
+
+		StringBuffer letters = new StringBuffer();
+		letterCombinationsHelper(digits, digit2Letter, letters, results, 0);
+		return results;
+	}
+
+	private static  void letterCombinationsHelper(String digits,
+			HashMap<Character, String> digit2Letter, StringBuffer letters,
+			ArrayList<String> results, int index) {
+		if (index == digits.length()) {
+			results.add(letters.toString());
+		} else {
+			char c = digits.charAt(index);
+			if (c == '0' || c == '1' || c == '*' || c == '#') {
+				letterCombinationsHelper(digits, digit2Letter, letters,
+						results, index + 1);
+			} else {
+				String candidates = digit2Letter.get(c);
+				for (int i = 0; i < candidates.length(); i++) {
+					letters.append(candidates.charAt(i));
+					letterCombinationsHelper(digits, digit2Letter, letters,
+							results, index + 1);
+					letters.deleteCharAt(letters.length() - 1);
+				}
+			}
+		}
+	}
+	
+	public static void main(String[] args) {
+		System.out.println(new  DFS().letterCombinations("23"));
+	}
+}
