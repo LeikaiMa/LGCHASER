@@ -1,0 +1,7 @@
+package maximumSubarray;
+
+public class ON {
+	public int maxSubArray(int[] A) {
+
+	}
+}

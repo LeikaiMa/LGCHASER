@@ -1,0 +1,7 @@
+package maximumSubarray;
+
+public class DivideAndConquer {
+	public static int maxSubArray(int[] A) {
+		
+	}
+}

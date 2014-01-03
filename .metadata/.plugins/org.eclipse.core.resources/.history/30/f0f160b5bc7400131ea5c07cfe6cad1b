@@ -1,0 +1,46 @@
+package maximumSubarray;
+
+public class DivideAndConquer {
+	public static int maxSubArray(int[] A) {
+		if (A == null || A.length == 0) {
+			return 0;
+		}
+		int max = Integer.MIN_VALUE;
+		return maxSubArrayHelper(A, 0, A.length - 1, max);
+	}
+
+	private static int maxSubArrayHelper(int[] A, int start, int end, int max) {
+		if (start > end) {
+			return Integer.MIN_VALUE;
+		}
+
+		int mid = start + (end - start) / 2;
+		int maxLeft = maxSubArrayHelper(A, start, mid - 1, max);
+		int maxRight = maxSubArrayHelper(A, mid + 1, end, max);
+
+		max = Math.max(max, Math.max(maxLeft, maxRight));
+
+		int sum = 0, maxl = Integer.MIN_VALUE, maxr = Integer.MIN_VALUE;
+
+		for (int i = mid - 1; i >= start; i--) {
+			sum += A[i];
+			maxl = Math.max(maxl, sum);
+		}
+		sum = 0;
+		for (int i = mid + 1; i <= end; i++) {
+			sum += A[i];
+			maxr = Math.max(maxr, sum);
+		}
+
+		max = Math.max(max, maxl + A[mid] + maxr);
+		return max;
+	}
+	
+	public static void main(String[] args) {
+		int[] A = { 1, 2, -1, -2, 2, 1, -2, 1, 4, -5, 4 };
+		
+		System.out.println(maxSubArray(A));
+		int[] B = {-5, -1};
+		System.out.println(maxSubArray(B));
+	}
+}

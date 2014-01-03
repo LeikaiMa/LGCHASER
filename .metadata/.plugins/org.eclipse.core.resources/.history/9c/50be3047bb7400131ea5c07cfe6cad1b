@@ -1,0 +1,11 @@
+package maximumSubarray;
+
+public class DivideAndConquer {
+	public static int maxSubArray(int[] A) {
+		if (A == null || A.length == 0) {
+			return 0;
+		}
+		int max = Integer.MIN_VALUE;
+		
+	}
+}
