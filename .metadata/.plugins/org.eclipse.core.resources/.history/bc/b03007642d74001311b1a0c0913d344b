@@ -1,0 +1,62 @@
+package symmetricTree;
+
+import java.util.ArrayList;
+
+public class BFS {
+	public boolean isSymmetric(TreeNode root) {
+		if (root == null) {
+			return false;
+		}
+		if (root.left == null && root.right ==  null) {
+			return true;
+		}
+		if (root.left == null || root.right == null
+				|| root.left.val != root.right.val) {
+			return false;
+		}
+
+		ArrayList<TreeNode> left = new ArrayList<TreeNode>();
+		ArrayList<TreeNode> right = new ArrayList<TreeNode>();
+
+		left.add(root.left);
+		right.add(root.right);
+
+		while (!left.isEmpty() && !right.isEmpty()) {
+			ArrayList<TreeNode> tmpLeft = new ArrayList<TreeNode>();
+			ArrayList<TreeNode> tmpRight = new ArrayList<TreeNode>();
+			for (int i = 0; i < left.size(); i++) {
+				TreeNode l = left.get(i);
+				TreeNode r = right.get(right.size() - 1 - i);
+
+				if (l.left != null && r.right != null
+						&& l.left.val != r.right.val) {
+					return false;
+				} else if (l.left != null && r.right != null
+						&& l.left.val == r.right.val) {
+					tmpLeft.add(l.left);
+					tmpRight.add(l.right);
+				} else if ((l.left != null && r.right == null)
+						|| (l.left == null && r.right != null)) {
+					return false;
+				}
+
+				if (l.right != null && r.left != null
+						&& l.right.val != r.left.val) {
+					return false;
+				} else if (l.right != null && r.left != null
+						&& l.right.val == r.left.val) {
+					tmpLeft.add(l.right);
+					tmpRight.add(l.left);
+				} else if ((l.right != null && r.left == null)
+						|| (l.right == null && r.left != null)) {
+					return false;
+				}
+			}
+
+			left = tmpLeft;
+			right = tmpRight;
+		}
+
+		return true;
+	}
+}

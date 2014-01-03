@@ -7,7 +7,6 @@ import java.util.Map;
 // 开始不知道string 能够自己进行sort 用的方法是将所有字母出现的个数统计出来，放进一个array 当中，然后比较array 
 // 这里学会了如何比较array 可以直接用arrays.equals 来进行。
 // 虽然想到了用hashmap 进行分类但是，但是只是按照长度来进行分类。这样不能从根本上进行解决问题。
-// 这个其实是超时的，没有了解本质，解决就有问题。
 public class NDimensionArray {
 	public static ArrayList<String> anagrams(String[] strs) {
 		ArrayList<String> results = new ArrayList<String>();
