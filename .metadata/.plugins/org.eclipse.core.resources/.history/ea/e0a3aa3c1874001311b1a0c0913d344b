@@ -1,0 +1,7 @@
+package simplifyPath;
+
+public class SplitAndArraylist {
+public String simplifyPath(String path) {
+        
+    }
+}

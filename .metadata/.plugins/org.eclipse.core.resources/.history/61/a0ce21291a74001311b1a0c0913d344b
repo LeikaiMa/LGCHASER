@@ -1,0 +1,35 @@
+package simplifyPath;
+
+import java.util.ArrayList;
+public class SplitAndArraylist {
+	public String simplifyPath(String path) {
+		if (path == null) {
+			return "/";
+		}
+		String[] parts = path.split("/");
+		
+		ArrayList<String> dir = new ArrayList<String>();
+		
+		for(String s: parts) {
+			if (s.length() == 0 || s.equals(".")) {
+				continue;
+			}
+			if (s.equals("..")) {
+				if (dir.size() == 0) {
+					continue;
+				} else {
+					dir.remove(dir.size() - 1);
+				}
+			} else {
+				dir.add(s);
+			}
+		}
+		if (dir.size() == 0) {
+			return "/";
+		}
+		StringBuffer sb = new StringBuffer();
+		
+	}
+	
+	
+}

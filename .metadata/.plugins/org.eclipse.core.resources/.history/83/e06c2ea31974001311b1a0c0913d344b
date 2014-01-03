@@ -1,0 +1,19 @@
+package simplifyPath;
+
+import java.util.ArrayList;
+public class SplitAndArraylist {
+	public String simplifyPath(String path) {
+		if (path == null) {
+			return "/";
+		}
+		String[] parts = path.split("/");
+		
+		ArrayList<String> dir = new ArrayList<String>();
+		
+		for(Strng s: parts) {
+			
+		}
+	}
+	
+	
+}
