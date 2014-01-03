@@ -1,0 +1,19 @@
+package anagrams;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class SortStringSelfHashMap {
+	public static ArrayList<String> anagrams(String[] strs) {
+		ArrayList<String> results = new ArrayList<String>();
+		if (strs == null || strs.length == 0 || strs.length == 1) {
+			return results;
+		}
+		
+		HashMap<String, ArrayList<Integer>> anagrams = new HashMap<String,ArrayList<Integer>>();
+		
+		for (int i = 0; i < strs.length; i++) {
+			
+		}
+	}
+}

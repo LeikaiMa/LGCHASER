@@ -1,0 +1,9 @@
+package anagrams;
+
+import java.util.ArrayList;
+
+public class NDimensionArray {
+	public ArrayList<String> anagrams(String[] strs) {
+		ArrayList<String> results = new ArrayList<String>();
+	}
+}

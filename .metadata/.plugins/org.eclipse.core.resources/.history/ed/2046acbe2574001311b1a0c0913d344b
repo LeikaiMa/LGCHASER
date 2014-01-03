@@ -1,0 +1,9 @@
+package anagrams;
+
+import java.util.ArrayList;
+
+public class SortStringSelfHashMap {
+	public static ArrayList<String> anagrams(String[] strs) {
+
+	}
+}

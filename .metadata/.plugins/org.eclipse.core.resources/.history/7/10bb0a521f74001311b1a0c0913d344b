@@ -1,0 +1,14 @@
+package anagrams;
+
+import java.util.ArrayList;
+
+public class NDimensionArray {
+	public ArrayList<String> anagrams(String[] strs) {
+		ArrayList<String> results = new ArrayList<String>();
+		if (strs==null || strs.length == 0) {
+			return results;
+		}
+		
+		int[][] sum = new int[strs.length][26];
+	}
+}

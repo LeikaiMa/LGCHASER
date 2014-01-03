@@ -1,0 +1,48 @@
+package anagrams;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class NDimensionArray {
+	public ArrayList<String> anagrams(String[] strs) {
+		ArrayList<String> results = new ArrayList<String>();
+		if (strs == null || strs.length == 0) {
+			return results;
+		}
+		if (strs.length == 1) {
+			results.add(strs[0]);
+			return results;
+		}
+		boolean findAnagram = false;
+		int anagramLine = -1;
+		int[][] sum = new int[strs.length][26];
+
+		for (int i = 0; i < strs.length; i++) {
+			for (int j = 0; j < strs[i].length(); j++) {
+				sum[i][strs[i].charAt(j) - 'a']++;
+			}
+			if (!findAnagram) {
+				for (int j = i - 1; j >= 0; j--) {
+					if (Arrays.equals(sum[i], sum[j])) {
+						findAnagram = true;
+						anagramLine = i;
+						break;
+					}
+				}
+			}
+		}
+		
+		if (!findAnagram) {
+			return results;
+		}
+
+		// boolean[][] anagrams = new boolean[strs.length][strs.length] ;
+		// for (int i = 0; i < strs.length; i++) {
+		// for (int j = i + 1; j < strs.length; j++) {
+		// boolean isSame = Arrays.equals(sum[i], sum[j]);
+		//
+		// }
+		// }
+
+	}
+}
