@@ -1,8 +1,0 @@
-package divideTwoInteger;
-
-public class BitManipulation {
-	public int divide(int dividend, int divisor) {
-		long a = Math.abs((long) dividend);
-		long b = Math.abs((long) divisor);
-	}
-}

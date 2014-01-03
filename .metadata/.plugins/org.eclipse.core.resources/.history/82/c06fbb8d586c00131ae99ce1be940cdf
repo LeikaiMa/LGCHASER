@@ -1,7 +1,0 @@
-package bstToDoubleLinkedList;
-
-public class CircularLinkedList {
-	public static BiNode convertToCircular(BiNode root) {
-		
-	}
-}

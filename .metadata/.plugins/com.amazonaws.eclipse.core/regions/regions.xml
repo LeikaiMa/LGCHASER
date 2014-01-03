@@ -18,6 +18,7 @@
 	  <service name="AutoScaling">https://autoscaling.us-gov-west-1.amazonaws.com/</service>
 	  <service name="CloudWatch">https://monitoring.us-gov-west-1.amazonaws.com/</service>
       <service name="CloudFormation">https://cloudformation.us-gov-west-1.amazonaws.com/</service>
+	  <service name="DynamoDB">https://dynamodb.us-gov-west-1.amazonaws.com/</service>
     </services>
   </region>
   

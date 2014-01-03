@@ -1,7 +1,0 @@
-package divideTwoInteger;
-
-public class BitManipulation {
-	public int divide(int dividend, int divisor) {
-		
-	}
-}

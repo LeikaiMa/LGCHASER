@@ -1,9 +1,0 @@
-package uniqueBSTII;
-
-import java.util.ArrayList;
-
-public class UniqueBST {
-	public ArrayList<TreeNode> generateTrees(int n) {
-		ArrayList<TreeNode> result = new ArrayList<TreeNode>();
-	}
-}

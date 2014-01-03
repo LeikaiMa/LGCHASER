@@ -1,7 +1,0 @@
-package singleSumII;
-
-public class SelectOneFromThree {
-	public int singleNumber(int[] A) {
-        int[] bits = new int[32];
-    }
-}

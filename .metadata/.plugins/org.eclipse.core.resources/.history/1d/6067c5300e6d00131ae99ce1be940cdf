@@ -1,7 +1,0 @@
-package removeDuplicateFromListII;
-
-public class WhileTrue {
-	public ListNode deleteDuplicates(ListNode head) {
-
-	}
-}

@@ -1,7 +1,0 @@
-package testArrayList;
-
-public class StoreInHashMap {
-	public static void main(String[] args) {
-		
-	}
-}

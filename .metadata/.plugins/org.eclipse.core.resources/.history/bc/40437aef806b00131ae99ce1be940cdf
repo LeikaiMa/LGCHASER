@@ -1,9 +1,0 @@
-package frequencyOfOccurence;
-
-import java.util.Hashtable;
-
-public class Repetitive {
-	Hashtable<String, Integer> setupDictionary(String[] book) {
-		
-	}
-}

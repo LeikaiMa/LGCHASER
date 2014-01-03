@@ -1,9 +1,0 @@
-package mergeIntervals;
-
-import java.util.ArrayList;
-
-public class UseArraylist {
-	public ArrayList<Interval> merge(ArrayList<Interval> intervals) {
-		ArrayList<Interval> result = new ArrayList<Interval>();
-	}
-}

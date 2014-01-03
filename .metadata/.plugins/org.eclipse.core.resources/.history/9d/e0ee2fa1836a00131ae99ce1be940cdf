@@ -1,8 +1,0 @@
-package uniqueBST;
-
-public class Catalan {
-	public int numTrees(int n) {
-
-	}
-
-}

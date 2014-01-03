@@ -1,9 +1,0 @@
-package encodingXML;
-
-import javax.lang.model.element.Element;
-
-public class TreeEncoding {
-	public static String encodeToString(Element root) {
-		
-	}
-}

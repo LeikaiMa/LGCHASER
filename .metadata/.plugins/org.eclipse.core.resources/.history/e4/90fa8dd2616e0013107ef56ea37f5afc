@@ -1,9 +1,0 @@
-package surroundedSquare;
-
-public class BruteForce {
-	Subsquare findSquare(int[][] matrix) {
-		for (int i = matrix.length; i >= 1; i--) {
-			
-		}
-	}
-}

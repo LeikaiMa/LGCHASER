@@ -1,7 +1,0 @@
-package testArray;
-
-public class CeilAndFloorOfSortedArray {
-	public static void main(String[] args) {
-		int[] A = 
-	}
-}

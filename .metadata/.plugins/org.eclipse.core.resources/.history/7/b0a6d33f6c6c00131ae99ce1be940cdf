@@ -1,7 +1,0 @@
-package scrambleString;
-
-public class UseHashMap {
-	public boolean isScramble(String s1, String s2) {
-
-	}
-}

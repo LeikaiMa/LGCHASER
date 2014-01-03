@@ -1,7 +1,0 @@
-package permutationSequence;
-
-public class DP {
-	public String getPermutation(int n, int k) {
-
-	}
-}

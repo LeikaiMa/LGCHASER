@@ -1,7 +1,0 @@
-package ran7;
-
-public class ByRan5 {
-	public static int rand7() {
-		
-	}
-}

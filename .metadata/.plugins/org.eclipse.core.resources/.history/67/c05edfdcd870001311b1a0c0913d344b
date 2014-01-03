@@ -1,7 +1,0 @@
-package editDistance;
-
-public class BFSAndHashmap {
-	public int minDistance(String word1, String word2) {
-
-	}
-}

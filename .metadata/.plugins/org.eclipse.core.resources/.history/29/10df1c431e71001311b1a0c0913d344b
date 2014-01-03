@@ -1,9 +1,0 @@
-package substringWithConcatenationOfAllWords;
-
-import java.util.ArrayList;
-
-public class DPWithHashMap {
-	public ArrayList<Integer> findSubstring(String S, String[] L) {
-		ArrayList<Integer> indexes = new ArrayList<>();
-	}
-}

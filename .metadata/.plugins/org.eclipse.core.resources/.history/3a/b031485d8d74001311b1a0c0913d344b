@@ -1,7 +1,0 @@
-package multiplyStrings;
-
-public class Iterative {
-	public String multiply(String num1, String num2) {
-		
-	}
-}

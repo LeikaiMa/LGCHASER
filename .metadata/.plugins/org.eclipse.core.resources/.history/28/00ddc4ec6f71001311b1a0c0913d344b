@@ -1,7 +1,0 @@
-package subSetII;
-
-public class Recursive {
-public ArrayList<ArrayList<Integer>> subsetsWithDup(int[] num) {
-        
-    }
-}

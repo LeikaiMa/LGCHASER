@@ -1,7 +1,0 @@
-package rectangleTrie;
-
-import java.util.LinkedList;
-
-public class TrieNode {
-	private LinkedList<TrieNode> childreNodes;
-}

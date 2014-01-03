@@ -1,7 +1,0 @@
-package largestSumMatrix;
-
-public class EvolveFromLine {
-	public void clearArray(int[] array) {
-		
-	}
-}

@@ -1,9 +1,0 @@
-package lengthOfLastWord;
-
-public class Length {
-	public int lengthOfLastWord(String s) {
-		if (s == null || s.isEmpty()) {
-			return 0;
-		}
-	}
-}

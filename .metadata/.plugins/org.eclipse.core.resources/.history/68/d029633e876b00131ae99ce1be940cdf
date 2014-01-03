@@ -1,7 +1,0 @@
-package encodingXML;
-
-public class Element {
-
-	public Element getNameCoe;
-
-}

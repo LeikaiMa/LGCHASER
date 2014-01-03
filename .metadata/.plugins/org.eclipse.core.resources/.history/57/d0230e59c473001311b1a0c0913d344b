@@ -1,7 +1,0 @@
-package sortList;
-
-public class MergeSort {
-	public ListNode sortList(ListNode head) {
-		
-	}
-}

@@ -1,9 +1,0 @@
-package wordBreak;
-
-import java.util.Set;
-
-public class RecursiveBackTrace {
-	public static boolean wordBreak(String s, Set<String> dict) {
-		
-	}
-}

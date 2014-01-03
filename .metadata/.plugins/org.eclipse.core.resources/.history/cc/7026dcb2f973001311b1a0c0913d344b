@@ -1,7 +1,0 @@
-package longestValidParentheses;
-
-public class UseStack {
-	public int longestValidParentheses(String s) {
-
-	}
-}

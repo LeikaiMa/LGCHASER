@@ -1,7 +1,0 @@
-package largestSum;
-
-public class ContiguousSequence {
-	public static int getMaxSum(int[] a) {
-		
-	}
-}

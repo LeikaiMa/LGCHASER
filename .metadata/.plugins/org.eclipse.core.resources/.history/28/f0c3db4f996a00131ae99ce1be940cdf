@@ -1,7 +1,0 @@
-package testArrayList;
-
-public class AddNullToArraylist {
-	public static void main(String[] args) {
-		
-	}
-}	

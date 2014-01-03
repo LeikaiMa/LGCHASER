@@ -1,7 +1,0 @@
-package bstToDoubleLinkedList;
-
-public class RetrievingTheTail {
-	public static BiNode convert(BiNode root) {
-		
-	}
-}

@@ -1,7 +1,0 @@
-package scrambleString;
-
-public class DP {
-	public static boolean isScramble(String s1, String s2) {
-		
-	}
-}

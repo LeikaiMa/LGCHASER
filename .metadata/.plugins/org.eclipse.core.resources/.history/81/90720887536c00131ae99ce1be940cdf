@@ -1,7 +1,0 @@
-package twoSumPairs;
-
-public class PairSums {
-	void printPairSums(int[] array, int sum) {
-		
-	}
-}

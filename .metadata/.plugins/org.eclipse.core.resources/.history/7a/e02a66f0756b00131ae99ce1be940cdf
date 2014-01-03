@@ -1,7 +1,0 @@
-package lengthOfLastWord;
-
-public class Length {
-public int lengthOfLastWord(String s) {
-        
-    }
-}

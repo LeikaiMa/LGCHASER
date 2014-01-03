@@ -1,0 +1,12 @@
+package validBinarySearchTree;
+
+public class DFS {
+	public boolean isValidBST(TreeNode root) {
+		if (root == null) {
+			return true;
+		}
+		
+		TreeNode leftNode = root.left;
+		TreeNode rightNode = root.right;
+	}
+}

@@ -1,9 +1,0 @@
-package combination;
-
-import java.util.ArrayList;
-
-public class BFSBacktrace {
-	public ArrayList<ArrayList<Integer>> combine(int n, int k) {
-		
-	}
-}

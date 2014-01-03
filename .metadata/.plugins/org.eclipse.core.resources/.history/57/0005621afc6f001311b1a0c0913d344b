@@ -1,9 +1,0 @@
-package regularExpressionMatching;
-
-public class UseStack {
-	public boolean isMatch(String s, String p) {
-		int indexS = 0;
-	}
-	
-	
-}

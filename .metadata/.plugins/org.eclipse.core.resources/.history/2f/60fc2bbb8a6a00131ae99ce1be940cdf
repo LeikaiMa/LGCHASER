@@ -1,7 +1,0 @@
-package uniqueBSTII;
-
-public class UniqueBST {
-public ArrayList<TreeNode> generateTrees(int n) {
-        
-    }
-}
