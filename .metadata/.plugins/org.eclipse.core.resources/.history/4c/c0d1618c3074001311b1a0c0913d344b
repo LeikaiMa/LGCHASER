@@ -1,0 +1,9 @@
+package strStr;
+
+public class Naive {
+	public String strStr(String haystack, String needle) {
+		if (haystack.isEmpty() && needle.isEmpty()) {
+			return haystack;
+		}
+	}
+}
