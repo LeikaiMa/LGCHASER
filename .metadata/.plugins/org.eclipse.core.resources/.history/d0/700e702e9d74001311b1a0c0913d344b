@@ -1,0 +1,7 @@
+package multiplyStrings;
+
+public class OneArray {
+	public static String multiply(String num1, String num2) {
+		
+	}
+}

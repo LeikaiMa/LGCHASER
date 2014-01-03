@@ -1,0 +1,7 @@
+package testString;
+
+public class RemovingLeadingZeros {
+	public static void main(String[] args) {
+		
+	}
+}

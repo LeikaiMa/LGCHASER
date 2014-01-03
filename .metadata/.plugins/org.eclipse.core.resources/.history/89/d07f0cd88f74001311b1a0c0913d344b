@@ -1,0 +1,9 @@
+package testString;
+
+public class ChangeStringInMethod {
+	public static void main(String[] args) {
+		String s = "a";
+		changeString (s);
+		System.out.println(s);
+	}
+}

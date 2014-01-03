@@ -1,0 +1,91 @@
+package multiplyStrings;
+
+public class Iterative {
+	public String multiply(String num1, String num2) {
+		if (num1 == null || num1.isEmpty() || num2 == null || num2.isEmpty()) {
+			return "";
+		}
+
+		num1 = num1.trim().replaceFirst("^0+(?!$)", "");
+		num2 = num2.trim().replaceFirst("^0+(?!$)", "");
+		if (num1.equals("0") || num2.equals("0")) {
+			return "0";
+		}
+		if (num1.equals("1")) {
+			return num2;
+		}
+		if (num2.equals("1")) {
+			return num1;
+		}
+
+		if (num1.length() <= num2.length()) {
+			return multiplyHelper(num2, num1);
+		} else {
+			return multiplyHelper(num1, num2);
+		}
+
+	}
+
+	private String multiplyHelper(String multiplicand, String multiplier) {
+		StringBuffer[] steps = new StringBuffer[multiplier.length()];
+		for (int i = 0; i < multiplier.length(); i++) {
+			StringBuffer tmp = multiplyOneDigit(multiplicand,
+					multiplier.charAt(multiplier.length() - 1 - i));
+			for (int j = 0; j < i; j++) {
+				tmp.append(0);
+			}
+			steps[i] = tmp;
+		}
+
+		StringBuffer result = steps[0];
+		for (int i = 1; i < steps.length; i++) {
+			if (result.length() > steps[i].length()) {
+				for (int j = 0; j < result.length() - steps[i].length(); j++) {
+					steps[i].insert(0, 0);
+				}
+			} else {
+				for (int j = 0; j < steps[i].length() - result.length(); j++) {
+					result.insert(0, 0);
+				}
+			}
+			result = add(result, steps[i]);
+		}
+
+		return result.toString();
+
+	}
+
+	private StringBuffer add(StringBuffer augend, StringBuffer addend) {
+		int carry = 0;
+		StringBuffer sum = new StringBuffer();
+		for (int i = augend.length() - 1; i >= 0; i--) {
+			int a = augend.charAt(i) - '0';
+			int b = addend.charAt(i) - '0';
+			int s = a + b + carry;
+			carry = carry / 10;
+			sum.insert(0, s % 10);
+		}
+		
+		if (carry > 0) {
+			sum.insert(0, carry);
+		}
+		return sum;
+	}
+
+	private StringBuffer multiplyOneDigit(String multiplicand, char multiplier) {
+		StringBuffer result = new StringBuffer();
+		int b = multiplier - '0';
+		int carry = 0;
+		for (int i = multiplicand.length() - 1; i >= 0; i--) {
+			int a = multiplicand.charAt(i) - '0';
+			int product = a * b + carry;
+			carry = product / 10;
+			result.insert(0, product % 10);
+		}
+
+		if (carry > 0) {
+			result.insert(0, carry);
+		}
+		return result;
+	}
+}
