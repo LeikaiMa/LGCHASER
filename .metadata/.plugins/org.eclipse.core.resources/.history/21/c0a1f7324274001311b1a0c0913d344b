@@ -1,0 +1,17 @@
+package mergeKSortedLists;
+
+import java.util.ArrayList;
+
+public class ConciseMergeSort {
+	public ListNode mergeKLists(ArrayList<ListNode> lists) {
+		if (lists.size() == 0) {
+			return null;
+		}
+		
+		int last = lists.size() - 1;
+		
+		while (last > 0) {
+			int cur  = 0;
+		}
+	}
+}

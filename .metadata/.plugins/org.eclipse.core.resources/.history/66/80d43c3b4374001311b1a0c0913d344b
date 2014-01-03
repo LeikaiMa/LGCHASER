@@ -1,0 +1,21 @@
+package mergeKSortedLists;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+
+public class HeapSort {
+	public ListNode mergeKLists(ArrayList<ListNode> lists) {
+		if (lists.size() == 0) {
+			return null;
+		}
+		
+		Comparator<ListNode> comparator = new Comparator<ListNode>() {
+
+			@Override
+			public int compare(ListNode o1, ListNode o2) {
+				// TODO Auto-generated method stub
+				return 0;
+			}
+		};
+	}
+}

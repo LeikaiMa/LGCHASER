@@ -1,0 +1,39 @@
+package mergeKSortedLists;
+
+import java.util.ArrayList;
+
+public class MergeSort {
+	public ListNode mergeKLists(ArrayList<ListNode> lists) {
+		if (lists.size() == 0) {
+			return null;
+		}
+		return mergeKListsHelper(lists, 0, lists.size() - 1);
+	}
+
+	private ListNode mergeKListsHelper(ArrayList<ListNode> lists, int start,
+			int end) {
+		if (start == end) {
+			return lists.get(start);
+		} else if (end - start == 1) {
+			return merge(lists.get(start), lists.get(end));
+		} else {
+			int mid = start + (end - start) / 2;
+			ListNode head1 = mergeKListsHelper(lists, start, mid);
+			ListNode head2 = mergeKListsHelper(lists, mid + 1, end);
+			return merge(head1, head2);
+		}
+	}
+
+	private ListNode merge(ListNode head1, ListNode head2) {
+		if (head1 == null) {
+			return head2;
+		}
+		if (head2 == null) {
+			return head1;
+		}
+		
+		ListNode dummy = new ListNode(0);
+	}
+	
+	
+}
