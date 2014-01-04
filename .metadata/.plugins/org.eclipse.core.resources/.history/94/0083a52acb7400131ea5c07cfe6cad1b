@@ -1,0 +1,20 @@
+package balancedBinaryTree;
+
+import java.util.ArrayList;
+
+public class BFS {
+	public boolean isBalanced(TreeNode root) {
+		if (root == null) {
+			return true;
+		}
+		
+		ArrayList<TreeNode> level = new ArrayList<TreeNode>();
+		boolean noChild = false;
+		while (!level.isEmpty()) {
+			ArrayList<TreeNode> tmp = new ArrayList<TreeNode>();
+			for (TreeNode node: level) {
+				TreeNode left = node.left;
+			}
+		}
+	}
+}

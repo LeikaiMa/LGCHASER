@@ -1,6 +1,7 @@
 eclipse.preferences.version=1
 encoding//src/anagrams/NDimensionArray.java=UTF-8
 encoding//src/anagrams/SortStringSelfHashMap.java=UTF-8
+encoding//src/balancedBinaryTree/BFS.java=UTF-8
 encoding//src/insertionSortList/InsertSort.java=UTF-8
 encoding//src/interleavingString/DP.java=UTF-8
 encoding//src/interleavingString/UseStack.java=UTF-8

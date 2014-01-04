@@ -1,0 +1,108 @@
+package balancedBinaryTree;
+
+
+public class BFS {
+	public static  boolean isBalanced(TreeNode root) {
+//		HashMap<TreeNode, Integer> node 
+		if (root  == null) {
+			return true;
+		}
+		System.out.println("root left : " + maxDepth(root.left) + "root:" + root.val);
+		System.out.println("root right : " + maxDepth(root.right) + "root:" + root.val);
+		
+		if (Math.abs(maxDepth(root.left) - maxDepth(root.right)) > 1) {
+			return false;
+		}
+		return isBalanced(root.left) && isBalanced(root.right);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+//		if (root == null) {
+//			return true;
+//		}
+//
+//		ArrayList<TreeNode> level = new ArrayList<TreeNode>();
+//		level.add(root);
+//		boolean noChild = false;
+//		while (!level.isEmpty()) {
+//			ArrayList<TreeNode> tmp = new ArrayList<TreeNode>();
+//			for (TreeNode node : level) {
+//				TreeNode left = node.left;
+//				TreeNode right = node.right;
+//				if (noChild && (left != null || right != null)) {
+//					return false;
+//				}
+//				if (left != null) {
+//					tmp.add(left);
+//				}
+//				if (right != null) {
+//					tmp.add(right);
+//				}
+//			}
+//
+//			if (tmp.size() < level.size() * 2) {
+//				noChild = true;
+//			}
+//			level = tmp;
+//
+//		}
+//		return true;
+	}
+	
+	private static int maxDepth(TreeNode node) {
+		if (node == null) {
+		return 0;
+		}
+		System.out.println("node val:" + node.val + " , " + (1+ Math.max(maxDepth(node.left), maxDepth(node.right))));
+		return 1+ Math.max(maxDepth(node.left), maxDepth(node.right));
+	}
+
+	public static void main(String[] args) {
+//		TreeNode t1 = new TreeNode(1);
+//		TreeNode t2 = new TreeNode(2);
+//		TreeNode t3 = new TreeNode(2);
+//		TreeNode t4 = new TreeNode(3);
+//		TreeNode t5 = new TreeNode(3);
+//		TreeNode t6 = new TreeNode(3);
+//		TreeNode t7 = new TreeNode(3);
+//		TreeNode t8 = new TreeNode(4);
+//		TreeNode t9 = new TreeNode(4);
+//		TreeNode t10 = new TreeNode(4);
+//		TreeNode t11 = new TreeNode(4);
+//		TreeNode t12 = new TreeNode(4);
+//		TreeNode t13 = new TreeNode(4);
+//		TreeNode t14 = new TreeNode(5);
+//		TreeNode t15= new TreeNode(5);
+//		t1.left = t2;
+//		t1.right = t3;
+//		t2.left = t4;
+//		t2.right = t5;
+//		t3.left = t6;
+//		t3.right = t7;
+//		t4.left = t8;
+//		t4.right = t9;
+//		t5.left = t10;
+//		t5.right = t11;
+//		t6.left = t12;
+//		t6.right = t13;
+//		t8.left = t14;
+//		t8.right = t15;
+		
+		TreeNode t1 = new TreeNode(1);
+		TreeNode t2 = new TreeNode(2);
+		TreeNode t3 = new TreeNode(3);
+		t2.right =t3;
+		t1.right = t2;
+		
+		System.out.println(isBalanced(t1));
+	}
+}
