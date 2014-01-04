@@ -1,0 +1,14 @@
+package wordSearch;
+
+public class DFS {
+	public boolean exist(char[][] board, String word) {
+		if (word == null || word.isEmpty()) {
+			return true;
+		}
+		int row = board.length;
+		int column = board[0].length;
+		boolean[][] visited = new boolean[board.length][board[0].length];
+		
+		for (in)
+	}
+}

@@ -1,0 +1,7 @@
+package wordSearch;
+
+public class DFS {
+	public boolean exist(char[][] board, String word) {
+
+	}
+}
