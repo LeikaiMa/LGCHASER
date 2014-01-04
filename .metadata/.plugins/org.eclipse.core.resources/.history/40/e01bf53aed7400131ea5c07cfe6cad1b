@@ -1,0 +1,24 @@
+package nextPermutation;
+
+import java.util.Arrays;
+
+public class FromWiki {
+	public static void nextPermutation(int[] num) {
+		int k = -1;
+		int l;
+		for (int i = 0; i < num.length - 1; i++) {
+			if (num[i] < num[i+1]) {
+				k = i;
+			}
+		}
+		
+		if (k == -1) {
+			Arrays.sort(num);
+			return;
+		}
+		
+		for (int i = 0; i < num.length; i++) {
+			
+		}
+	}
+}

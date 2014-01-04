@@ -1,0 +1,36 @@
+package nextPermutation;
+
+import java.util.Arrays;
+
+public class InPlace {
+	public static void nextPermutation(int[] num) {
+		if (num == null || num.length == 0 || num.length == 1) {
+			return;
+		}
+
+//		for (int i = num.length - 1; i > 0; i--) {
+//			if (num[i] > num[i-1]) {
+//				int tmp = num[i];
+//				num[i] = num[i-1];
+//				num[i-1] = tmp;
+//				Arrays.sort(num, i, num.length);
+//				return;
+//			}
+//		}
+		
+		for (int i = 1; i < num.length -1; i ++ ) {
+			
+		}
+		
+		Arrays.sort(num);
+	}
+	
+	public static void main(String[] args) {
+		int[] num = {4,2,0,2,3,2,0};
+		nextPermutation(num);
+		System.out.println(Arrays.toString(num));
+		int[] num1= {2,3,1};
+		nextPermutation(num1);
+		System.out.println(Arrays.toString(num1));
+	}
+}
