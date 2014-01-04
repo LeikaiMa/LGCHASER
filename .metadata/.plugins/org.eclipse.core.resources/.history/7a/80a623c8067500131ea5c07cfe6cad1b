@@ -1,0 +1,33 @@
+package sumRootToLeafNumbers;
+
+import java.util.ArrayList;
+
+public class DFS {
+	public int sumNumbers(TreeNode root) {
+		if (root == null) {
+			return 0;
+		}
+
+		ArrayList<Integer> results = new ArrayList<Integer>();
+		int number = 0;
+		sumNumbersHelper(root, results, number);
+		int sum = 0;
+		for (int r : results) {
+			sum += r;
+		}
+		return sum;
+	}
+
+	private void sumNumbersHelper(TreeNode root, ArrayList<Integer> results,
+			StringBuffer number) {
+		if (root == null) {
+			results.add(Integer.valueOf(number.toString()));
+			number.delete(str, end)
+			return;
+		}
+		number.append(root.val);
+		
+		
+
+	}
+}
