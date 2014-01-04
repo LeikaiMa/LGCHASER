@@ -1,0 +1,30 @@
+package mimumWindowSubstring;
+
+public class ON {
+
+	public String minWindow(String S, String T) {
+		int[] appearCount = new int[256];
+		int[] expectCount = new int[256];
+		
+		for (int i = 0; i < T.length(); i++) {
+			expectCount[T.charAt(i)]++;
+		}
+		
+		int wordEnd = 0, wordStart = 0;
+		int appear = 0;
+		for (; wordEnd <  S.length(); wordEnd++) {
+			char c = S.charAt(wordEnd);
+			if (expectCount[c] > 0) {
+				
+				if (appearCount[c] < expectCount[c] ) {
+					appear++;
+				}
+				appearCount[c] ++;
+			}
+			
+			if (appear == T.length()) {
+				while (appearCount[S.charAt(wordStart)] > expectCount[S.charAt(wordStart) || expectCount[S.charAt(wordStart)] == 0)
+			}
+		}
+	}
+}

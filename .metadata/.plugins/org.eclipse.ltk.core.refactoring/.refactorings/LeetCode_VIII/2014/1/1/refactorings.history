@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;mimumWindowSubstring.ON&apos; to &apos;TwoPointerDp&apos;&#x0A;- Original project: &apos;LeetCode_VIII&apos;&#x0A;- Original element: &apos;mimumWindowSubstring.ON&apos;&#x0A;- Renamed element: &apos;mimumWindowSubstring.TwoPointerDp&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ON&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;mimumWindowSubstring{ON.java[ON" matchStrategy="1" name="TwoPointerDp" qualified="false" references="true" similarDeclarations="false" stamp="1388810324028" textual="false" version="1.0"/>
+</session>

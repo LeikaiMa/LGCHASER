@@ -1,0 +1,55 @@
+package mimumWindowSubstring;
+// 要找最小的window 就是包括里面所有字母的字符串长度最小，肯定要遍历整个要查找的字符串S 所以肯定复杂度至少为O(n)
+// 一般要为n 就是遍历至少一个指针遍历一遍不回头，想到这个是个字符串，最好是有两个指针
+public class ON {
+
+	public static String minWindow(String S, String T) {
+		int[] appearCount = new int[256];
+		int[] expectCount = new int[256];
+
+		for (int i = 0; i < T.length(); i++) {
+			expectCount[T.charAt(i)]++;
+		}
+
+		int wordEnd = 0, wordStart = 0;
+		int appear = 0;
+		int min = Integer.MAX_VALUE;
+		int minStart = -1;
+		for (; wordEnd < S.length(); wordEnd++) {
+			char c = S.charAt(wordEnd);
+			if (expectCount[c] > 0) {
+
+				if (appearCount[c] < expectCount[c]) {
+					appear++;
+				}
+				appearCount[c]++;
+			}
+
+			if (appear == T.length()) {
+				while (appearCount[S.charAt(wordStart)] > expectCount[S
+						.charAt(wordStart)]
+						|| expectCount[S.charAt(wordStart)] == 0) {
+					appearCount[S.charAt(wordStart)]--;
+					wordStart++;
+				}
+				
+				if (min > wordEnd - wordStart + 1) {
+					min = wordEnd - wordStart + 1;
+					minStart = wordStart;
+				}
+			}
+		}
+		
+		if (min != Integer.MAX_VALUE) {
+			return S.substring(minStart, minStart + min);
+		} else {
+			return "";
+		}
+	}
+	
+	public static void main(String[] args) {
+		String S = "ADOBECODEBANC";
+		String T = "ABC";
+		System.out.println(minWindow(S, T));
+	}
+}
