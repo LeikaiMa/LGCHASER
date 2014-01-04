@@ -1,0 +1,7 @@
+package maximalRectangle;
+
+public class MaximumHistogram {
+	public int maximalRectangle(char[][] matrix) {
+
+	}
+}
