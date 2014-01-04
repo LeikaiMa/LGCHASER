@@ -1,0 +1,37 @@
+package recoverBinaryTree;
+// 恢复BST中的两个被交换的node 的值，用O(n) 的空间话还是可以做的，将所有的值从里面取出来，在外面sort 一遍，然后将里面的值按照inorder 的顺序存到BST的每一个node 里面。
+// 但是这种方法会很慢，而且很多都是正确的在重复插入值。
+// 所以思考怎么用O(1) 的空间大小来进行存储，
+public class InOrder {
+	public void recoverTree(TreeNode root) {
+		if (root == null) {
+			return;
+		}
+		
+		TreeNode[] swappedNode = new TreeNode[3];
+		
+		recoverTreeHelper(root, swappedNode);
+		int val1 = swappedNode[0].val;
+		int val2 = swappedNode[1].val;
+		swappedNode[0].val = val2;
+		swappedNode[1].val = val1;
+	}
+
+	private void recoverTreeHelper(TreeNode root, TreeNode[] swappedNode) {
+		if (root == null) {
+			return;
+		}
+		
+		recoverTreeHelper(root.left, swappedNode);
+		if (swappedNode[2] != null && swappedNode[2].val > root.val) {
+			swappedNode[1] = root;
+			if (swappedNode[0] == null) {
+				swappedNode[0] = swappedNode[2];
+			}
+		}
+		
+		swappedNode[2] = root;
+		
+		recoverTreeHelper(root.right, swappedNode);
+	}
+}

@@ -1,0 +1,31 @@
+package recoverBinaryTree;
+
+public class InOrder {
+	public void recoverTree(TreeNode root) {
+		if (root == null) {
+			return;
+		}
+		
+		TreeNode[] swappedNode = new TreeNode[3];
+		
+		recoverTreeHelper(root, swappedNode);
+		int val1 = swappedNode[0].val;
+		int val2 = swappedNode[1].val;
+		swappedNode[0].val = val2;
+		swappedNode[1].val = val1;
+	}
+
+	private void recoverTreeHelper(TreeNode root, TreeNode[] swappedNode) {
+		if (root == null) {
+			return;
+		}
+		
+		recoverTreeHelper(root.left, swappedNode);
+		if (swappedNode[2] != null && swappedNode[2].val > root.val) {
+			swappedNode[1] = root;
+			if (swappedNode[0] == null) {
+				
+			}
+		}
+	}
+}

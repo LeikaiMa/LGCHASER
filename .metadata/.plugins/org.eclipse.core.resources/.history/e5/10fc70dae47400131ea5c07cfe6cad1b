@@ -1,0 +1,41 @@
+package recoverBinaryTree;
+// 恢复BST中的两个被交换的node 的值，用O(n) 的空间话还是可以做的，将所有的值从里面取出来，在外面sort 一遍，然后将里面的值按照inorder 的顺序存到BST的每一个node 里面。
+// 但是这种方法会很慢，而且很多都是正确的在重复插入值。
+// 所以思考怎么用O(1) 的空间大小来进行存储，需要重新思考，关键是只要找到这两个错误的位置进行交换就可以了。
+// 思考BST的本质，这一点想到了，就是in order的 时候就是输出的就是一个按照顺序排的array，
+// 下面就要思考如何找出这两个出错的位置。因为交换了，就是前面一个小值放到后面去了一个大值放到前面来了。
+// 这样被放在前面的大值就比前面的一个数大，或者是头的情况就没有，或者是比后面的值大。所以因为前面的值有可能没有就不太适合比较，就找这个值比后面大的情况。
+// 再看被放在后面的一个小值，和前面比是小的，和后面比是大的，所以考虑比较的对象，因为和前面一个保持相同就比较和前面比，小的就是被调到后面的小值。
+public class InOrder {
+	public void recoverTree(TreeNode root) {
+		if (root == null) {
+			return;
+		}
+		
+		TreeNode[] swappedNode = new TreeNode[3];
+		
+		recoverTreeHelper(root, swappedNode);
+		int val1 = swappedNode[0].val;
+		int val2 = swappedNode[1].val;
+		swappedNode[0].val = val2;
+		swappedNode[1].val = val1;
+	}
+
+	private void recoverTreeHelper(TreeNode root, TreeNode[] swappedNode) {
+		if (root == null) {
+			return;
+		}
+		
+		recoverTreeHelper(root.left, swappedNode);
+		if (swappedNode[2] != null && swappedNode[2].val > root.val) {
+			swappedNode[1] = root;
+			if (swappedNode[0] == null) {
+				swappedNode[0] = swappedNode[2];
+			}
+		}
+		
+		swappedNode[2] = root;
+		
+		recoverTreeHelper(root.right, swappedNode);
+	}
+}
