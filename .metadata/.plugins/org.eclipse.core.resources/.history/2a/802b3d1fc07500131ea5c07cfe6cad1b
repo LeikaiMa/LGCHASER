@@ -1,0 +1,7 @@
+package synchronizationAndLocks;
+
+public class MyObject {
+	public synchronized void foo(String name) {
+		
+	}
+}

@@ -1,0 +1,12 @@
+package locks;
+
+import java.util.concurrent.locks.Lock;
+
+public class LockedATM {
+	private Lock lock;
+	private int balance = 100;
+	
+	public LockedATM() {
+		lock = 
+	}
+}

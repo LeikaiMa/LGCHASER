@@ -1,0 +1,6 @@
+package runnableAndThread;
+
+public class RunnableExample implements Runnable{
+	
+
+}
