@@ -1,0 +1,37 @@
+package binaryTreeInorderTraversal;
+
+public class StackForNode {
+    public ArrayList<Integer> inorderTraversal(TreeNode root) {
+        ArrayList<Integer> results = new ArrayList<Integer>();
+        if (root == null) {
+            return results;
+        }
+        
+        Stack<TreeNode> nodes = new Stack<TreeNode>();
+        Stack<Boolean> visited = new Stack<Boolean>();
+        
+        nodes.push(root);
+        visited.push(false);
+        
+        while (!nodes.isEmpty()) {
+            TreeNode node = nodes.pop();
+            boolean hasVisited = visited.pop();
+            if (hasVisited) {
+                results.add(node.val);
+            } else {
+                if (node.right != null) {
+                    nodes.push(node.right);
+                    visited.push(false);
+                }
+                nodes.push(node);
+                visited.push(true);
+                if (node.left != null) {
+                    nodes.push(node.left);
+                    visited.push(false);
+                }
+            }
+        }
+        
+        return results;
+     }
+}

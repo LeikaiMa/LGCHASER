@@ -1,0 +1,28 @@
+package binaryTreeInorderTraversal;
+
+import java.util.ArrayList;
+import java.util.Stack;
+
+public class OneStack {
+	public ArrayList<Integer> inorderTraversal(TreeNode root) {
+		ArrayList<Integer> results = new ArrayList<Integer>();
+		boolean done = false;
+		TreeNode cur = root;
+		Stack<TreeNode> nodes = new Stack<TreeNode>();
+		while (!done) {
+			if (cur != null) {
+				nodes.push(cur);
+				cur = cur.left;
+			} else {
+				if (nodes.isEmpty()) {
+					done = true;
+				} else {
+					TreeNode node = nodes.pop();
+					results.add(node.val);
+					cur = node.right;
+				}
+			}
+		}
+		return results;
+	}
+}
