@@ -1,0 +1,8 @@
+package circularArray;
+
+public class CircularArray<T> {
+	private T[] items;
+	private int head = 0;
+	
+	
+}

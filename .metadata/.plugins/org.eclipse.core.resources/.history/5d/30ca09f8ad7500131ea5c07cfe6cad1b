@@ -1,0 +1,10 @@
+package circularArray;
+
+public class CircularArray<T> {
+	private T[] items;
+	private int head = 0;
+
+	public CircularArray(int size) {
+		items = (T[]) new Object[size];
+	}
+}

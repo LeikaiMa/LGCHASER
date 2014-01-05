@@ -1,0 +1,65 @@
+package circularArray;
+// 要实现generic 的要在class 后面要加上<T> 这个功能。
+// 因为是一个array 所以里面有一个以T 为类型的array 因为是要成环的，而里面的数组实际上是不能成环的，所以要以一个head，每次移动的时候将这个head 更新。
+// 然后constructor 是根据
+import java.util.Iterator;
+
+public class CircularArray<T> implements Iterable<T> {
+	private T[] items;
+	private int head = 0;
+
+	@SuppressWarnings("unchecked")
+	public CircularArray(int size) {
+		items = (T[]) new Object[size];
+	}
+
+	public void rotate(int shiftRight) {
+		head = convert(shiftRight);
+	}
+
+	private int convert(int index) {
+		if (index < 0) {
+			index += items.length;
+		}
+
+		return (head + index) % items.length;
+	}
+
+	public T get(int i) {
+		if (i < 0 || i >= items.length) {
+			throw new java.lang.IndexOutOfBoundsException("...");
+		}
+		return items[convert(i)];
+	}
+
+	public void set(int i, T item) {
+		items[convert(i)] = item;
+	}
+
+	public Iterator<T> iterator() {
+		return new CircularArrayIterator<T>(this);
+	}
+
+	private class CircularArrayIterator<TI> implements Iterator<TI> {
+		private int _current = -1;
+		private TI[] _items;
+
+		public CircularArrayIterator(CircularArray<TI> array) {
+			_items = array.items;
+		}
+
+		public boolean hasNext() {
+			return _current < items.length - 1;
+		}
+
+		public TI next() {
+			_current++;
+			TI item = (TI) _items[convert(_current)];
+			return item;
+		}
+
+		public void remove() {
+			throw new UnsupportedOperationException("...");
+		}
+	}
+}

@@ -1,0 +1,6 @@
+package circularArray;
+
+public class CircularArray<T> {
+	private T[] items;
+	
+}

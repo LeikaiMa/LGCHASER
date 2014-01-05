@@ -1,0 +1,14 @@
+package collectionFramework;
+
+import java.util.ArrayList;
+
+public class Collections {
+	public static void main(String[] args) {
+		ArrayList<String> myArr = new ArrayList<String>();
+		myArr.add("One");
+		myArr.add("Two");
+		System.out.println(myArr.get(0));
+		
+		
+	}
+}

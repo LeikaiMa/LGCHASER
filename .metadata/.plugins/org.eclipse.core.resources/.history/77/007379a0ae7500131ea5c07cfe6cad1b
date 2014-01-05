@@ -1,0 +1,29 @@
+package circularArray;
+
+public class CircularArray<T> {
+	private T[] items;
+	private int head = 0;
+
+	@SuppressWarnings("unchecked")
+	public CircularArray(int size) {
+		items = (T[]) new Object[size];
+	}
+	
+	public void rotate(int shiftRight) {
+		head = convert(shiftRight);
+	}
+	
+	private int convert(int index) {
+		if (index < 0) {
+			index += items.length;
+		}
+		
+		return (head + index) % items.length;
+	}
+	
+	public T get(int i) {
+		if (i < 0 || i >= items.length) {
+			
+		}
+	}
+}

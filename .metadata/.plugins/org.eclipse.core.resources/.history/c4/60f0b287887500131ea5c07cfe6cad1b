@@ -1,0 +1,7 @@
+package overLoadingVSoverRiding;
+
+public abstract class Shape {
+	public void printMe()
+ {
+		}
+ }
