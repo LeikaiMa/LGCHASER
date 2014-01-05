@@ -1,0 +1,16 @@
+package provideLockNoDeadLock;
+
+import java.util.HashMap;
+import java.util.LinkedList;
+
+import org.omg.CORBA.INTERNAL;
+
+public class LockFactory {
+	private static LockFactory instance;
+	
+	private int numberOfLocks = 5;
+	
+	private LockNode[] locks;
+	
+	private HashMap<Integer, LinkedList<LockNode>> lockOrder;
+}

@@ -1,0 +1,18 @@
+package testArrayList;
+
+import java.util.ArrayList;
+
+public class RemoveNode {
+	public static void main(String[] args) {
+		ArrayList<ListNode> arrayList = new ArrayList<>();
+		ListNode l1 = new ListNode(1);
+		ListNode l2 = new ListNode(2);
+		ListNode l3 = new ListNode(1);
+		arrayList.add(l1);
+		arrayList.add(l2);
+		arrayList.add(l3);
+		System.out.println(arrayList);
+		
+		arrayList.remove(l3);
+	}
+}

@@ -1,0 +1,9 @@
+package testArrayList;
+
+import java.util.ArrayList;
+
+public class RemoveNode {
+	public static void main(String[] args) {
+		ArrayList<ListNode> arrayList = new ArrayList<>();
+	}
+}

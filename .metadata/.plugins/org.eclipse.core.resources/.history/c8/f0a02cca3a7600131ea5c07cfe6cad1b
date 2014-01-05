@@ -1,0 +1,15 @@
+package provideLockNoDeadLock;
+
+import java.util.ArrayList;
+import java.util.concurrent.locks.Lock;
+
+public class LockNode {
+	public enum VisitState {
+		FRESH, VISITING, VISITED
+	};
+	
+	private ArrayList<LockNode> children;
+	
+	private int lockId;
+	private Lock lock;
+}
