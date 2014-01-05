@@ -42,10 +42,8 @@ public class OnePassDP {
 	}
 	
 	public static void main(String[] args) {
-		String S = "aabb";
-		String T = "ab";
-//		String S = "ABCDE";
-//		String T = "AEC";
+		String S = "ABCDE";
+		String T = "AEC";
 //		 String S = "rabbbit";
 //		 String T = "rabbit";
 //		 String S = "aacaacca";
