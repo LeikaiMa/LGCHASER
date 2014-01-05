@@ -1,0 +1,11 @@
+package philosophersDiningProblem;
+
+import java.util.concurrent.locks.Lock;
+
+public class Chopstick {
+	private Lock lock;
+	
+	public Chopstick() {
+		
+	}
+}	

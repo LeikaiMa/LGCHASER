@@ -1,0 +1,38 @@
+package constructBinaryTreeFromInorderAndPostorderTraversal;
+
+import java.util.HashMap;
+
+public class HashMapStoreIndex {
+    public TreeNode buildTree(int[] inorder, int[] postorder) {
+        if (inorder == null || postorder == null) {
+            return null;
+        }
+        if (inorder.length == 0) {
+            return null;
+        }
+        if (inorder.length != postorder.length) {
+            return null;
+        }
+        
+        HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
+        for (int i = 0; i < inorder.length; i++) {
+            map.put(inorder[i], i);
+        }
+        return buildTreeHelper(map, inorder, 0, inorder.length - 1, postorder, 0, postorder.length - 1);
+    }
+    
+    public TreeNode buildTreeHelper(HashMap<Integer, Integer> map, int[] inorder, int istart, int iend, int[] postorder, int pstart, int pend) {
+        if (istart > iend) {
+            return null;
+        }
+        
+        int rootVal = postorder[pend];
+        TreeNode root = new TreeNode(rootVal);
+        int index = map.get(rootVal);
+        
+        root.left = buildTreeHelper(map, inorder, istart, index - 1, postorder, pstart, pstart + (index - 1 - istart));
+        root.right = buildTreeHelper(map, inorder, index + 1, iend, postorder, pend - 1 - (iend - index - 1) ,pend - 1);
+        
+        return root;
+    }
+}

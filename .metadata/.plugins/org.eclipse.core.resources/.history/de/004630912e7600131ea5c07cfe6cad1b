@@ -1,0 +1,8 @@
+package philosophersDiningProblem;
+
+public class Philosopher extends Thread {
+	private int bites= 10;
+	private Chopstick left;
+	private Chopstick right;
+	
+}
