@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;TreeNode.java&apos; to &apos;Classification_BinaryTree/src/constructBinaryTreeFromPreorderAndInorderTraversal&apos;&#x0A;- Original project: &apos;Classification_BinaryTree&apos;&#x0A;- Destination element: &apos;Classification_BinaryTree/src/constructBinaryTreeFromPreorderAndInorderTraversal&apos;&#x0A;- Original element: &apos;constructBinaryTreeFromInorderAndPostorderTraversal.TreeNode.java&apos;" description="Copy compilation unit" destination="/src&lt;constructBinaryTreeFromPreorderAndInorderTraversal" element1="/src&lt;constructBinaryTreeFromInorderAndPostorderTraversal{TreeNode.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1388958386518" units="1" version="1.0"/>
+</session>

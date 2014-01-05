@@ -1,5 +1,4 @@
 package binaryTreeInorderTraversal;
-// I - 1
 // 要注意的是生成新的变量。而不能不生成就用。
 // 这个是先root 变成cur
 // 然后直接一直往左走，每走一步push 到stack 里面，直到没有的时候， 将里面的值pop 出来，放进答案里面去，然后cur 变成right 然后继续循环。

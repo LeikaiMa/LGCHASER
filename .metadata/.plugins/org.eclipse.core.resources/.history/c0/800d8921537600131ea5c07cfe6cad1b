@@ -1,5 +1,4 @@
 package constructBinaryTreeFromInorderAndPostorderTraversal;
-// I-2
 //分析post 和inorder 的关系。
 //post 最后一个肯定是root， 然后inorder 是用root 将left 和right 分开。
 //先用一个hashmap 将inorder 里面的值和index 一一存起来，这样以后找的时候就不需要再遍历找，可以直接用hashmap。
