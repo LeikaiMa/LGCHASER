@@ -1,0 +1,31 @@
+package insertInterval;
+
+import java.util.ArrayList;
+
+public class CompareBoundary {
+	public ArrayList<Interval> insert(ArrayList<Interval> intervals,
+			Interval newInterval) {
+		ArrayList<Interval> results = new ArrayList<Interval>();
+
+		int i = 0;
+		int len = intervals.size();
+
+		while (i < len && intervals.get(i).end < newInterval.start) {
+			results.add(intervals.get(i++));
+		}
+
+		while (i < len && intervals.get(i).start <= newInterval.end) {
+			Interval oldInterval = intervals.get(i++);
+			newInterval.start = Math.min(newInterval.start, oldInterval.start);
+			newInterval.end = Math.max(newInterval.end, oldInterval.end);
+		}
+
+		results.add(newInterval);
+
+		while (i < len) {
+			results.add(intervals.get(i++));
+		}
+
+		return results;
+	}
+}
