@@ -1,0 +1,30 @@
+package containerWithMostWater;
+
+public class FrontPointerBackPointer {
+	public int maxArea(int[] height) {
+		int max = 0;
+		int i = 0;
+		int j = height.length - 1;
+
+		while (i < j) {
+			int hi = height[i];
+			int hj = height[j];
+
+			max = Math.max(max, Math.min(hi, hj) * (j - i));
+
+			if (hi < hj) {
+				i++;
+				while (i < height.length && height[i] <= height[i - 1]) {
+					i++;
+				}
+			} else {
+				j--;
+				while (j >= 0 && height[j] <= height[j + 1]) {
+					j--;
+				}
+			}
+		}
+
+		return max;
+	}
+}
