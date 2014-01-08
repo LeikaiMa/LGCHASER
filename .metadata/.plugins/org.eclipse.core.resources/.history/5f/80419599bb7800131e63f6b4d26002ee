@@ -1,0 +1,7 @@
+package testArrayList;
+
+public class ArrayListInitialization {
+	public static void main(String[] args) {
+		
+	}
+}
