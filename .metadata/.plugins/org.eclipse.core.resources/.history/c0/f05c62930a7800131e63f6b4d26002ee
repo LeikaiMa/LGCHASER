@@ -1,0 +1,32 @@
+package nQueensII;
+
+public class BitManipulation {
+	public int totalNQueens(int n) {
+		if (n <= 0) {
+			return 0;
+		}
+
+		int[] params = new int[2];
+		params[1] = (1 << n) - 1;
+
+		totalNQueensHelper(0, 0, 0, params);
+
+		return params[0];
+	}
+
+	public void totalNQueensHelper(int c, int l, int r, int[] params) {
+		int upper = params[1];
+
+		if (c != upper) {
+
+			int pos = upper & (~(c | l | r));
+			while (pos != 0) {
+				int p = pos & -pos;
+				totalNQueensHelper(c + p, (l + p) << 1, (r + p) >> 1, params);
+				pos -= p;
+			}
+		} else {
+			params[0]++;
+		}
+	}
+}
