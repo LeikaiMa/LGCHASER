@@ -1,9 +1,0 @@
-package nextPermutation;
-
-public class InPlace {
-	public void nextPermutation(int[] num) {
-		if (num == null || num.length == 0 || num.length == 1) {
-			return;
-		}
-	}
-}

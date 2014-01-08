@@ -1,7 +1,0 @@
-package nextPermutation;
-
-public class InPlace {
-	public void nextPermutation(int[] num) {
-
-	}
-}

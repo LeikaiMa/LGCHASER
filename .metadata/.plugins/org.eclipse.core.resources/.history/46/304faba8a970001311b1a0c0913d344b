@@ -1,7 +1,0 @@
-package binaryTreeMaxSum;
-
-public class RecursiveCompare {
-	public int maxPathSum(TreeNode root) {
-
-	}
-}

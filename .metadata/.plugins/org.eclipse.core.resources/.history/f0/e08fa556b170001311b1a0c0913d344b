@@ -1,7 +1,0 @@
-package bestTimeToBuyAndSellStockI;
-
-public class ON {
-public int maxProfit(int[] prices) {
-        
-    }
-}

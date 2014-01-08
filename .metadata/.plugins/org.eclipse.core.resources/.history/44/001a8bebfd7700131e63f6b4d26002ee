@@ -1,0 +1,5 @@
+package nQueens;
+
+public class DFS {
+
+}

@@ -1,9 +1,0 @@
-package subSetII;
-
-import java.util.ArrayList;
-
-public class DFS {
-	public static ArrayList<ArrayList<Integer>> subsetsWithDup(int[] num) {
-		
-	}
-}

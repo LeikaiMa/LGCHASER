@@ -1,9 +1,0 @@
-package substringWithConcatenationOfAllWords;
-
-import java.util.ArrayList;
-
-public class Conciser {
-	public ArrayList<Integer> findSubstring(String S, String[] L) {
-		
-	}
-}

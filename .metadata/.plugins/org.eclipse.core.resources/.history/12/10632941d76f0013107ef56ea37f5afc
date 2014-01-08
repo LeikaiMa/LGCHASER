@@ -1,7 +1,0 @@
-package testArray;
-
-public class MoveFirstElement {
-	public static void main(String[] args) {
-		
-	}
-}

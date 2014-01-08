@@ -1,7 +1,0 @@
-package balancedBinaryTree;
-
-public class BFS {
-	public boolean isBalanced(TreeNode root) {
-		
-	}
-}

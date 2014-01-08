@@ -1,9 +1,0 @@
-package searchForRange;
-
-public class TwoBinarySearch {
-	public static  int[] searchRange(int[] A, int target) {
-		int[] result = new int[2];
-		result[0]= -1;
-		result[1] = -1;
-	}
-}

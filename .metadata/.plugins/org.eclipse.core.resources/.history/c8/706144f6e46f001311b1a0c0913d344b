@@ -1,9 +1,0 @@
-package removeElement;
-
-public class TwoPointer {
-	public int removeElement(int[] A, int elem) {
-		if (A == null || A.length == 0) {
-			return 0;
-		}
-	}
-}

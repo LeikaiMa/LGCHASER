@@ -1,5 +1,0 @@
-package provideLockNoDeadLock;
-
-public class LockFactory {
-
-}

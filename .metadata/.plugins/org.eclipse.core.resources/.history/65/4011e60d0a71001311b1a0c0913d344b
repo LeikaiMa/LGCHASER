@@ -1,7 +1,0 @@
-package flattenBinaryTreeToLinkedList;
-
-public class PreOrderDFS {
-	public void flatten(TreeNode root) {
-
-	}
-}

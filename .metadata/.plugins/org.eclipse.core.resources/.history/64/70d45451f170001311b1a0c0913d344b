@@ -1,7 +1,0 @@
-package removeDuplicateFromSortedArrayII;
-
-public class TwoPointer {
-	public int removeDuplicates(int[] A) {
-		
-	}
-}

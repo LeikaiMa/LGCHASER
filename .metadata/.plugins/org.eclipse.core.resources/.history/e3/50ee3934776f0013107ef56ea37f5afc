@@ -1,7 +1,0 @@
-package searchForRange;
-
-public class BinarySearch {
-	public int[] searchRange(int[] A, int target) {
-
-	}
-}

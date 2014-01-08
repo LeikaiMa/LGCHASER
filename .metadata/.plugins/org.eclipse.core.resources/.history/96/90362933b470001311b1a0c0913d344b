@@ -1,7 +1,0 @@
-package bestTimeToBuyAndSellStockI;
-
-public class Clearer {
-	public static int maxProfit(int[] prices) {
-		
-	}
-}

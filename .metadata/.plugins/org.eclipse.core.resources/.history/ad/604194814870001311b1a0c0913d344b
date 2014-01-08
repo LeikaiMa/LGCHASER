@@ -1,7 +1,0 @@
-package countAndSay;
-
-public class Loop {
-	public String countAndSay(int n) {
-
-	}
-}

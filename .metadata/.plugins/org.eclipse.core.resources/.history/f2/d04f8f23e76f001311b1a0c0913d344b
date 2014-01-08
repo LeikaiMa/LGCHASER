@@ -1,7 +1,0 @@
-package levelOrderTraversal;
-
-public class BFS {
-	public ArrayList<ArrayList<Integer>> levelOrder(TreeNode root) {
-
-	}
-}

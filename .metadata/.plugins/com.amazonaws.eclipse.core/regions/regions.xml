@@ -214,4 +214,25 @@
     </services>
   </region>
 
+  <region>
+    <displayname>China (Beijing)</displayname>
+    <systemname>cn-north-1</systemname>
+    <flag-icon>flags/china.png</flag-icon>
+    <min-toolkit-version>1.6.2.0</min-toolkit-version>
+    <restrictions>IsChinaAccount</restrictions>
+    <services>
+      <service name="S3">https://s3.cn-north-1.amazonaws.com.cn/</service>
+      <service name="IAM">https://iam.cn-north-1.amazonaws.com.cn/</service>
+      <service name="EC2">https://ec2.cn-north-1.amazonaws.com.cn/</service>
+      <service name="SNS">https://sns.cn-north-1.amazonaws.com.cn/</service>
+      <service name="SQS">https://sqs.cn-north-1.amazonaws.com.cn/</service>
+      <service name="RDS">https://rds.cn-north-1.amazonaws.com.cn/</service>
+	  <service name="ELB">https://elasticloadbalancing.cn-north-1.amazonaws.com.cn/</service>
+	  <service name="AutoScaling">https://autoscaling.cn-north-1.amazonaws.com.cn/</service>
+	  <service name="CloudWatch">https://monitoring.cn-north-1.amazonaws.com.cn/</service>
+      <service name="CloudFormation">https://cloudformation.cn-north-1.amazonaws.com.cn/</service>
+      <service name="DynamoDB">https://dynamodb.cn-north-1.amazonaws.com.cn/</service>
+    </services>
+  </region>
+  
 </regions>

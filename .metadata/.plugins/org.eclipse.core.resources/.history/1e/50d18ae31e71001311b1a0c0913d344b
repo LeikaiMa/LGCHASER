@@ -1,9 +1,0 @@
-package testHashMap;
-
-import java.util.HashMap;
-
-public class GetNoSuchElement {
-	public static void main(String[] args)
-	{	HashMap<String , Integer> map = new HashMap<>();
-	}
-}
