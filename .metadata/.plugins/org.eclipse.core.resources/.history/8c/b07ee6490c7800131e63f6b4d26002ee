@@ -1,0 +1,15 @@
+package testArrayList;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+// 要将
+public class ArrayListToArray {
+	public static void main(String[] args) {
+		ArrayList<Integer> arraylist = new ArrayList<>();
+		arraylist.add(1);
+		arraylist.add(2);
+		
+		Integer[] array = (Integer[]) arraylist.toArray();
+		System.out.println(Arrays.toString(array));
+	}
+}
