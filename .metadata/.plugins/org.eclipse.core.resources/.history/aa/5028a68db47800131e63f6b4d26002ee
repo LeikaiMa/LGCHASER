@@ -1,0 +1,24 @@
+package subSets;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class CountNumbers {
+	public ArrayList<ArrayList<Integer>> subsets(int[] S) {
+		Arrays.sort(S);
+
+		ArrayList<ArrayList<Integer>> results = new ArrayList<ArrayList<Integer>>();
+
+		for (int i = 0; i < (1 << S.length); i++) {
+			ArrayList<Integer> result = new ArrayList<Integer>();
+			for (int j = 0; j < S.length; j++) {
+				if ((i & (1 << j)) != 0) {
+					result.add(S[j]);
+				}
+			}
+			results.add(result);
+		}
+
+		return results;
+	}
+}

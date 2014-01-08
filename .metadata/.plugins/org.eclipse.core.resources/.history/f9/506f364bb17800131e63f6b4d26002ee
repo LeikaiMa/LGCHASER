@@ -1,0 +1,46 @@
+package subSets;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class AddSequentially {
+	public static ArrayList<ArrayList<Integer>> subsets(int[] S) {
+		ArrayList<ArrayList<Integer>> results = new ArrayList<ArrayList<Integer>>();
+		ArrayList<Integer> result = new ArrayList<Integer>();
+		results.add(new ArrayList<Integer>(result));
+
+		Arrays.sort(S);
+		subSetsHelper(results, result, S, 0);
+
+		return results;
+	}
+
+	public static void subSetsHelper(ArrayList<ArrayList<Integer>> results,
+			ArrayList<Integer> result, int[] S, int index) {
+		for (int i = index; i < S.length; i++) {
+			result.add(S[i]);
+			results.add(new ArrayList<Integer>(result));
+			subSetsHelper(results, result, S, index + 1);
+			result.remove(result.size() - 1);
+		}
+	}
+	
+//	private static void subSetsHelper(ArrayList<ArrayList<Integer>> results,
+//			ArrayList<Integer> tmp, int[] S, int pos) {
+//		for (int i = pos; i < S.length; i++) {
+//			tmp.add(S[i]);
+//			results.add(new ArrayList<Integer>(tmp));
+//			subSetsHelper(results, tmp, S, i + 1);
+//			tmp.remove(tmp.size() - 1);
+//		}
+//	}
+
+	public static void main(String[] args) {
+		int[] S = { 1, 2, 3, 4, 5, 6, 7, 8, 10, 0 };
+		System.out.println(Arrays.toString(S));
+		ArrayList<ArrayList<Integer>> result = subsets(S);
+		for (ArrayList<Integer> arrayList : result) {
+			System.out.println(arrayList);
+		}
+	}
+}

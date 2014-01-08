@@ -33,4 +33,14 @@ public class DFS {
 			tmp.remove(tmp.size() - 1);
 		}
 	}
+	
+	
+	 public static void main(String[] args) {
+			int[] S = {1,2,3,4,5,6,7,8,10,0};
+			System.out.println(Arrays.toString(S));
+			ArrayList<ArrayList<Integer>> result = subsets(S);
+			for (ArrayList<Integer> arrayList : result) {
+				System.out.println(arrayList);
+			}
+		}
 }
