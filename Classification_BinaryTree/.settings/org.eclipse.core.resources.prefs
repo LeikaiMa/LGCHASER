@@ -1,3 +1,5 @@
 eclipse.preferences.version=1
+encoding//src/binaryTreePostorderTraversal/StackAndPrev.java=UTF-8
+encoding//src/binaryTreePreorderTraversal/StackToStoreIterative.java=UTF-8
 encoding//src/constructBinaryTreeFromInorderAndPostorderTraversal/HashMapStoreIndex.java=UTF-8
 encoding//src/constructBinaryTreeFromPreorderAndInorderTraversal/HashMapStoreIndex.java=UTF-8
