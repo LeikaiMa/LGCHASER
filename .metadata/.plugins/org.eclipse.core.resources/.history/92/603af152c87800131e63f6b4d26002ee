@@ -1,0 +1,61 @@
+package sudokuSolver;
+
+import java.util.HashSet;
+
+public class TryCandidates {
+	public void solveSudoku(char[][] board) {
+		solveSudokuHelper(board);
+	}
+
+	public boolean solveSudokuHelper(char[][] board) {
+		for (int i = 0; i < board.length; i++) {
+			for (int j = 0; j < board[0].length; j++) {
+				if (board[i][j] == '.') {
+					HashSet<Character> candidates = getCandidates(board, i, j);
+					for (Character c : candidates) {
+						board[i][j] = c;
+						if (solveSudokuHelper(board)) {
+							return true;
+						}
+					}
+					board[i][j] = '.';
+					return false;
+				}
+			}
+		}
+		return true;
+	}
+
+	private HashSet<Character> getCandidates(char[][] board, int row, int column) {
+		HashSet<Character> candidates = new HashSet<Character>();
+
+		for (char c = '1'; c <= '9'; c++) {
+			candidates.add(c);
+		}
+
+		for (int i = 0; i < board.length; i++) {
+			if (candidates.contains(board[i][column])) {
+				candidates.remove(board[i][column]);
+			}
+		}
+
+		for (int j = 0; j < board[0].length; j++) {
+			if (candidates.contains(board[row][j])) {
+				candidates.remove(board[row][j]);
+			}
+		}
+
+		int rc = row / 3 * 3;
+		int cc = column / 3 * 3;
+
+		for (int i = rc; i < rc + 3; i++) {
+			for (int j = cc; j < cc + 3; j++) {
+				if (candidates.contains(board[i][j])) {
+					candidates.remove(board[i][j]);
+				}
+			}
+		}
+
+		return candidates;
+	}
+}
