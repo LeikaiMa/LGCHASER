@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;ListNode.java&apos; to &apos;Classification_TwoPointer/src/linkedListCycleII&apos;&#x0A;- Original project: &apos;Classification_TwoPointer&apos;&#x0A;- Destination element: &apos;Classification_TwoPointer/src/linkedListCycleII&apos;&#x0A;- Original element: &apos;linkedListCycleI.ListNode.java&apos;" description="Copy compilation unit" destination="/src&lt;linkedListCycleII" element1="/src&lt;linkedListCycleI{ListNode.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1389248691604" units="1" version="1.0"/>
+</session>
