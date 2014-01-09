@@ -1,0 +1,53 @@
+package stringToInteger;
+
+public class IndexOneByOne {
+	public int atoi(String str) {
+		int index = 0;
+		int result = 0;
+		if (str.isEmpty()) {
+			return result;
+		}
+		while (str.charAt(index) == ' ') {
+			index++;
+		}
+
+		boolean positive = true;
+		if (str.charAt(index) == '+') {
+			index++;
+		} else if (str.charAt(index) == '-') {
+			positive = false;
+			index++;
+		}
+
+		for (int i = index; i < str.length(); i++) {
+			char c = str.charAt(i);
+			if (!Character.isDigit(c)) {
+				return result;
+			}
+
+			if (positive && result > Integer.MAX_VALUE / 10) {
+				return Integer.MAX_VALUE;
+			}
+
+			if (positive && result == Integer.MAX_VALUE / 10 && c >= '7') {
+				return Integer.MAX_VALUE;
+			}
+
+			if (!positive && -result < Integer.MIN_VALUE / 10) {
+				return Integer.MIN_VALUE;
+			}
+
+			if (!positive && -result == Integer.MIN_VALUE / 10 && c >= '8') {
+				return Integer.MIN_VALUE;
+			}
+
+			result = result * 10 + (c - '0');
+		}
+
+		if (positive) {
+			return result;
+		} else {
+			return -result;
+		}
+	}
+}
