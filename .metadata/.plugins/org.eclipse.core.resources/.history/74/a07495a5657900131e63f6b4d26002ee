@@ -1,0 +1,67 @@
+package palindromePartitionII;
+
+import java.util.HashSet;
+
+public class HashSetToRemoveDup {
+	public int minCut(String s) {
+		if (s == null || s.isEmpty()) {
+			return 0;
+		}
+
+		boolean[][] dp = new boolean[s.length()][s.length()];
+
+		for (int i = 0; i < s.length(); i++) {
+			for (int span = 0; span <= Math.min(i, s.length() - 1 - i); span++) {
+				int l = i - span;
+				int h = i + span;
+				if (s.charAt(l) == s.charAt(h)) {
+					dp[l][h] = true;
+				} else {
+					break;
+				}
+			}
+		}
+
+		for (int i = 0; i < s.length(); i++) {
+			for (int span = 0; span <= Math.min(i, s.length() - 1 - i - 1); span++) {
+				int l = i - span;
+				int h = i + 1 + span;
+				if (s.charAt(l) == s.charAt(h)) {
+					dp[l][h] = true;
+				} else {
+					break;
+				}
+			}
+		}
+
+		HashSet<Integer> next = new HashSet<Integer>();
+		if (dp[0][s.length() - 1]) {
+			return 0;
+		}
+
+		for (int i = 0; i < s.length(); i++) {
+			if (dp[0][i]) {
+				next.add(i + 1);
+			}
+		}
+
+		int min = 1;
+		while (true) {
+			HashSet<Integer> tmp = new HashSet<Integer>();
+			for (int i : next) {
+				if (dp[i][s.length() - 1]) {
+					return min;
+				}
+
+				for (int j = i; j < s.length(); j++) {
+					if (dp[i][j]) {
+						tmp.add(j + 1);
+					}
+				}
+			}
+
+			min++;
+			next = tmp;
+		}
+	}
+}
