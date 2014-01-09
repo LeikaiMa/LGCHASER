@@ -1,0 +1,49 @@
+package longestPalindromicSubstring;
+
+public class CheckDoubleAxis {
+	public String longestPalindrome(String s) {
+		if (s == null || s.isEmpty() || s.length() == 1) {
+			return s;
+		}
+
+		int max = 0;
+		int lm = -1;
+		int hm = -1;
+
+		for (int i = 0; i < s.length(); i++) {
+			for (int span = 0; span <= Math.min(i, s.length() - 1 - i); span++) {
+				int l = i - span;
+				int h = i + span;
+
+				if (s.charAt(l) == s.charAt(h)) {
+					if (2 * span + 1 > max) {
+						max = 2 * span + 1;
+						lm = l;
+						hm = h;
+					}
+				} else {
+					break;
+				}
+			}
+		}
+
+		for (int i = 0; i < s.length() - 1; i++) {
+			for (int span = 0; span <= Math.min(i, s.length() - 1 - i - 1); span++) {
+				int l = i - span;
+				int h = i + 1 + span;
+
+				if (s.charAt(l) == s.charAt(h)) {
+					if (2 * span + 2 > max) {
+						max = 2 * span + 2;
+						lm = l;
+						hm = h;
+					}
+				} else {
+					break;
+				}
+			}
+		}
+
+		return s.substring(lm, hm + 1);
+	}
+}
