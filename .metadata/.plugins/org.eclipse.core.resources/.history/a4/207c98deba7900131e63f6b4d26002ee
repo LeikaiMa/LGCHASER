@@ -1,0 +1,42 @@
+package copyListWithRandomPointer;
+
+public class InOneList {
+	public static RandomListNode copyRandomList(RandomListNode head) {
+        if (head == null) {
+            return null;
+        }
+        
+        RandomListNode p = head;
+        while (p != null) {
+            RandomListNode copy = new RandomListNode(p.label);
+            copy.next = p.next;
+            p.next = copy;
+            p = p.next.next;
+        }
+        
+        p = head;
+        while (p != null) {
+            if (p.random != null) {
+                p.next.random = p.random.next;   
+            }
+            p = p.next.next;
+        }
+        
+        p = head;
+        RandomListNode newHead = p.next;
+        
+        while (p != null && p.next != null) {
+            RandomListNode tmp = p.next;
+            p.next = tmp.next;
+            p = tmp;
+        }
+        
+        return newHead;
+    }
+	
+	public static void main(String[] args) {
+		RandomListNode l1 = new RandomListNode(1);
+		l1.random = l1;
+		System.out.println(copyRandomList(l1));
+	}
+}
