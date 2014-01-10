@@ -1,0 +1,33 @@
+package maximumDepthOfBinaryTree;
+
+import java.util.ArrayList;
+
+public class ReturnAtFinal {
+    public int maxDepth(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        ArrayList<TreeNode> level = new ArrayList<TreeNode>();
+        int depth = 0;
+        level.add(root);
+        
+        while (!level.isEmpty()) {
+            depth++;
+            ArrayList<TreeNode> tmp = new ArrayList<TreeNode>();
+            for (TreeNode node : level) {
+                if (node.left != null) {
+                    tmp.add(node.left);
+                }
+                
+                if (node.right != null) {
+                    tmp.add(node.right);
+                }
+            }
+            
+            level = tmp;
+        }
+        
+        return depth;
+        
+    }
+}
