@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;trappingRainWater.LeftMostRightMos&apos; to &apos;LeftMostRightMost&apos;&#x0A;- Original project: &apos;Classification_DP&apos;&#x0A;- Original element: &apos;trappingRainWater.LeftMostRightMos&apos;&#x0A;- Renamed element: &apos;trappingRainWater.LeftMostRightMost&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;LeftMostRightMos&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;trappingRainWater{LeftMostRightMos.java[LeftMostRightMos" matchStrategy="1" name="LeftMostRightMost" qualified="false" references="true" similarDeclarations="false" stamp="1389328644467" textual="false" version="1.0"/>
+</session>
