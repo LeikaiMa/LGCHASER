@@ -1,9 +1,0 @@
-package longestRectangleInHistogram;
-
-public class ONOneStack {
-	public static  int largestRectangleArea(int[] height) {
-		if (height == null) {
-			return 0;
-		}
-	}
-}

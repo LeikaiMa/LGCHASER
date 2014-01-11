@@ -1,7 +1,0 @@
-package triangle;
-
-public class ON {
-	public int minimumTotal(ArrayList<ArrayList<Integer>> triangle) {
-
-	}
-}

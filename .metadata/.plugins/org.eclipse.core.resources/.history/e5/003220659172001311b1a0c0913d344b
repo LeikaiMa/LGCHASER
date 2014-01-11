@@ -1,7 +1,0 @@
-package convertSortedListToBST;
-
-public class ListToArrayList {
-	public TreeNode sortedListToBST(ListNode head) {
-
-	}
-}

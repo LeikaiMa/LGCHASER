@@ -1,7 +1,0 @@
-package longestRectangleInHistogram;
-
-public class ONWithStack {
-	public int largestRectangleArea(int[] height) {
-
-	}
-}

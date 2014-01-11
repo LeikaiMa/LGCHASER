@@ -1,7 +1,0 @@
-package searchInRotatedArray;
-
-public class CustomBinarySearch {
-	public int search(int[] A, int target) {
-		
-	}
-}

@@ -1,9 +1,0 @@
-package triangle;
-
-import java.util.ArrayList;
-
-public class BetterWithoutSort {
-	public static int minimumTotal(ArrayList<ArrayList<Integer>> triangle) {
-		
-	}
-}

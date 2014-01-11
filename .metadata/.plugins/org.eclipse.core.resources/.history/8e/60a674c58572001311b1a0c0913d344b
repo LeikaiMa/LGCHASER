@@ -1,7 +1,0 @@
-package gasStation;
-
-public class TestOneByOne {
-	public int canCompleteCircuit(int[] gas, int[] cost) {
-		int[] remain = new int[gas.length];
-	}
-}

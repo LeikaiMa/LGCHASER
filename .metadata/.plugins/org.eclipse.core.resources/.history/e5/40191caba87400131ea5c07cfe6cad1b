@@ -1,7 +1,0 @@
-package validBinarySearchTree;
-
-public class DFS {
-	public boolean isValidBST(TreeNode root) {
-
-	}
-}

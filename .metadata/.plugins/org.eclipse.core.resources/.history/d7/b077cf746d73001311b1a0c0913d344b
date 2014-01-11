@@ -1,7 +1,0 @@
-package searchInsertPosition;
-
-public class BinarySearch {
-	public int searchInsert(int[] A, int target) {
-		
-	}
-}

@@ -1,7 +1,0 @@
-package mergeKSortedLists;
-
-public class MergeSort {
-	public ListNode mergeKLists(ArrayList<ListNode> lists) {
-
-	}
-}

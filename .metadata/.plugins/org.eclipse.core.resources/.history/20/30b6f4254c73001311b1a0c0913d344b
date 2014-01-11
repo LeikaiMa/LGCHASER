@@ -1,9 +1,0 @@
-package searchInRotatedArray;
-
-public class FindPivot {
-	int FindSortedArrayRotation(int A[], int N) {
-		int L = 0;
-		int R = N - 1;
-
-	}
-}

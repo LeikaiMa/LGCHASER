@@ -1,7 +1,0 @@
-package sqrt;
-
-public class Naive {
-	public int sqrt(int x) {
-		return 0;
-	}
-}

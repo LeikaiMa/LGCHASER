@@ -1,7 +1,0 @@
-package multiplyStrings;
-
-public class OneArray {
-	public static String multiply(String num1, String num2) {
-		int num[] = new int[num1.length() + num2.length()];
-	}
-}

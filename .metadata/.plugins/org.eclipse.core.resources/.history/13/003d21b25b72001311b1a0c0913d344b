@@ -1,7 +1,0 @@
-package longestCommonPrefix;
-
-public class CharacterByCharacter {
-public String longestCommonPrefix(String[] strs) {
-        
-    }
-}

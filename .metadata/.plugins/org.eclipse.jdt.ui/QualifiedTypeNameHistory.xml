@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="javax.crypto.Mac"/>
-<fullyQualifiedTypeName name="java.lang.Character"/>
-<fullyQualifiedTypeName name="sqrt.Newton"/>
-<fullyQualifiedTypeName name="letterCombinationOfPhoneNumber.DFS"/>
-<fullyQualifiedTypeName name="partitionList.ListNode"/>
 <fullyQualifiedTypeName name="javax.print.attribute.HashAttributeSet"/>
 <fullyQualifiedTypeName name="balancedBinaryTree.TreeNode"/>
 <fullyQualifiedTypeName name="binaryTreeLevelOrderTraversalII.TreeNode"/>
 <fullyQualifiedTypeName name="recoverBinaryTree.TreeNode"/>
-<fullyQualifiedTypeName name="java.lang.ArrayStoreException"/>
-<fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="java.lang.StringBuffer"/>
 <fullyQualifiedTypeName name="sumRootToLeafNumbers.TreeNode"/>
 <fullyQualifiedTypeName name="java.util.Stack"/>
@@ -44,15 +37,12 @@
 <fullyQualifiedTypeName name="java.lang.Thread"/>
 <fullyQualifiedTypeName name="philosophersDiningProblem.Philosopher"/>
 <fullyQualifiedTypeName name="philosophersDiningProblem.Chopstick"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="testArrayList.ListNode"/>
 <fullyQualifiedTypeName name="java.lang.InterruptedException"/>
 <fullyQualifiedTypeName name="provideLockNoDeadLock.LockNode.VisitState"/>
 <fullyQualifiedTypeName name="java.util.concurrent.locks.ReentrantLock"/>
 <fullyQualifiedTypeName name="java.util.Hashtable"/>
 <fullyQualifiedTypeName name="org.omg.CORBA.INTERNAL"/>
-<fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="java.lang.Boolean"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="java.awt.List"/>
@@ -60,4 +50,14 @@
 <fullyQualifiedTypeName name="java.util.concurrent.locks.Lock"/>
 <fullyQualifiedTypeName name="java.util.LinkedList"/>
 <fullyQualifiedTypeName name="provideLockNoDeadLock.LockNode"/>
+<fullyQualifiedTypeName name="testArrayList.ArrayListToArray"/>
+<fullyQualifiedTypeName name="java.lang.ArrayStoreException"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="java.awt.Checkbox"/>
+<fullyQualifiedTypeName name="testArrayList.ArraylistOfArraylist"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="copyListWithRandomPointer.RandomListNode"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="javax.security.auth.x500.X500Principal"/>
 </qualifiedTypeNameHistroy>

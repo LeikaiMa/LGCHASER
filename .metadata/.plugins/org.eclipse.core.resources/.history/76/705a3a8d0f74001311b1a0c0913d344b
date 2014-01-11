@@ -1,7 +1,0 @@
-package longestValidParentheses;
-
-public class DP {
-	public static int longestValidParentheses(String s) {
-		
-	}
-}

@@ -1,7 +1,0 @@
-package generateParentheses;
-
-public class Iterative {
-	public ArrayList<String> generateParenthesis(int n) {
-        
-    }
-}

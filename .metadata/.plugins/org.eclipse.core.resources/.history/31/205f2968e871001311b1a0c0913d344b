@@ -1,7 +1,0 @@
-package testArrayList;
-
-public class RemoveRange {
-	public static void main(String[] args) {
-		
-	}
-}

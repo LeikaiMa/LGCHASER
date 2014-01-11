@@ -1,7 +1,0 @@
-package searchA2DArray;
-
-public class OneBinarySearch {
-	public static boolean searchMatrix(int[][] matrix, int target) {
-		
-	}
-}

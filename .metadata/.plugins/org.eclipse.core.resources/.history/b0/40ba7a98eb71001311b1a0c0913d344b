@@ -1,7 +1,0 @@
-package longestSubstringWithoutRepeatingCharacters;
-
-public class TwoPointer {
-	public static int lengthOfLongestSubstring(String s) {
-		boolean[] character = new boolean[256];
-	}
-}

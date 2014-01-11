@@ -1,7 +1,0 @@
-package evaluateReversePolishNotation;
-
-public class WithStack {
-	public int evalRPN(String[] tokens) {
-
-	}
-}

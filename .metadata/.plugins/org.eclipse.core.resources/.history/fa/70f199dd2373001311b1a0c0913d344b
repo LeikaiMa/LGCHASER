@@ -1,9 +1,0 @@
-package pascalTriangleII;
-
-import java.util.ArrayList;
-
-public class AddZeroToTwoEnd {
-	 public ArrayList<Integer> getRow(int rowIndex) {
-		 
-	 }
-}

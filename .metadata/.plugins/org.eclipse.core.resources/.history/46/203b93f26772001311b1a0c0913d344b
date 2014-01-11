@@ -1,7 +1,0 @@
-package testBitManipulation;
-
-public class IntegerToDouble {
-	public static void main(String[] args) {
-		
-	}
-}

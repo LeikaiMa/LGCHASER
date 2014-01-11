@@ -1,7 +1,0 @@
-package partitionList;
-
-public class TwoDummyList {
-	public ListNode partition(ListNode head, int x) {
-
-	}
-}

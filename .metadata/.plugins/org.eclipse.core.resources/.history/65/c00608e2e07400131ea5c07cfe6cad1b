@@ -1,7 +1,0 @@
-package recoverBinaryTree;
-
-public class InOrder {
-	public void recoverTree(TreeNode root) {
-
-	}
-}
