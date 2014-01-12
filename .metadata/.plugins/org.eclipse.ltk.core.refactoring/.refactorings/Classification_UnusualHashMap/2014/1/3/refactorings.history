@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;lruCache.WithLinkedHashMap&apos; to &apos;LRUCache&apos;&#x0A;- Original project: &apos;Classification_UnusualHashMap&apos;&#x0A;- Original element: &apos;lruCache.WithLinkedHashMap&apos;&#x0A;- Renamed element: &apos;lruCache.LRUCache&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;WithLinkedHashMap&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;lruCache{WithLinkedHashMap.java[WithLinkedHashMap" matchStrategy="1" name="LRUCache" qualified="false" references="true" similarDeclarations="false" stamp="1389562003805" textual="false" version="1.0"/>
+</session>

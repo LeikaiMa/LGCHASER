@@ -1,6 +1,2 @@
 INDEX VERSION 1.126+/Users/Lake/Documents/Interview/.metadata/.plugins/org.eclipse.jdt.core
 3965382828.index
-3143694148.index
-2886267847.index
-3480048032.index
-3635300697.index
