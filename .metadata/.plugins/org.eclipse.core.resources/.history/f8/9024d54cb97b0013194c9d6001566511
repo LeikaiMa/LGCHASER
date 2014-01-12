@@ -1,0 +1,26 @@
+package countAndSay;
+
+public class CheckNextDup {
+    public String countAndSay(int n) {
+        String s = "1";
+        for (int i = 1; i < n; i++) {
+            StringBuffer sb = new StringBuffer();
+            int index = 0;
+            
+            while (index < s.length()) {
+                char c = s.charAt(index);
+                int count = 1;
+                while (index < s.length() - 1 && s.charAt(index) == s.charAt(index + 1)) {
+                    count++;
+                    index++;
+                }
+                sb.append(count);
+                sb.append(c);
+                index++;
+            }
+            
+            s = sb.toString();
+        }
+        return s;
+    }
+}
