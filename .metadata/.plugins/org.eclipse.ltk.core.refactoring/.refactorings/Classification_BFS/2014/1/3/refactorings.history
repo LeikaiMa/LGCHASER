@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;TreeNode.java&apos; to &apos;Classification_BFS/src/binaryTreeLevelOrderTraversalII&apos;&#x0A;- Original project: &apos;Classification_BFS&apos;&#x0A;- Destination element: &apos;Classification_BFS/src/binaryTreeLevelOrderTraversalII&apos;&#x0A;- Original element: &apos;binaryTreeLevelOrderTraversal.TreeNode.java&apos;" description="Copy compilation unit" destination="/src&lt;binaryTreeLevelOrderTraversalII" element1="/src&lt;binaryTreeLevelOrderTraversal{TreeNode.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1389559494657" units="1" version="1.0"/>
+</session>
