@@ -1,0 +1,24 @@
+package combination;
+
+import java.util.ArrayList;
+
+public class KNindexControlParameters {
+	public ArrayList<ArrayList<Integer>> combine(int n, int k) {
+        ArrayList<ArrayList<Integer>> results = new ArrayList<ArrayList<Integer>>();
+        ArrayList<Integer> result = new ArrayList<Integer>();
+        helper(results, result, k, n, 1);
+        return results;
+    }
+    
+    private void helper(ArrayList<ArrayList<Integer>> results, ArrayList<Integer> result, int k, int n, int index) {
+        if (k == 0) {
+            results.add(new ArrayList<Integer>(result));
+        } else {
+            for (int i = index; i <= n - k + 1; i++) {
+                result.add(i);
+                helper(results, result, k - 1, n, i + 1);
+                result.remove(result.size() - 1);
+            }
+        }
+    }
+}
