@@ -35,7 +35,7 @@ public class TwoBinarySearch {
 			result[0] = lower;
 		}
 
-		upper = A.length;
+		upper = A.length - 1;
 		while (lower < upper) {
 			int mid = lower + (upper - lower) / 2;
 			if (A[mid] > target) {
@@ -50,9 +50,9 @@ public class TwoBinarySearch {
 	}
 
 	public static void main(String[] args) {
-//		int[] A = { 5, 7, 7, 8, 8, 10 };
+		int[] A = { 5, 7, 7, 8, 8, 10 };
 		int[] A = {1};
-		int target = 1;
+//		int target = 1;
 		System.out.println(Arrays.toString(searchRange(A, target)));
 	}
 }

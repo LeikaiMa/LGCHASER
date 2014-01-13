@@ -35,7 +35,7 @@ public class TwoBinarySearch {
 			result[0] = lower;
 		}
 
-		upper = A.length;
+		upper = A.length - 1;
 		while (lower < upper) {
 			int mid = lower + (upper - lower) / 2;
 			if (A[mid] > target) {
