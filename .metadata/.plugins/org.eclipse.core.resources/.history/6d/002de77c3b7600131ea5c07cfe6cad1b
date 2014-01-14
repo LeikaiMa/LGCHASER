@@ -1,9 +1,0 @@
-package testArrayList;
-
-public class ListNode {
-	int val;
-	
-	public ListNode(int x) {
-		val = x;
-	}
-}

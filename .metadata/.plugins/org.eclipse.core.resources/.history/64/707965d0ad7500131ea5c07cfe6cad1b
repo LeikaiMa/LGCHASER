@@ -1,5 +1,0 @@
-package circularArray;
-
-public class CircularArray <T>{
-
-}

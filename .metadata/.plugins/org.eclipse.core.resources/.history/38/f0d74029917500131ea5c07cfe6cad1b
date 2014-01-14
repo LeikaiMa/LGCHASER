@@ -1,8 +1,0 @@
-package reflection;
-// reflection 能够得到java class 和object 的information
-// 能够了解到class 在运行的时候method 的field 代表的是什么
-// 能够生成一个class 的新的 instance
-// 
-public class Reflection {
-
-}

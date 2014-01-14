@@ -1,6 +1,0 @@
-package synchronizationAndLocks;
-
-public class MyClass extends Thread{
-	private String name;
-	private MyObject myObj;
-}

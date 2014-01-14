@@ -1,8 +1,0 @@
-package overLoadingVSoverRiding;
-
-public class Ambiguous {
-	private double area = 10;
-	public double computeArea() {
-		
-	}
-}

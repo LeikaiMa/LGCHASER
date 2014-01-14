@@ -1,7 +1,0 @@
-package provideLockNoDeadLock;
-
-public class LockNode {
-	public enum VisitState {
-		FRESH, VISITING, VISITED
-	};
-}

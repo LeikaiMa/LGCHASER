@@ -1,8 +1,0 @@
-package finnallyKeyword;
-
-public class TryCatch {
-	public static String lem() {
-		System.out.println("lem");
-		return "return from lem";
-	}
-}
