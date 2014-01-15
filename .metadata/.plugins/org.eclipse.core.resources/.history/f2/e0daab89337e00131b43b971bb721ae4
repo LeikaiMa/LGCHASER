@@ -1,0 +1,55 @@
+package validNumber;
+
+public class AutoMata {
+    public enum InputType {
+        INVALID, SPACE, SIGN, DIGIT, DOT, EXPONENT, NUM_INPUTS
+    }
+    
+    public static int[][] transitionTable = {
+        {-1, 0, 3, 1, 2, -1},
+        {-1, 8, -1, 1, 4, 5},
+        {-1, -1, -1, 4, -1, -1},
+        {-1, -1, -1, 1, 2, -1},
+        {-1, 8, -1, 4, -1, 5},
+        {-1, -1, 6, 7, -1, -1},
+        {-1, -1, -1, 7, -1, -1},
+        {-1, 8, -1, 7, -1, -1},
+        {-1, 8, -1, -1, -1, -1}
+    };
+    
+    public boolean isNumber(String s) {
+        if (s == null || s.length() == 0) {
+            return false;
+        }
+        
+        int state = 0;
+        
+        for (int i = 0; i < s.length(); i++) {
+            InputType input = InputType.INVALID;
+            char c = s.charAt(i);
+            if (c == ' ') {
+                input = InputType.SPACE;
+            } else if (c == '+' || c == '-') {
+                input = InputType.SIGN;
+            } else if (c >= '0' && c <= '9') {
+                input = InputType.DIGIT;
+            } else if (c == '.') {
+                input = InputType.DOT;
+            } else if (c == 'E' || c == 'e') {
+                input = InputType.EXPONENT;
+            }
+            
+            state = transitionTable[state][input.ordinal()];
+            
+            if (state == -1) {
+                return false;
+            }
+        }
+        
+        if (state == 1 || state == 4 || state == 7 || state == 8) {
+            return true;
+        } else {
+            return false;
+        }
+    } 
+}
