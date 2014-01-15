@@ -2,7 +2,6 @@ eclipse.preferences.version=1
 encoding//src/containerWithMostWater/FrontPointerBackPointer.java=UTF-8
 encoding//src/linkedListCycleI/SlowCatchesFast.java=UTF-8
 encoding//src/linkedListCycleII/FastReturnToHead.java=UTF-8
-encoding//src/longestSubStringWithoutRepeatingCharacters/StoreInASCIIArrayAndRemoveRepeatition.java=UTF-8
 encoding//src/palindromeNumber/FirstDigitLastDigit.java=UTF-8
 encoding//src/removeDuplicatesFromSortedList/SlowConnectDifferentFast.java=UTF-8
 encoding//src/removeElement/SlowAndFast.java=UTF-8
