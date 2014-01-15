@@ -2,7 +2,6 @@ eclipse.preferences.version=1
 encoding//src/addTwoNumbers/DummyHead.java=UTF-8
 encoding//src/copyListWithRandomPointer/InOneList.java=UTF-8
 encoding//src/copyListWithRandomPointer/UseHashMap.java=UTF-8
-encoding//src/mergeTwoSortedLists/DummyHead.java=UTF-8
 encoding//src/removeDuplicatesFromSortedListII/DummyHeadAndRemoveDup.java=UTF-8
 encoding//src/reverseLinkedListII/DummyHead.java=UTF-8
 encoding//src/reverseNodesInKGroup/DummyAndReverseInGroup.java=UTF-8
