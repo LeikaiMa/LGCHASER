@@ -57,6 +57,9 @@ public class BitManipulation {
 	public static void main(String[] args) {
 		int dividend = -2147483647;
 		int divisor = 1;
+		dividend = -8;
+		divisor = 2;
 		System.out.println(divide(dividend, divisor));
+		
 	}
 }

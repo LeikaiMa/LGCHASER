@@ -1,0 +1,55 @@
+package divideTwoIntegers;
+
+public class Multiple2ToLargestLessThanDividend {
+	public int divide(int dividend, int divisor) {
+		if (divisor == 0) {
+			return Integer.MAX_VALUE;
+		}
+
+		if (divisor == 1 || divisor == -1) {
+			return divisor > 0 ? dividend : -dividend;
+		}
+
+		if (dividend == 0) {
+			return 0;
+		}
+
+		boolean positive = true;
+
+		if (dividend < 0) {
+			positive = !positive;
+		}
+
+		if (divisor < 0) {
+			positive = !positive;
+		}
+
+		long a = Math.abs((long) dividend);
+		long b = Math.abs((long) divisor);
+
+		long c = b;
+		long len = 1;
+
+		while (c <= a) {
+			c <<= 1;
+			len <<= 1;
+		}
+
+		long result = 0;
+		c >>= 1;
+		len >>= 1;
+
+		while (c >= b) {
+			while (a >= c) {
+				a -= c;
+				result += len;
+			}
+
+			c >>= 1;
+			len >>= 1;
+		}
+
+		result = positive ? result : -result;
+		return (int) result;
+	}
+}
