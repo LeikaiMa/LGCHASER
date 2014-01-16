@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;TreeNode.java&apos; to &apos;Classification_BFS/src/binaryTreeZigzagLevelOrderTraversal&apos;&#x0A;- Original project: &apos;LeetCode_VI&apos;&#x0A;- Destination element: &apos;Classification_BFS/src/binaryTreeZigzagLevelOrderTraversal&apos;&#x0A;- Original element: &apos;binaryTreeZigzagLevelOrderTraversal.TreeNode.java&apos;" description="Copy compilation unit" destination="=Classification_BFS/src&lt;binaryTreeZigzagLevelOrderTraversal" element1="/src&lt;binaryTreeZigzagLevelOrderTraversal{TreeNode.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1389850144879" units="1" version="1.0"/>
+</session>
