@@ -1,0 +1,79 @@
+package wordLadderII;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+
+public class SaveVistiedStatusAfterEachLevel {
+    public ArrayList<ArrayList<String>> findLadders(String start, String end, HashSet<String> dict) {
+        ArrayList<ArrayList<String>> results = new ArrayList<ArrayList<String>>();
+        ArrayList<String> level = new ArrayList<String>();
+        level.add(start);
+        if (start.equals(end)) {
+            results.add(level);
+            return results;
+        }
+        
+        HashSet<String> visited = new HashSet<String>();
+        visited.add(start);
+        
+        HashMap<String, ArrayList<String>> map = new HashMap<String, ArrayList<String>>();
+        
+        while (!level.isEmpty()) {
+            ArrayList<String> tmp = new ArrayList<String>();
+            for (String s : level) {
+                helper(s, end, map, visited, dict, tmp);
+            }
+            
+            for (String s : tmp) {
+                visited.add(s);
+            }
+            
+            if (visited.contains(end)) {
+                ArrayList<String> result = new ArrayList<String>();
+                result.add(end);
+                backTrack(results, end, start, map, result);
+                return results;
+            } else {
+                level = tmp;
+            }
+        }
+        
+        return results;
+    }
+    
+    private void backTrack(ArrayList<ArrayList<String>> results, String prev, String start, HashMap<String, ArrayList<String>> map, ArrayList<String> result) {
+        if (prev.equals(start)) {
+            result.add(0, start);
+            results.add(new ArrayList<String>(result));
+        } else {
+            ArrayList<String> parents = map.get(prev);
+            for (String s : parents) {
+                result.add(0, s);
+                backTrack(results, s, start, map, result);
+                result.remove(0);
+            }
+        }
+    }
+    
+    private void helper(String s, String end, HashMap<String, ArrayList<String>> map, HashSet<String> visited, HashSet<String> dict, ArrayList<String> tmp) {
+        for (int i = 0; i < s.length(); i++) {
+            char[] word = s.toCharArray();
+            
+            for (char c = 'a'; c <= 'z'; c++) {
+                word[i] = c;
+                String w = new String(word);
+                if (!visited.contains(w) && (dict.contains(w) || w.equals(end))) {
+                    tmp.add(w);
+                    if (map.containsKey(w)) {
+                        map.get(w).add(s);
+                    } else {
+                        ArrayList<String> parents = new ArrayList<String>();
+                        parents.add(s);
+                        map.put(w, parents);
+                    }
+                }
+            }
+        }
+    }
+}
