@@ -1,0 +1,5 @@
+package generateParentheses;
+
+public class CheckLeftParen {
+
+}

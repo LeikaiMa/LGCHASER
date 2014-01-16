@@ -1,0 +1,37 @@
+package generateParentheses;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+
+public class CheckLeftParen {
+    public ArrayList<String> generateParenthesis(int n) {
+        ArrayList<String> result = new ArrayList<String>();
+        if (n == 0) {
+            return result;
+        }
+        
+        HashSet<String> level = new HashSet<String>();
+        level.add("()");
+        
+        for (int index = 1; index < n; index++) {
+            HashSet<String> tmp = new HashSet<String>();
+            for (String s : level) {
+                for (int i = 0; i < s.length(); i++) {
+                    if (s.charAt(i) == '(') {
+                        StringBuffer sb = new StringBuffer();
+                        sb.append(s.substring(0, i + 1));
+                        sb.append("()");
+                        sb.append(s.substring(i + 1));
+                        tmp.add(sb.toString());
+                    }
+                }
+                tmp.add("()" + s);
+            }
+            
+            level = tmp;
+        }
+        
+        result.addAll(level);
+        return result;
+    }
+}

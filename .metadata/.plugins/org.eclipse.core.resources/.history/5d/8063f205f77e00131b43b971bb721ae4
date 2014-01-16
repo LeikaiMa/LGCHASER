@@ -2,7 +2,6 @@ eclipse.preferences.version=1
 encoding//src/candy/CompareNeighbors.java=UTF-8
 encoding//src/countAndSay/CheckNextDup.java=UTF-8
 encoding//src/gasStation/DiscardThePreviousNegativeSum.java=UTF-8
-encoding//src/generateParentheses/CheckLeftParen.java=UTF-8
 encoding//src/grayCode/AddOnFormerResult.java=UTF-8
 encoding//src/integerToRoman/WhileLoopTraceDown.java=UTF-8
 encoding//src/mergeIntervals/SortByComparator.java=UTF-8
