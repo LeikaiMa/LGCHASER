@@ -1,5 +1,5 @@
 package anagrams;
-//VII
+//VI
 //通过思考，了解到string是可以自己sort 的，先将string 拆成char array 然后用 char array 进行sort 得到了一个sort 好的array
 //然后将这些array 放进一个hashmap
 //这里用到了anagram 的本质，所有的单词的总数都相同，而且每个单词的字母组成也相同。这样排完序之后就是相同的string
