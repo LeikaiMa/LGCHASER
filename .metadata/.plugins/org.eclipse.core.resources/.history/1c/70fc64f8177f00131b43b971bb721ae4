@@ -1,0 +1,33 @@
+package largestRectangleInHistogram;
+
+import java.util.Stack;
+
+public class StackStoreIndex {
+    public int largestRectangleArea(int[] height) {
+        if (height == null) {
+            return 0;
+        }
+        
+        Stack<Integer> stack = new Stack<Integer>();
+        int max = 0;
+        
+        int i = 0;
+        
+        while (i < height.length) {
+            if (stack.isEmpty() || height[stack.peek()] <= height[i]) {
+                stack.push(i);
+                i++;
+            } else {
+                int index = stack.pop();
+                max =  Math.max(max, height[index] * (stack.isEmpty() ? i : i - stack.peek() - 1));
+            }
+         }
+         
+         while (!stack.isEmpty()) {
+             int index = stack.pop();
+             max = Math.max(max, height[index] * (stack.isEmpty() ? i : i - stack.peek() - 1));
+         }
+         
+         return max;
+    }
+}
