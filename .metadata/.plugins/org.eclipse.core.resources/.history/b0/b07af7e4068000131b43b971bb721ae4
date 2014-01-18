@@ -2,7 +2,6 @@ eclipse.preferences.version=1
 encoding//src/combination/KNindexControlParameters.java=UTF-8
 encoding//src/combinationSum/AddItself.java=UTF-8
 encoding//src/combinationSumII/RemoveDup.java=UTF-8
-encoding//src/letterCombinationsOfAPhoneNumber/StoreCorrespondingDigitsToChar.java=UTF-8
 encoding//src/nQueens/DFS.java=UTF-8
 encoding//src/nQueensII/BitManipulation.java=UTF-8
 encoding//src/pathSum/CheckLeftAndRight.java=UTF-8
