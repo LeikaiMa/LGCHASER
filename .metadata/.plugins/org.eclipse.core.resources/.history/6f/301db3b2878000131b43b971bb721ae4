@@ -1,0 +1,27 @@
+package permutationSequence;
+
+import java.util.ArrayList;
+
+public class RemoveThePreviousNumbers {
+	public String getPermutation(int n, int k) {
+		ArrayList<Integer> num = new ArrayList<Integer>();
+		int[] dp = new int[10];
+		dp[0] = 1;
+		for (int i = 1; i <= 9; i++) {
+			num.add(i);
+			dp[i] = dp[i - 1] * i;
+		}
+
+		StringBuffer sb = new StringBuffer();
+		k--;
+		for (int i = n; i > 0; i--) {
+			int index = k / dp[i - 1];
+			sb.append(num.get(index));
+			num.remove(index);
+			k = k % dp[i - 1];
+		}
+
+		return sb.toString();
+
+	}
+}
