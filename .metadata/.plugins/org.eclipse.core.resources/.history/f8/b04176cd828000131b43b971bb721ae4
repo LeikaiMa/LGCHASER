@@ -1,0 +1,27 @@
+package partitionList;
+
+public class TwoDummyHead {
+	public ListNode partition(ListNode head, int x) {
+		ListNode dummy1 = new ListNode(0);
+		ListNode less = dummy1;
+		ListNode dummy2 = new ListNode(0);
+		ListNode larger = dummy2;
+
+		while (head != null) {
+			if (head.val < x) {
+				less.next = head;
+				head = head.next;
+				less = less.next;
+			} else {
+				larger.next = head;
+				head = head.next;
+				larger = larger.next;
+			}
+		}
+
+		larger.next = null;
+		less.next = dummy2.next;
+
+		return dummy1.next;
+	}
+}
