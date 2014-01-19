@@ -1,0 +1,34 @@
+package sumRootToLeafNumbers;
+
+public class CheckLeafBeforeGoInto {
+    public int sumNumbers(TreeNode root) {
+        if (root == null) {
+			return 0;
+		}
+
+		ArrayList<Integer> results = new ArrayList<Integer>();
+		int number = 0;
+		sumNumbersHelper(root, results, number);
+		int sum = 0;
+		for (int r : results) {
+			sum += r;
+		}
+		return sum;
+    }
+    
+    private static void sumNumbersHelper(TreeNode root,
+			ArrayList<Integer> results, int number) {
+
+		number = number * 10 + root.val;
+		if (root.left == null && root.right == null) {
+			results.add(number);
+			return;
+		}
+		if (root.left != null) {
+			sumNumbersHelper(root.left, results, number);
+		}
+		if (root.right != null) {
+			sumNumbersHelper(root.right, results, number);
+		}
+	}
+}
