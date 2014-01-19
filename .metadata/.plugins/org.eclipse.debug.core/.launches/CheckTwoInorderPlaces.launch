@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/Classification_BinaryTree/src/recoverBinarySearchTree/CheckTwoInorderPlaces.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="recoverBinarySearchTree.CheckTwoInorderPlaces"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="Classification_BinaryTree"/>
+</launchConfiguration>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;TreeNode.java&apos; to &apos;Classification_BinaryTree/src/recoverBinarySearchTree&apos;&#x0A;- Original project: &apos;LeetCode_VII&apos;&#x0A;- Destination element: &apos;Classification_BinaryTree/src/recoverBinarySearchTree&apos;&#x0A;- Original element: &apos;recoverBinaryTree.TreeNode.java&apos;" description="Copy compilation unit" destination="=Classification_BinaryTree/src&lt;recoverBinarySearchTree" element1="/src&lt;recoverBinaryTree{TreeNode.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1390096300950" units="1" version="1.0"/>
+</session>
