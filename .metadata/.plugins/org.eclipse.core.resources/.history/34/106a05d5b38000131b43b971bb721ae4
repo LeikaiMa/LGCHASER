@@ -46,8 +46,6 @@ public class SplitAndArraylist {
 		System.out.println(simplifyPath(path2));
 		String path3 = "/home//foo/";
 		System.out.println(simplifyPath(path3));
-		String path4 = "/...";
-		System.out.println(simplifyPath(path4));
 	}
 	
 	
