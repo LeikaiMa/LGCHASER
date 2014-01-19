@@ -1,0 +1,55 @@
+package maximalRectangle;
+
+import java.util.Stack;
+
+public class Histogram {
+    public int maximalRectangle(char[][] matrix) {
+        if (matrix == null || matrix.length == 0) {
+            return 0;
+        }
+        
+        int max = 0; 
+        int row = matrix.length;
+        int column = matrix[0].length;
+        
+        int[][] heights = new int[row][column + 1];
+        
+        for (int j = 0; j < column; j++) {
+            if (matrix[0][j] == '1') {
+                heights[0][j] = 1;
+            }
+        }
+        
+        for (int i = 1; i < row; i++) {
+            for (int j = 0; j < column; j++) {
+                if (matrix[i][j] == '1') {
+                    heights[i][j] = 1 + heights[i - 1][j];
+                }
+            }
+        }
+        
+        for (int i = 0; i < row; i++) {
+            max = Math.max(max, getMaxArea(heights, i));
+        }
+        
+        return max;
+    }
+    
+    
+    public int getMaxArea(int[][] heights, int row) {
+        int max = 0;
+        Stack<Integer> stack = new Stack<Integer>();
+        
+        for (int j = 0; j < heights[0].length; j++) {
+            if (stack.isEmpty() || heights[row][stack.peek()] <=  heights[row][j]) {
+                stack.push(j);
+            } else {
+                int height = heights[row][stack.pop()];
+                max = Math.max(max, height *(stack.isEmpty() ? j : j - stack.peek() - 1));
+                j--;
+            }
+        }
+        
+        return max;
+    }
+}
