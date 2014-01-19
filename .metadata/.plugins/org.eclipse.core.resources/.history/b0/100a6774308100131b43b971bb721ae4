@@ -1,0 +1,45 @@
+package minimumWindowSubstring;
+
+public class ExpectedAppeared {
+    public String minWindow(String S, String T) {
+        int[] expected = new int[256];
+        int[] appeared = new int[256];
+        
+        int wordStart = 0;
+        int wordEnd = 0;
+        int appearN = 0;
+        
+        int min = Integer.MAX_VALUE;
+        int minStart = -1;
+        
+        for (int i = 0; i < T.length(); i++) {
+            expected[T.charAt(i)]++;
+        }
+        
+        for (; wordEnd < S.length(); wordEnd++) {
+            char c = S.charAt(wordEnd);
+            if (appeared[c] <  expected[c]) {
+                appearN++;
+            }
+            appeared[c]++;
+            
+            if (appearN == T.length()) {
+                while (wordStart <= wordEnd && appeared[S.charAt(wordStart)] > expected[S.charAt(wordStart)]) {
+                    appeared[S.charAt(wordStart)]--;
+                    wordStart++;
+                }
+                
+                if (min >  wordEnd - wordStart + 1) {
+                    min = wordEnd - wordStart + 1;
+                    minStart = wordStart;
+                }
+            } 
+        }
+        
+        if (min == Integer.MAX_VALUE) {
+            return "";
+        } else {
+            return S.substring(minStart, minStart + min);
+        }
+    }
+}
