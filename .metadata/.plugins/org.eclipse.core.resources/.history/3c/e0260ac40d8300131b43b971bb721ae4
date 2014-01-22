@@ -1,0 +1,18 @@
+package findKthSmallest;
+
+public class QuickSelection {
+	public int findKthSmallest(int[] a, int k) {
+		int value = 0;
+		int n = a.length;
+		int c = 5;
+		
+		while (true) {
+			int pivot = FindPivot(a, n, c);
+		}
+	}
+
+	private int FindPivot(int[] a, int n, int c) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+}

@@ -1,0 +1,13 @@
+package findKthSmallest;
+
+public class QuickSelection {
+	public int findKthSmallest(int[] a, int k) {
+		int value = 0;
+		int n = a.length;
+		int c = 5;
+		
+		while (true) {
+			
+		}
+	}
+}
