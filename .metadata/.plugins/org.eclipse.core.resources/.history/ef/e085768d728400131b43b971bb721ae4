@@ -1,0 +1,11 @@
+package binarySearchTreeSuccessor;
+
+
+public class CompareRoot {
+	private TreeNode getLeftMost(TreeNode head) {
+		TreeNode current = head;
+		while (current.left != null) {
+			current = current.left;
+		}
+	}
+}

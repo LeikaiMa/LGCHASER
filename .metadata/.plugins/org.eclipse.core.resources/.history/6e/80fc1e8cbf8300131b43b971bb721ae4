@@ -1,0 +1,29 @@
+package findKthSmallest;
+
+public class LargestKElementsSum {
+	public int largestKSum(int[] num, int k) {
+		if (num.length < k) {
+			return Integer.MIN_VALUE;
+		}
+
+		return largestKSum(num, 0, num.length - 1, k - 1);
+	}
+
+	private int largestKSum(int[] num, int first, int last, int k) {
+		if (first <= last) {
+			int pivot = partition(num, first, last);
+			
+			if (pivot == k) {
+				int sum = 0;
+				for (int i = 0; i < k; i++) {
+					sum += num[i];
+				}
+				return sum;
+			} else if (pivot > k) {
+				return largestKSum(num, first, pivot - 1, k);
+			}
+			
+		}
+		
+	}
+}

@@ -7,6 +7,7 @@ package findKthSmallest;
 //从前面开始往后进行遍历，如果他要比last 大，也就是比pivot 的值要小，那么将他和first 进行交换，然后first 向后移动一个位置
 //最后将pivot 和first 进行交换，pivot 返回的就是现在的index
 //一直到k 为止，如果不行的 话就返回minimum value
+//http://www.geekviewpoint.com/java/search/quickselect
 import java.util.Random;
 
 public class QuickSelection {

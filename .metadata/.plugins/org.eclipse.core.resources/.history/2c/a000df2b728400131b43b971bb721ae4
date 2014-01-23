@@ -1,0 +1,9 @@
+package binarySearchTreeSuccessor;
+
+import javax.xml.soap.Node;
+
+public class CompareRoot {
+	private TreeNode getLeftMost(Node head) {
+		
+	}
+}

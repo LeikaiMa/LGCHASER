@@ -1,0 +1,24 @@
+package findKthSmallest;
+
+public class FirstKElementsSum {
+	public int largestKSum(int[] num, int k) {
+		if (num.length < k) {
+			return 0;
+		}
+		
+		largestKSum(num, 0, num.length - 1, k - 1);
+		int sum = 0;
+		for (int i = 0; i < k; i++) {
+			sum += num[i];
+		}
+
+		return sum;
+	}
+
+	private int largestKSum(int[] num, int first, int last, int k) {
+		if (first <= last) {
+			int pivot = 
+		}
+		
+	}
+}

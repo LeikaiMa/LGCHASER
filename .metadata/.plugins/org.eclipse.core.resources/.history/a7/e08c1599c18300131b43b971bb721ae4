@@ -1,0 +1,77 @@
+package findKthSmallest;
+
+import java.util.Random;
+
+public class LargestKElementsSum {
+	public int largestKSum(int[] num, int k) {
+		if (num.length < k) {
+			return Integer.MIN_VALUE;
+		}
+
+		return largestKSum(num, 0, num.length - 1, k - 1);
+	}
+
+	private int largestKSum(int[] num, int first, int last, int k) {
+		if (first <= last) {
+			int pivot = partition(num, first, last);
+			if (pivot == k) {
+				int sum = 0;
+				for (int i = 0; i < k; i++) {
+					sum += num[i];
+				}
+				return sum;
+			} else if (pivot > k) {
+				return largestKSum(num, first, pivot - 1, k);
+			} else {
+				return largestKSum(num, pivot + 1, last, k);
+			}
+
+		}
+		return Integer.MIN_VALUE;
+	}
+
+	private int partition(int[] num, int first, int last) {
+		int pivot = first + new Random().nextInt(last - first + 1);
+		// int pivot = findPivot(num, first, last, 5);
+		swap(num, last, pivot);
+
+		for (int i = first; i < last; i++) {
+			if (num[i] > num[last]) {
+				swap(num, i, first);
+				first++;
+			}
+		}
+
+		swap(num, first, last);
+		return first;
+	}
+
+	private int findPivot(int[] num, int start, int end, int c) {
+		int n = end - start + 1;
+
+		while (n > 1) {
+			int position = start;
+
+			for (int s = start; s < n; s += c) {
+				int e = start + c;
+				e = Math.min(end, n);
+
+				for (int i = s; i < e - 1; i++) {
+					for (int j = i + 1; j < e; j++) {
+						if (num[j] > num[i]) {
+							int tmp = num[i];
+							num[i] = num[j];
+							num[j] = tmp;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	private void swap(int[] num, int first, int last) {
+		int tmp = num[first];
+		num[first] = num[last];
+		num[last] = tmp;
+	}
+}

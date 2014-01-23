@@ -1,0 +1,7 @@
+package findKthSmallest;
+
+public class FirstKElementsSum {
+	public int firstKSum(int[] N, int k) {
+		
+	}
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;findKthSmallest.FirstKElementsSum.java&apos; to &apos;LargestKElementsSum.java&apos;&#x0A;- Original project: &apos;Classification_ArraySelection&apos;&#x0A;- Original element: &apos;findKthSmallest.FirstKElementsSum.java&apos;&#x0A;- Renamed element: &apos;findKthSmallest.LargestKElementsSum.java&apos;" description="Rename compilation unit &apos;FirstKElementsSum.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;findKthSmallest{FirstKElementsSum.java" name="LargestKElementsSum.java" references="false" stamp="1390434187534" version="1.0"/>
+</session>
