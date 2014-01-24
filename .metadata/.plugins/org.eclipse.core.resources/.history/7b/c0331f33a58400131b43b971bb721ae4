@@ -1,0 +1,30 @@
+package levelOrderTraversal;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class OneQueue {
+	public void printLevelOrder(TreeNode root) {
+		if (root == null) {
+			return;
+		}
+		Queue<TreeNode> queue = new LinkedList<>();
+		queue.add(root);
+		int nodesInCurrentLevel = 1;
+		int nodesInNextLevel = 0;
+		
+		while (!queue.isEmpty()) {
+			TreeNode node = queue.poll();
+			System.out.println(node.val + " ");
+			nodesInCurrentLevel--;
+			if (root.left != null) {
+				queue.add(root.left);
+				nodesInNextLevel++;
+			} 
+			if (root.right != null) {
+				
+			}
+		}
+		
+	}
+}

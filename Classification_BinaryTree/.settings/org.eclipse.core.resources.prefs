@@ -8,9 +8,11 @@ encoding//src/constructBinaryTreeFromInorderAndPostorderTraversal/HashMapStoreIn
 encoding//src/constructBinaryTreeFromPreorderAndInorderTraversal/HashMapStoreIndex.java=UTF-8
 encoding//src/convertSortedArrayToBinarySearchTree/Recursive.java=UTF-8
 encoding//src/convertSortedListToBinarySearchTree/ReturnNextPointerAndParentTreeNode.java=UTF-8
+encoding//src/findShortestPath/UseLCA.java=UTF-8
 encoding//src/flattenBinaryTreeToLinkedList/ConcatTail.java=UTF-8
 encoding//src/leastCommonAncestorWithParent/CountDepth.java=UTF-8
 encoding//src/leastCommonAncestorWithoutParentPointer/BottomToTop.java=UTF-8
+encoding//src/levelOrderTraversal/OneQueue.java=UTF-8
 encoding//src/recoverBinarySearchTree/CheckTwoInorderPlaces.java=UTF-8
 encoding//src/sameTree/Recursively.java=UTF-8
 encoding//src/uniqueBinarySearchTrees/Catalan.java=UTF-8

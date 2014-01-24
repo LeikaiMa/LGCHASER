@@ -1,0 +1,19 @@
+package longestNondecreasingSequence;
+
+import java.util.ArrayList;
+
+public class StoreElementAsListEnd {
+	public ArrayList<Integer> findLongestNondecreasingSequence(ArrayList<Integer> input) {
+		ArrayList<ArrayList<Integer>> outputs = new ArrayList<>();
+		ArrayList<Integer> output = new ArrayList<>();
+		output.add(input.get(0));
+		
+		for (int i = 1; i < input.size(); i++) {
+			int maxIndex = -1;
+			int maxLength = -1;
+			for (int j = 0; j < i; j++) {
+				
+			}
+		}
+	}
+}

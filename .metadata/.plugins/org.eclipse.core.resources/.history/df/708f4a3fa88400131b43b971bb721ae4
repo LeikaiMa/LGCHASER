@@ -1,0 +1,61 @@
+package findShortestPath;
+
+import java.util.ArrayList;
+//这个是首先找到最近的ancestor 然后从这个ancestor 去返回一个左边的arraylist 和右边的arraylist 
+//然后再把两个arraylist 连接到一起。
+public class UseLCA {
+	public ArrayList<TreeNode> findShortestPath(TreeNode head, int x, int y) {
+		ArrayList<TreeNode> result = new ArrayList<>();
+		head = getLCA(head, x, y);
+		ArrayList<TreeNode> left = findPath(head, x);
+		ArrayList<TreeNode> right = findPath(head, y);
+
+		if (x < y) {
+			left.remove(left.size() - 1);
+			result.addAll(left);
+			result.addAll(right);
+		} else {
+			right.remove(right.size() - 1);
+			result.addAll(right);
+			result.addAll(left);
+		}
+
+		return result;
+	}
+
+	private ArrayList<TreeNode> findPath(TreeNode head, int x) {
+		ArrayList<TreeNode> result = new ArrayList<>();
+		if (head.val == x) {
+			result.add(head);
+			return result;
+		} else if (head.val > x) {
+			ArrayList<TreeNode> left = findPath(head.left, x);
+			result.addAll(left);
+			result.add(head);
+		} else {
+			result.add(head);
+			ArrayList<TreeNode> right = findPath(head.right, x);
+			result.addAll(right);
+		}
+		return result;
+	}
+
+	public TreeNode getLCA(TreeNode root, int p, int q) {
+		if (root == null) {
+			return null;
+		}
+
+		if (root.val == p || root.val == q) {
+			return root;
+		}
+
+		TreeNode left = getLCA(root.left, p, q);
+		TreeNode right = getLCA(root.right, p, q);
+
+		if (left != null && right != null) {
+			return root;
+		}
+
+		return left != null ? left : right;
+	}
+}

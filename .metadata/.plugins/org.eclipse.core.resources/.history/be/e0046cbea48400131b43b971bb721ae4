@@ -1,0 +1,9 @@
+package levelOrderTraversal;
+
+public class OneQueue {
+	public void printLevelOrder(TreeNode root) {
+		if (root == null) {
+			return;
+		}
+	}
+}

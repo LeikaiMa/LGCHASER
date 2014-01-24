@@ -1,0 +1,5 @@
+package longestNondecreasingSequence;
+
+public class StoreElementAsListEnd {
+
+}
