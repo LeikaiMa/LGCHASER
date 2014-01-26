@@ -1,0 +1,68 @@
+package distributedDoublyLinkedSum;
+
+public class TwoIterations {
+	public static volatile boolean startFlag = false;
+
+	public static void main(String[] args) {
+
+	}
+
+	private static class Node {
+		Node next;
+		Node prev;
+
+		int value;
+		Integer data;
+
+		public Node(int value) {
+			this.value = value;
+			new Thread(new NodeRunner(this, value)).start();
+		}
+
+		public synchronized void send(int data) {
+			this.data = data;
+		}
+	}
+
+	private static class NodeRunner implements Runnable {
+		Node node;
+		int id;
+
+		public NodeRunner(Node node, int id) {
+			this.node = node;
+			this.id = id;
+		}
+
+		@Override
+		public void run() {
+			while (!startFlag) {
+
+			}
+
+			if (node.next == null) {
+				node.prev.send(node.value);
+			} else {
+				while (node.data == null) {
+					try {
+						Thread.sleep(10);
+					} catch (InterruptedException e) {
+
+					}
+				}
+				
+				int sum = node.data +  node.value;
+				if (node.prev != null) {
+					node.data = null;
+					node.prev.send(sum);
+				}
+			}
+			
+			while(node.data == null) {
+				try {
+					Thread.sleep(10);
+					
+				}
+			}
+		}
+	}
+}

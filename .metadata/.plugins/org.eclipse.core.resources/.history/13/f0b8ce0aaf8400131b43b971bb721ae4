@@ -1,0 +1,7 @@
+package quickSort;
+
+public class SwapPivot {
+	public void quickSort(int[] input, int front, int end) {
+		
+	}
+}

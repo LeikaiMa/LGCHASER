@@ -1,0 +1,7 @@
+package findKthSmallest;
+
+public class FixedValue {
+	public int largestKSum(int[] num, int k) {
+		int[] count = new int[101];
+	}
+}

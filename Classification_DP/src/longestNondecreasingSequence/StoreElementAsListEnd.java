@@ -1,5 +1,6 @@
 package longestNondecreasingSequence;
-
+// 将每个先存在一个list 里面，里面存的都是都是以这个为结尾的最长的数组，如果现在这个可以找到一个最长的数组，然后最后一个比自己小或者是相等，那么就在这个后面加上这个数字存起来。
+// 最后看最长的。
 import java.util.ArrayList;
 // store each element as the last one in every arraylist.
 // add each element to the previous longest arraylist whose last element is less or equal to this element.

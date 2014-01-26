@@ -1,0 +1,9 @@
+package distributedDoublyLinkedSum;
+
+public class TwoIterations {
+	public static volatile boolean startFlag = false;
+
+	public static void main(String[] args) {
+
+	}
+}

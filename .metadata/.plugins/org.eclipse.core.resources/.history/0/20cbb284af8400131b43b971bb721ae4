@@ -1,0 +1,36 @@
+package quickSort;
+
+public class SwapPivot {
+	public void quickSort(int[] input, int front, int end) {
+		if (front >= end) {
+			return;
+		}
+		
+		int pivot = partition(input, front, end);
+		quickSort(input, front, pivot);
+		quickSort(input, pivot + 1, end);
+	}
+
+	private int partition(int[] input, int front, int end) {
+		int pivot = input[front];
+		
+		while (front < end) {
+			while (input[front] < pivot) {
+				front++;
+			} 
+			
+			while (input[end] > pivot) {
+				end--;
+			}
+			
+			swap(input, front, end);
+		}
+		
+		return front;
+	}
+
+	private void swap(int[] input, int front, int end) {
+		int tmp = input[a];
+		
+	}
+}
