@@ -1,0 +1,11 @@
+package distributedBinaryTreeSum;
+
+public class BottomToTopToBottom {
+	public static volatile boolean startFlag = false;
+	
+	public static class Node {
+		Node parent;
+		Node left;
+		Node right;
+	}
+}

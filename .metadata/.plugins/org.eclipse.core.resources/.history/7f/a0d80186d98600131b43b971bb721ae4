@@ -1,0 +1,45 @@
+package distributedBinaryTreeSum;
+
+public class BottomToTopToBottom {
+	public static volatile boolean startFlag = false;
+
+	public static class Node {
+		Node parent;
+		Node left;
+		Node right;
+
+		int value;
+		int sum = 0;
+		int receiveCount = 0;
+
+		public Node(int value) {
+			this.value = value;
+			NodeRunner nodeRunner = new NodeRunner(this, value);
+			new Thread(nodeRunner).start();
+		}
+
+		public synchronized void send(Integer data) {
+			sum += data;
+			receiveCount++;
+		}
+		
+		public static class NodeRunner implements Runnable {
+			Node node;
+			int id;
+			
+			public NodeRunner(Node node, int id) {
+				this.node = node;
+				this.id = id;
+			}
+
+			@Override
+			public void run() {
+				while (!startFlag) {
+					
+				}
+			}
+			
+			
+		}
+	}
+}
