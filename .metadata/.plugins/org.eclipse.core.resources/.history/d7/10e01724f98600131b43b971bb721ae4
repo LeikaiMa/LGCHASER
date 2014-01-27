@@ -1,0 +1,5 @@
+package distributedCircularListSum;
+
+public class FlagObject {
+	public static volatile boolean startFlag = false;
+}

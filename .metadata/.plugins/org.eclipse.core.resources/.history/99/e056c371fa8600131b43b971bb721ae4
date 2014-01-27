@@ -1,0 +1,75 @@
+package distributedCircularListSum;
+
+public class FlagObject {
+	public static volatile boolean startFlag = false;
+	private static Boolean flag = false;
+
+	public static class Node {
+		Node next;
+		int value;
+		Integer data;
+
+		public Node(int value) {
+			this.value = value;
+			new Thread(new NodeRunner(this, value)).start();
+		}
+
+		public synchronized void send(int data) {
+			this.data = data;
+		}
+	}
+
+	private static class NodeRunner implements Runnable {
+		Node node;
+		int id;
+
+		public NodeRunner(Node node, int id) {
+			this.node = node;
+			this.id = id;
+		}
+
+		@Override
+		public void run() {
+			while (!startFlag) {
+
+			}
+
+			boolean isFirst = false;
+
+			synchronized (flag) {
+				if (flag == false) {
+					flag = true;
+					isFirst = true;
+				}
+			}
+
+			if (isFirst) {
+				node.next.send(node.value);
+			} else {
+				while (node.data == null) {
+					try {
+						Thread.sleep(10);
+					} catch (InterruptedException e) {
+
+					}
+				}
+
+				int sum = node.value + node.data;
+				node.data = null;
+				node.next.send(sum);
+			}
+
+			while (node.data == null) {
+				try {
+					Thread.sleep(10);
+				} catch (InterruptedException e) {
+					
+				}
+			}
+			
+			System.out.println("id: " + id + " sum: " + node.data);
+			node.next.send(node.data);
+		}
+
+	}
+}

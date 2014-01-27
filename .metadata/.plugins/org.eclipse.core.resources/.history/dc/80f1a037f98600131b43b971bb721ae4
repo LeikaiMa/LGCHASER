@@ -1,0 +1,11 @@
+package distributedCircularListSum;
+
+public class FlagObject {
+	public static volatile boolean startFlag = false;
+	private static Boolean flag = false;
+	
+	public static class Node {
+		Node next;
+		int value;
+	}
+}

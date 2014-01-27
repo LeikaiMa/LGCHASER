@@ -1,0 +1,25 @@
+package distributedCircularListSum;
+
+public class FlagObject {
+	public static volatile boolean startFlag = false;
+	private static Boolean flag = false;
+	
+	public static class Node {
+		Node next;
+		int value;
+		Integer data;
+		
+		public Node(int value) {
+			this.value = value;
+			new Thread(new NodeRunner(this, value)).start();
+		}
+		
+		public synchronized void send(int data) {
+			this.data = data;
+		}
+	}
+	
+	private static class NodeRunner implements Runnable{
+		
+	}
+}
