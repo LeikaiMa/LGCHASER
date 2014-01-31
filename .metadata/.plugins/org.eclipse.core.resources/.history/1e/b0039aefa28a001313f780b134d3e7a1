@@ -1,0 +1,32 @@
+package removeDuplicateBST;
+
+import java.util.Iterator;
+
+public class IteratorBST {
+	public static class InputIterator implements Iterator<Integer> {
+		int count;
+
+		public InputIterator(int count) {
+			this.count = count;
+		}
+
+		@Override
+		public boolean hasNext() {
+			return count != 0;
+		}
+
+		@Override
+		public Integer next() {
+			int input = (int) (Math.random() * 30);
+			System.out.println(">>" + input);
+			count--;
+			return input;
+		}
+
+		@Override
+		public void remove() {
+			// TODO Auto-generated method stub
+			
+		}
+	}
+}

@@ -1,0 +1,75 @@
+package removeDuplicateBST;
+
+import java.util.Iterator;
+
+import javax.xml.soap.Node;
+
+public class IteratorBST {
+	private static class InputIterator implements Iterator<Integer> {
+		int count;
+
+		public InputIterator(int count) {
+			this.count = count;
+		}
+
+		@Override
+		public boolean hasNext() {
+			return count != 0;
+		}
+
+		@Override
+		public Integer next() {
+			int input = (int) (Math.random() * 30);
+			System.out.println(">>" + input);
+			count--;
+			return input;
+		}
+
+		@Override
+		public void remove() {
+
+		}
+	}
+
+	private static class OutputIterator implements Iterator<Integer> {
+		Iterator<Integer> inputIterator;
+		Integer nextElement;
+		TreeNode root;
+
+		public OutputIterator(Iterator<Integer> inputIterator) {
+			this.inputIterator = inputIterator;
+			if (inputIterator.hasNext()) {
+				nextElement = inputIterator.next();
+				if (nextElement != null) {
+					add(nextElement);
+				}
+			}
+		}
+
+		private boolean add(int value) {
+			return add(root, value);
+		}
+		
+		private boolean add(TreeNode current, int value) {
+			TreeNode node = new TreeNode(value);
+			if (current == null) {
+				root = node;
+				return true;
+			}
+			
+			if (current.val == value) {
+				return false;
+			}
+			
+			if (current.val > value) {
+				if (current.left == null) {
+					current.left = node;
+					return true;
+				} else {
+					return add(current.left, value)
+				}
+			}
+		}
+	}
+
+}

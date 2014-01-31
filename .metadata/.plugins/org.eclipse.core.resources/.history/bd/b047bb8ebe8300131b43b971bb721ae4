@@ -1,7 +1,0 @@
-package findKthSmallest;
-
-public class FirstKElementsSum {
-	public int firstKSum(int[] num, int k) {
-		firstKSum(num, 0, num.length - 1, k - 1);
-	}
-}

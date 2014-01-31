@@ -4,7 +4,7 @@ public class FixedValue {
 	public int largestKSum(int[] num, int k) {
 		int[] count = new int[101];
 		for (int n : num) {
-			count[n]++;
+			count[101 - n]++;
 		}
 
 		int sum = 0;

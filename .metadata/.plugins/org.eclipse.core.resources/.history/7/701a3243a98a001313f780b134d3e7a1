@@ -1,0 +1,116 @@
+package removeDuplicateBST;
+
+import java.util.Iterator;
+//要将output 的iterator 按照 input 的iterator来输出，但是中间要去重，这里用的是BST 来check是否为重，然后返回的是boolean 的值来判断是否有重复。
+//我个人感觉也可以用hashset 来进行保存，进行去重。
+//如果是input 的iterator 应该就要implement 一个iterator 
+public class IteratorBST {
+	public static void main(String[] args) {
+		System.out.println("Input\tOutput");
+		Iterator<Integer> inputIterator = new InputIterator(30);
+		Iterator<Integer> outputIterator = new OutputIterator(inputIterator);
+		while (outputIterator.hasNext()) {
+			System.out.println("\t<<" + outputIterator.next());
+		}
+	}
+	
+	private static class InputIterator implements Iterator<Integer> {
+		int count;
+
+		public InputIterator(int count) {
+			this.count = count;
+		}
+
+		@Override
+		public boolean hasNext() {
+			return count != 0;
+		}
+
+		@Override
+		public Integer next() {
+			int input = (int) (Math.random() * 30);
+			System.out.println(">>" + input);
+			count--;
+			return input;
+		}
+
+		@Override
+		public void remove() {
+
+		}
+	}
+
+	private static class OutputIterator implements Iterator<Integer> {
+		Iterator<Integer> inputIterator;
+		Integer nextElement;
+		TreeNode root;
+
+		public OutputIterator(Iterator<Integer> inputIterator) {
+			this.inputIterator = inputIterator;
+			if (inputIterator.hasNext()) {
+				nextElement = inputIterator.next();
+				if (nextElement != null) {
+					add(nextElement);
+				}
+			}
+		}
+
+		private boolean add(int value) {
+			return add(root, value);
+		}
+
+		private boolean add(TreeNode current, int value) {
+			TreeNode node = new TreeNode(value);
+			if (current == null) {
+				root = node;
+				return true;
+			}
+
+			if (current.val == value) {
+				return false;
+			}
+
+			if (current.val > value) {
+				if (current.left == null) {
+					current.left = node;
+					return true;
+				} else {
+					return add(current.left, value);
+				}
+			} else {
+				if (current.right == null) {
+					current.right = node;
+					return true;
+				} else {
+					return add(current.right, value);
+				}
+			}
+		}
+
+		@Override
+		public boolean hasNext() {
+			return nextElement != null;
+		}
+
+		@Override
+		public Integer next() {
+			int output = nextElement;
+			nextElement = null;
+			while (inputIterator.hasNext()) {
+				int input = inputIterator.next();
+				if (add(input)) {
+					nextElement = input;
+					break;
+				}
+			}
+			return output;
+		}
+
+		@Override
+		public void remove() {
+			// TODO Auto-generated method stub
+
+		}
+	}
+
+}

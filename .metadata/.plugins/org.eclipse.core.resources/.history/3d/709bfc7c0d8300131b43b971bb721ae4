@@ -1,7 +1,0 @@
-package findKthSmallest;
-
-public class QuickSelection {
-	public int findKthSmallest(int[] a, int k) {
-		
-	}
-}

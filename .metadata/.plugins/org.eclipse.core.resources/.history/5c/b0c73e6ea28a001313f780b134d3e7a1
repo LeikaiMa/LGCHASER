@@ -1,0 +1,9 @@
+package removeDuplicateBST;
+
+import java.util.Iterator;
+
+public class IteratorBST {
+	public static class InputIterator implements Iterator<Integer> {
+		
+	}
+}
