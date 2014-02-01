@@ -1,0 +1,89 @@
+package findOrderOfLetter;
+
+import java.util.HashMap;
+//这种排序的问题很多的情况是属于拓扑排序，拓扑排序总共可以分成两种，
+//一种是Kahn 算法，一个list 用来存最后的结果，还有一个set 用来存没有incoming edge 的node 的点
+//然后过程就是将其中一个node 取出来，然后将n-> m 这个edge 移除，然后检查这个m 有没有incoming 的edge 如果没有了，就将这个node 放进set中
+//最后当这个set 没有node 之后，就看graph 里面有没有edge ，如果还有就说明不行。如果没有了。就说明成功就返回一个L
+//还有一种是用DFS，先检查有么有环，如果没有就可以找，首先S 是没有out 的edge 然后，就访问node ，如果没有就要标记visited 然后找m-> n
+//然后递归进去visit (m) 递归出来将n 放进L 当中，而这个L 和之前的 方法不同的是stack ，然后要取出来的时候是pop 出来，这样顺序就正确了
+//这道题的作用是首先是统计出现的字母数，然后将其标记好index 这里用的是hashmap 然后index 就是存进去之前map 的size 这样就是从0 开始的
+//然后要建的是两个字母之间的顺序，这时候用的一个二维数组，大小是hashmap 的size 然后通过一个两次循环，比较如果不同的话就是前面一个字母指向后面一个字母为true，同样里面的index 是从map 里面得到
+public class TopologicalSort {
+	public static void main(String[] args) {
+		String[] words = { "car", "cat", "cbr", "deer", "egg", "god", "rabe",
+				"race", "rat", "tar" };
+		char[] letters = getLetterOrdering(words);
+		if (letters == null) {
+			System.out.println("no possible");
+		} else {
+			for (char ch : letters) {
+				System.out.println(ch + ",");
+			}
+		}
+	}
+
+	private static char[] getLetterOrdering(String[] words) {
+		HashMap<Character, Integer> characters = new HashMap<>();
+		for (String word : words) {
+			for (int i = 0; i < word.length(); i++) {
+				char character = word.charAt(i);
+				if (!characters.containsKey(character)) {
+					characters.put(character, characters.size());
+				}
+			}
+		}
+
+		boolean[][] adjacency = new boolean[characters.size()][characters
+				.size()];
+
+		for (int i = 0; i < words.length - 1; ++i) {
+			for (int j = i + 1; j < words.length; ++j) {
+				String prevWord = words[i];
+				String nextWord = words[j];
+
+				for (int k = 0; k < Math.min(prevWord.length(),
+						nextWord.length()); ++k) {
+					char prevCharacter = prevWord.charAt(k);
+					char nextCharacter = nextWord.charAt(k);
+					if (prevCharacter != nextCharacter) {
+						adjacency[characters.get(prevCharacter)][characters
+								.get(nextCharacter)] = true;
+						break;
+					}
+				}
+			}
+		}
+
+		char[] result = new char[characters.size()];
+		int resultIndex = 0;
+		while (!characters.isEmpty()) {
+			char lowChar = ' ';
+			for (Character nextCharacter : characters.keySet()) {
+				int nextIndex = characters.get(nextCharacter);
+				boolean lowest = true;
+				for (Character prevCharacter : characters.keySet()) {
+					int prevIndex = characters.get(prevCharacter);
+					if (adjacency[prevIndex][nextIndex]) {
+						lowest = false;
+						break;
+					}
+				}
+
+				if (lowest) {
+					lowChar = nextCharacter;
+					result[resultIndex++] = nextCharacter;
+					break;
+				}
+			}
+
+			if (lowChar == ' ') {
+				return null;
+			} else {
+				characters.remove(lowChar);
+				lowChar = ' ';
+			}
+		}
+		return result;
+	}
+}

@@ -1,0 +1,45 @@
+package findOrderOfLetter;
+
+import java.util.HashMap;
+
+public class TopologicalSort {
+	private static char[] getLetterOrdering(String[] words) {
+		HashMap<Character, Integer> characters = new HashMap<>();
+		for (String word : words) {
+			for (int i = 0; i < word.length(); i++) {
+				char character = word.charAt(i);
+				if (!characters.containsKey(character)) {
+					characters.put(character, characters.size());
+				}
+			}
+		}
+
+		boolean[][] adjacency = new boolean[characters.size()][characters
+				.size()];
+
+		for (int i = 0; i < words.length - 1; ++i) {
+			for (int j = i + 1; j < words.length; ++j) {
+				String prevWord = words[i];
+				String nextWord = words[j];
+
+				for (int k = 0; k < Math.min(prevWord.length(),
+						nextWord.length()); ++k) {
+					char prevCharacter = prevWord.charAt(k);
+					char nextCharacter = nextWord.charAt(k);
+					if (prevCharacter != nextCharacter) {
+						adjacency[characters.get(prevCharacter)][characters
+								.get(nextCharacter)] = true;
+						break;
+					}
+				}
+			}
+		}
+
+		char[] result = new char[characters.size()];
+		int resultIndex = 0;
+		while (!characters.isEmpty()) {
+
+		}
+
+	}
+}

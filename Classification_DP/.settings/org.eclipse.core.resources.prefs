@@ -2,6 +2,7 @@ eclipse.preferences.version=1
 encoding//src/decodeWays/CheckRestriction.java=UTF-8
 encoding//src/distinctSubsequences/ReplaceAndDEletion.java=UTF-8
 encoding//src/editDistance/DPWithDeletionInsertionReplace.java=UTF-8
+encoding//src/findOrderOfLetter/TopologicalSort.java=UTF-8
 encoding//src/implementStrStr/KMPVersion.java=UTF-8
 encoding//src/interleavingString/CheckTwoPossibilities.java=UTF-8
 encoding//src/jumpGame/MaxCover.java=UTF-8

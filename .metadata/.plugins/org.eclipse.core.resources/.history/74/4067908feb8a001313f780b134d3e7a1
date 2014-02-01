@@ -1,0 +1,18 @@
+package findOrderOfLetter;
+
+import java.util.HashMap;
+
+public class TopologicalSort {
+	private static char[] getLetterOrdering(String[] words) {
+		HashMap<Character, Integer> characters = new HashMap<>();
+		for (String word : words) {
+			for (int i = 0; i < word.length(); i++) {
+				char character = word.charAt(i);
+				if (!characters.containsKey(character)) {
+					characters.put(character, characters.size());
+				}
+			}
+		}
+
+	}
+}
