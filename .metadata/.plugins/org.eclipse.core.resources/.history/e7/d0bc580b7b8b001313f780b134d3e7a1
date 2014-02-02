@@ -1,0 +1,8 @@
+package testBoolean;
+
+public class BooleanToblean {
+	public static void main(String[] args) {
+		boolean b = getBoolean();
+		System.out.println(b);
+	}
+}

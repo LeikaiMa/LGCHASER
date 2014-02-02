@@ -1,0 +1,15 @@
+package testBoolean;
+
+public class BooleanToblean {
+	public static void main(String[] args) {
+		boolean b = getBoolean();
+		System.out.println(b);
+	}
+
+	private static Boolean getBoolean() {
+		Boolean[] b = new Boolean[1];
+		return b[0];
+	}
+	
+	
+}

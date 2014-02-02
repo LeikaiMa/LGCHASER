@@ -1,0 +1,47 @@
+package longestCommonSubsequence;
+// 要求两个最长的common sequence ，这个common sequence 指的是可以删去其中的元素，然后剩下共同的，就是共同的徐律。
+// 用dp 的方法来进行储存，所有的组合都需要进行尝试。然后他的基本条件是放在最后两个都是length 的时候这个是为0的长度。
+// 
+public class CheckTheCharacterFromBackToStart {
+	
+	public static void main(String[] args) {
+		String a = "alfkjalfjlkj";
+		String b = "ajflaklfjlaj";
+		String result = findLCS(a, b);
+		System.out.println(result);
+	}
+	
+	
+	private static String findLCS(String a, String b) {
+		int[][] memo = new int[a.length() + 1][b.length() + 1];
+
+		for (int i = a.length() - 1; i >= 0; i--) {
+			for (int j = b.length() - 1; j >= 0; j--) {
+				if (a.charAt(i) == b.charAt(j)) {
+					memo[i][j] = memo[i + 1][j + 1] + 1;
+				} else {
+					memo[i][j] = Math.max(memo[i + 1][j], memo[i][j + 1]);
+				}
+			}
+		}
+
+		int i = 0;
+		int j = 0;
+
+		StringBuffer result = new StringBuffer();
+
+		while (i < a.length() && j < b.length()) {
+			if (a.charAt(i) == b.charAt(j)) {
+				result.append(a.charAt(i));
+				i++;
+				j++;
+			} else if (memo[i + 1][j] > memo[i][j + 1]) {
+				i++;
+			} else {
+				j++;
+			}
+		}
+
+		return result.toString();
+	}
+}

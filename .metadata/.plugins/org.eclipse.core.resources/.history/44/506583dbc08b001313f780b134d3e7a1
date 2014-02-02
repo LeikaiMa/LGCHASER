@@ -1,0 +1,7 @@
+package longestCommonSubsequence;
+
+public class CheckTheCharacterFromBackToStart {
+	private static String findLCS(String a, String b) {
+		int[][] memo = new int[a.length() + 1][b.length() + 1];
+	}
+}

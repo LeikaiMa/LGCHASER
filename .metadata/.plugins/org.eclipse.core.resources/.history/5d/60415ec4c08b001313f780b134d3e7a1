@@ -1,0 +1,5 @@
+package longestCommonSubsequence;
+
+public class CheckTheCharacterFromBackToStart {
+
+}

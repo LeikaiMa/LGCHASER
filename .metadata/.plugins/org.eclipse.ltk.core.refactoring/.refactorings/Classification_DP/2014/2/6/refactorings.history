@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;longestCommonSequence&apos; to &apos;longestCommonSubsequence&apos;&#x0A;- Original project: &apos;Classification_DP&apos;&#x0A;- Original element: &apos;Classification_DP/src/longestCommonSequence&apos;&#x0A;- Renamed element: &apos;Classification_DP/src/longestCommonSubsequence&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;longestCommonSequence&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;longestCommonSequence" name="longestCommonSubsequence" qualified="false" references="true" stamp="1391314422166" textual="false" version="1.0"/>
+</session>
