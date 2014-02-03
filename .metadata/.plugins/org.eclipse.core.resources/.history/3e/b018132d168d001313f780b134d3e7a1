@@ -1,0 +1,40 @@
+package lruCache;
+
+import java.util.HashMap;
+
+
+public class ImplementLinkedHashMapOnMyOwn {
+	
+	public HashMap<Integer, DoubleLinkedListNode> table = new HashMap<>();
+	public DoubleLinkedListNode head;
+	public DoubleLinkedListNode end;
+	public int capacity;
+	public int len;
+	
+	public ImplementLinkedHashMapOnMyOwn(int capacity) {
+		this.capacity = capacity;
+		len = 0;
+	}
+	
+	public int get(int key) {
+		
+	}
+	
+	
+	public void removeNode(DoubleLinkedListNode node) {
+		DoubleLinkedListNode cur = node;
+		DoubleLinkedListNode pre = cur.pre;
+	}
+
+	public class DoubleLinkedListNode {
+		public int val;
+		public int key;
+		public DoubleLinkedListNode pre;
+		public DoubleLinkedListNode post;
+		
+		public DoubleLinkedListNode(int key, int value) {
+			val = value;
+			this.key = key;
+		}
+	}
+}

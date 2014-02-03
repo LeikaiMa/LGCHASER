@@ -1,0 +1,17 @@
+package lruCache;
+
+import java.util.HashMap;
+
+public class ImplementLinkedHashMapOnMyOwn {
+
+	public class DoubleLinkedListNode {
+		public int val;
+		public int key;
+		public DoubleLinkedListNode pre;
+		public DoubleLinkedListNode post;
+		
+		public class DoubleLinkedListNode(int key, int value) {
+			
+		}
+	}
+}
