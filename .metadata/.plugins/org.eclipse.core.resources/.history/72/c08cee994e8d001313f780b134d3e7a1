@@ -1,0 +1,7 @@
+package peekIterator;
+
+import java.util.Iterator;
+
+public class UseTopVariable<T> implements Iterator<T>{
+	
+}

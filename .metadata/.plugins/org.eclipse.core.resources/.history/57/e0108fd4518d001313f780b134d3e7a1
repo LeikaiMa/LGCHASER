@@ -1,0 +1,50 @@
+package peekIterator;
+
+import java.util.Iterator;
+
+public class Peekable<T> implements Iterator<T>{
+	private Iterator<T> iterator;
+	private boolean hasPeek;
+	private T top;
+
+	public Peekable(Iterator<T> iterator) {
+		this.iterator = iterator;
+		getTop();
+	}
+	
+	private void getTop() {
+		hasPeek = false;
+		if (iterator.hasNext()) {
+			top = iterator.next();
+		}
+	}
+
+	@Override
+	public boolean hasNext() {
+		return hasPeekl;
+	}
+
+	@Override
+	public T next() {
+		if (top == null) {
+			try {
+				throw new Exception();
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}
+
+		T currentTop = top;
+		getTop();
+		return currentTop;
+	}
+
+	@Override
+	public void remove() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

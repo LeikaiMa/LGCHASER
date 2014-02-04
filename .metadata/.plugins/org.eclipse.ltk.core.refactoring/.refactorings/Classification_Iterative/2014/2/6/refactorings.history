@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;peekIterator.UseTopVariable&apos; to &apos;Peekable&apos;&#x0A;- Original project: &apos;Classification_Iterative&apos;&#x0A;- Original element: &apos;peekIterator.UseTopVariable&apos;&#x0A;- Renamed element: &apos;peekIterator.Peekable&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;UseTopVariable&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;peekIterator{UseTopVariable.java[UseTopVariable" matchStrategy="1" name="Peekable" qualified="false" references="true" similarDeclarations="false" stamp="1391485499600" textual="false" version="1.0"/>
+</session>
